@@ -1,6 +1,6 @@
 var BilData = [
   {
-    "BildeID": "",
+    "BildeID": "../img/zoey.jpg",
     "Merke": "Audi",
     "Modell": "e-tron",
     "Type": "55",
@@ -13,7 +13,7 @@ var BilData = [
     "Sitteplasser": "5"
   },
   {
-    "BildeID": "",
+    "BildeID": "../img/zoey.jpg",
     "Merke": "Audi",
     "Modell": "e-tron",
     "Type": "55 advanced plus",
@@ -26,7 +26,7 @@ var BilData = [
     "Sitteplasser": "5"
   },
   {
-    "BildeID": "",
+    "BildeID": "../img/zoey.jpg",
     "Merke": "Audi",
     "Modell": "e-tron",
     "Type": "Exclusive",

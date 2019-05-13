@@ -17,13 +17,9 @@ const carDescription = {};
 class Car extends React.Component {
   render() {
     console.log(CarData);
-    const list = CarData.map(car => <CarCard Modell={car.Merke} Merke={car.Modell} /> );
+    const list = CarData.map(car => <CarCard Modell={car.Merke} Merke={car.Modell} BildeID={car.BildeID}/> );
     return (
       <div style={carWrapper}>
-        <div className={carHeader}>
-          <Image backgroundImage="../img/zoey.jpg" />
-          <Headline>Tittel henta fra json her</Headline>
-        </div>
         <div>{list}</div>
       </div>
     );

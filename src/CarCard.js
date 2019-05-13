@@ -14,7 +14,7 @@ class CarCard extends React.Component {
     return (
       <div style={carWrapper}>
         <div className={carHeader}>
-          <Image backgroundImage={"../img/zoey.jpg"} />
+          <Image>{this.props.BildeID}</Image>
           <Headline>{this.props.Merke}</Headline>
           <Headline>{this.props.Modell}</Headline>
         </div>
