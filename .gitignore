@@ -1,0 +1,39 @@
+# Config
+.env
+env.sh
+
+# Useless bloat files
+.DS_Store
+.idea
+
+# Built files
+.next
+dist
+node_modules
+reports
+storybook-static
+yarn-error.log
+test-results.xml
+tests_output
+selenium.log
+app-frontend.log
+bundles
+coverage
+junit.xml
+
+# ???
+*.swp
+*.swo
+pages/test.js
+lock.gpid
+.cache
+
+# README generation
+README.md.orig*
+README.md.toc*
+
+# sh
+runDev.sh
+runProd.sh
+runPercy.sh
+runStorybook.sh
