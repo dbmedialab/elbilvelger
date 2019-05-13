@@ -1,6 +1,6 @@
 var BilData = [
   {
-    "Bilde I.D.": "",
+    "BildeID": "",
     "Merke": "Audi",
     "Modell": "e-tron",
     "Type": "55",
@@ -13,7 +13,7 @@ var BilData = [
     "Sitteplasser": "5"
   },
   {
-    "Bilde I.D.": "",
+    "BildeID": "",
     "Merke": "Audi",
     "Modell": "e-tron",
     "Type": "55 advanced plus",
@@ -26,7 +26,7 @@ var BilData = [
     "Sitteplasser": "5"
   },
   {
-    "Bilde I.D.": "",
+    "BildeID": "",
     "Merke": "Audi",
     "Modell": "e-tron",
     "Type": "Exclusive",
@@ -39,7 +39,7 @@ var BilData = [
     "Sitteplasser": "5"
   },
   {
-    "Bilde I.D.": "",
+    "BildeID": "",
     "Merke": "",
     "Modell": "",
     "Type": "",
@@ -52,7 +52,7 @@ var BilData = [
     "Sitteplasser": ""
   },
   {
-    "Bilde I.D.": "",
+    "BildeID": "",
     "Merke": "BMW",
     "Modell": "i3",
     "Type": "120Ah",
@@ -65,7 +65,7 @@ var BilData = [
     "Sitteplasser": "4"
   },
   {
-    "Bilde I.D.": "",
+    "BildeID": "",
     "Merke": "BMW",
     "Modell": "i3",
     "Type": "120Ah Charged",
@@ -78,7 +78,7 @@ var BilData = [
     "Sitteplasser": "4"
   },
   {
-    "Bilde I.D.": "",
+    "BildeID": "",
     "Merke": "BMW",
     "Modell": "i3",
     "Type": "120Ah Charged +",
@@ -91,7 +91,7 @@ var BilData = [
     "Sitteplasser": "4"
   },
   {
-    "Bilde I.D.": "",
+    "BildeID": "",
     "Merke": "BMW",
     "Modell": "i3",
     "Type": "120Ah fully Charged",
@@ -104,7 +104,7 @@ var BilData = [
     "Sitteplasser": "4"
   },
   {
-    "Bilde I.D.": "",
+    "BildeID": "",
     "Merke": "",
     "Modell": "",
     "Type": "",
@@ -117,7 +117,7 @@ var BilData = [
     "Sitteplasser": ""
   },
   {
-    "Bilde I.D.": "",
+    "BildeID": "",
     "Merke": "Citroen",
     "Modell": "Berlingo",
     "Type": "Electricue Proff L1",
@@ -130,7 +130,7 @@ var BilData = [
     "Sitteplasser": "2"
   },
   {
-    "Bilde I.D.": "",
+    "BildeID": "",
     "Merke": "Citron",
     "Modell": "Berlingo",
     "Type": "Electricue Proff L2",
@@ -143,7 +143,7 @@ var BilData = [
     "Sitteplasser": "2"
   },
   {
-    "Bilde I.D.": "",
+    "BildeID": "",
     "Merke": "Citroen",
     "Modell": "C-Zero",
     "Type": "Feel",
@@ -156,7 +156,7 @@ var BilData = [
     "Sitteplasser": "4"
   },
   {
-    "Bilde I.D.": "",
+    "BildeID": "",
     "Merke": "",
     "Modell": "",
     "Type": "",
@@ -169,7 +169,7 @@ var BilData = [
     "Sitteplasser": ""
   },
   {
-    "Bilde I.D.": "",
+    "BildeID": "",
     "Merke": "Jaguar",
     "Modell": "i-Pace",
     "Type": "400hk AWD Auto S",
@@ -182,7 +182,7 @@ var BilData = [
     "Sitteplasser": "5"
   },
   {
-    "Bilde I.D.": "",
+    "BildeID": "",
     "Merke": "Jaguar",
     "Modell": "i-Pace",
     "Type": "400hk AWD Auto SE",
@@ -195,7 +195,7 @@ var BilData = [
     "Sitteplasser": "5"
   },
   {
-    "Bilde I.D.": "",
+    "BildeID": "",
     "Merke": "Jaguar",
     "Modell": "i-Pace",
     "Type": "400hk AWD Auto HSE",
@@ -208,7 +208,7 @@ var BilData = [
     "Sitteplasser": "5"
   },
   {
-    "Bilde I.D.": "",
+    "BildeID": "",
     "Merke": "",
     "Modell": "",
     "Type": "",
@@ -221,7 +221,7 @@ var BilData = [
     "Sitteplasser": ""
   },
   {
-    "Bilde I.D.": "",
+    "BildeID": "",
     "Merke": "",
     "Modell": "",
     "Type": "",
@@ -234,7 +234,7 @@ var BilData = [
     "Sitteplasser": ""
   },
   {
-    "Bilde I.D.": "",
+    "BildeID": "",
     "Merke": "Hyundai",
     "Modell": "Ioniq",
     "Type": "EV",
@@ -247,7 +247,7 @@ var BilData = [
     "Sitteplasser": "5"
   },
   {
-    "Bilde I.D.": "",
+    "BildeID": "",
     "Merke": "Hyundai",
     "Modell": "Ioniq",
     "Type": "Teknikk",
@@ -260,7 +260,7 @@ var BilData = [
     "Sitteplasser": "5"
   },
   {
-    "Bilde I.D.": "",
+    "BildeID": "",
     "Merke": "Hyundai",
     "Modell": "Kona Electric",
     "Type": "Teknikk",
@@ -273,7 +273,7 @@ var BilData = [
     "Sitteplasser": "5"
   },
   {
-    "Bilde I.D.": "",
+    "BildeID": "",
     "Merke": "",
     "Modell": "",
     "Type": "",
@@ -286,7 +286,7 @@ var BilData = [
     "Sitteplasser": ""
   },
   {
-    "Bilde I.D.": "",
+    "BildeID": "",
     "Merke": "DS",
     "Modell": "E-Tense",
     "Type": "136 So Chic",
@@ -299,7 +299,7 @@ var BilData = [
     "Sitteplasser": "5"
   },
   {
-    "Bilde I.D.": "",
+    "BildeID": "",
     "Merke": "DS",
     "Modell": "E-Tense",
     "Type": "136 Grand Chic",
@@ -312,7 +312,7 @@ var BilData = [
     "Sitteplasser": "5"
   },
   {
-    "Bilde I.D.": "",
+    "BildeID": "",
     "Merke": "",
     "Modell": "",
     "Type": "",
@@ -325,7 +325,7 @@ var BilData = [
     "Sitteplasser": ""
   },
   {
-    "Bilde I.D.": "",
+    "BildeID": "",
     "Merke": "Kia",
     "Modell": "E-Niro",
     "Type": "First Edition",
@@ -338,7 +338,7 @@ var BilData = [
     "Sitteplasser": "5"
   },
   {
-    "Bilde I.D.": "",
+    "BildeID": "",
     "Merke": "Kia",
     "Modell": "E-Soul",
     "Type": "Classic",
@@ -351,7 +351,7 @@ var BilData = [
     "Sitteplasser": "5"
   },
   {
-    "Bilde I.D.": "",
+    "BildeID": "",
     "Merke": "Kia",
     "Modell": "E-Soul",
     "Type": "Active",
@@ -364,7 +364,7 @@ var BilData = [
     "Sitteplasser": "5"
   },
   {
-    "Bilde I.D.": "",
+    "BildeID": "",
     "Merke": "Kia",
     "Modell": "E-Soul",
     "Type": "Exclusive",
@@ -377,7 +377,7 @@ var BilData = [
     "Sitteplasser": "5"
   },
   {
-    "Bilde I.D.": "",
+    "BildeID": "",
     "Merke": "",
     "Modell": "",
     "Type": "",
@@ -390,7 +390,7 @@ var BilData = [
     "Sitteplasser": ""
   },
   {
-    "Bilde I.D.": "",
+    "BildeID": "",
     "Merke": "Mercedes-Benz",
     "Modell": "EQC",
     "Type": "400 4MATIC",
@@ -403,7 +403,7 @@ var BilData = [
     "Sitteplasser": "5"
   },
   {
-    "Bilde I.D.": "",
+    "BildeID": "",
     "Merke": "",
     "Modell": "",
     "Type": "",
@@ -416,7 +416,7 @@ var BilData = [
     "Sitteplasser": ""
   },
   {
-    "Bilde I.D.": "",
+    "BildeID": "",
     "Merke": "Mitsubishi",
     "Modell": "i-Miev",
     "Type": "16 kWh",
@@ -429,7 +429,7 @@ var BilData = [
     "Sitteplasser": "4"
   },
   {
-    "Bilde I.D.": "",
+    "BildeID": "",
     "Merke": "",
     "Modell": "",
     "Type": "",
@@ -442,7 +442,7 @@ var BilData = [
     "Sitteplasser": ""
   },
   {
-    "Bilde I.D.": "",
+    "BildeID": "",
     "Merke": "Nissan",
     "Modell": "Leaf",
     "Type": "40kWh Acenta",
@@ -455,7 +455,7 @@ var BilData = [
     "Sitteplasser": "5"
   },
   {
-    "Bilde I.D.": "",
+    "BildeID": "",
     "Merke": "Nissan",
     "Modell": "Leaf",
     "Type": "40kWh N-Conneca",
@@ -468,7 +468,7 @@ var BilData = [
     "Sitteplasser": "5"
   },
   {
-    "Bilde I.D.": "",
+    "BildeID": "",
     "Merke": "Nissan",
     "Modell": "Leaf",
     "Type": "40kWh Tekna",
@@ -481,7 +481,7 @@ var BilData = [
     "Sitteplasser": "5"
   },
   {
-    "Bilde I.D.": "",
+    "BildeID": "",
     "Merke": "Nissan",
     "Modell": "Leaf",
     "Type": "62kWh e+ N-Conneca",
@@ -494,7 +494,7 @@ var BilData = [
     "Sitteplasser": "5"
   },
   {
-    "Bilde I.D.": "",
+    "BildeID": "",
     "Merke": "Nissan",
     "Modell": "Leaf",
     "Type": "62 kWh e+ Tekna",
@@ -507,7 +507,7 @@ var BilData = [
     "Sitteplasser": "5"
   },
   {
-    "Bilde I.D.": "",
+    "BildeID": "",
     "Merke": "Nissan",
     "Modell": "E-NV200",
     "Type": "Evalia 40 kWt 5-s",
@@ -520,7 +520,7 @@ var BilData = [
     "Sitteplasser": "5"
   },
   {
-    "Bilde I.D.": "",
+    "BildeID": "",
     "Merke": "Nissan",
     "Modell": "E-NV200",
     "Type": "Evalia 40 kWt 7-s",
@@ -533,7 +533,7 @@ var BilData = [
     "Sitteplasser": "7"
   },
   {
-    "Bilde I.D.": "",
+    "BildeID": "",
     "Merke": "Nissan",
     "Modell": "E-NV200",
     "Type": "Comfort Plus 40 kWt",
@@ -546,7 +546,7 @@ var BilData = [
     "Sitteplasser": "2"
   },
   {
-    "Bilde I.D.": "",
+    "BildeID": "",
     "Merke": "Nissan",
     "Modell": "E-NV200",
     "Type": "Premium 40 kWt",
@@ -559,7 +559,7 @@ var BilData = [
     "Sitteplasser": "2"
   },
   {
-    "Bilde I.D.": "",
+    "BildeID": "",
     "Merke": "",
     "Modell": "",
     "Type": "",
@@ -572,7 +572,7 @@ var BilData = [
     "Sitteplasser": "5"
   },
   {
-    "Bilde I.D.": "",
+    "BildeID": "",
     "Merke": "Opel",
     "Modell": "Ampera-E",
     "Type": "Premium",
@@ -585,7 +585,7 @@ var BilData = [
     "Sitteplasser": "4"
   },
   {
-    "Bilde I.D.": "",
+    "BildeID": "",
     "Merke": "",
     "Modell": "",
     "Type": "",
@@ -598,7 +598,7 @@ var BilData = [
     "Sitteplasser": "3"
   },
   {
-    "Bilde I.D.": "",
+    "BildeID": "",
     "Merke": "Peugeot",
     "Modell": "iOn",
     "Type": "Active",
@@ -611,7 +611,7 @@ var BilData = [
     "Sitteplasser": "3"
   },
   {
-    "Bilde I.D.": "",
+    "BildeID": "",
     "Merke": "Peugeot",
     "Modell": "Partner Electric",
     "Type": "L1 Edition",
@@ -624,7 +624,7 @@ var BilData = [
     "Sitteplasser": "3"
   },
   {
-    "Bilde I.D.": "",
+    "BildeID": "",
     "Merke": "Peugeot",
     "Modell": "Partner Electric",
     "Type": "L2 Editon",
@@ -637,7 +637,7 @@ var BilData = [
     "Sitteplasser": "3"
   },
   {
-    "Bilde I.D.": "",
+    "BildeID": "",
     "Merke": "Peugeot",
     "Modell": "Partner Electric",
     "Type": "Mester L1",
@@ -650,7 +650,7 @@ var BilData = [
     "Sitteplasser": "2"
   },
   {
-    "Bilde I.D.": "",
+    "BildeID": "",
     "Merke": "Peugeot",
     "Modell": "Partner Electric",
     "Type": "Mester L2",
@@ -663,7 +663,7 @@ var BilData = [
     "Sitteplasser": "2"
   },
   {
-    "Bilde I.D.": "",
+    "BildeID": "",
     "Merke": "Peugeot",
     "Modell": "Partner Tepee",
     "Type": "Electricue",
@@ -676,7 +676,7 @@ var BilData = [
     "Sitteplasser": "2"
   },
   {
-    "Bilde I.D.": "",
+    "BildeID": "",
     "Merke": "",
     "Modell": "",
     "Type": "",
@@ -689,7 +689,7 @@ var BilData = [
     "Sitteplasser": "5"
   },
   {
-    "Bilde I.D.": "",
+    "BildeID": "",
     "Merke": "Renault",
     "Modell": "Kangoo Electric",
     "Type": "Z.E.",
@@ -702,7 +702,7 @@ var BilData = [
     "Sitteplasser": "2"
   },
   {
-    "Bilde I.D.": "",
+    "BildeID": "",
     "Merke": "Renault",
     "Modell": "Kangoo Electric",
     "Type": "Maxi",
@@ -715,7 +715,7 @@ var BilData = [
     "Sitteplasser": "5"
   },
   {
-    "Bilde I.D.": "",
+    "BildeID": "",
     "Merke": "Renault",
     "Modell": "Kangoo Electric",
     "Type": "5-seter",
@@ -728,7 +728,7 @@ var BilData = [
     "Sitteplasser": "5"
   },
   {
-    "Bilde I.D.": "",
+    "BildeID": "",
     "Merke": "Renault",
     "Modell": "Twizy",
     "Type": "Intens",
@@ -741,7 +741,7 @@ var BilData = [
     "Sitteplasser": "5"
   },
   {
-    "Bilde I.D.": "",
+    "BildeID": "",
     "Merke": "Renault",
     "Modell": "Zoe",
     "Type": "Z.E 40 R90 Life",
@@ -754,7 +754,7 @@ var BilData = [
     "Sitteplasser": "4"
   },
   {
-    "Bilde I.D.": "",
+    "BildeID": "",
     "Merke": "Renault",
     "Modell": "Zoe",
     "Type": "Z.E 40 R110 Intens",
@@ -767,7 +767,7 @@ var BilData = [
     "Sitteplasser": ""
   },
   {
-    "Bilde I.D.": "",
+    "BildeID": "",
     "Merke": "",
     "Modell": "",
     "Type": "",
@@ -780,7 +780,7 @@ var BilData = [
     "Sitteplasser": ""
   },
   {
-    "Bilde I.D.": "",
+    "BildeID": "",
     "Merke": "Smart",
     "Modell": "ForTwo",
     "Type": "Pure",
@@ -793,7 +793,7 @@ var BilData = [
     "Sitteplasser": "2"
   },
   {
-    "Bilde I.D.": "",
+    "BildeID": "",
     "Merke": "Smart",
     "Modell": "ForTwo",
     "Type": "EQ ForTwo",
@@ -806,7 +806,7 @@ var BilData = [
     "Sitteplasser": "2"
   },
   {
-    "Bilde I.D.": "",
+    "BildeID": "",
     "Merke": "Smart",
     "Modell": "ForTwo",
     "Type": "STAR",
@@ -819,7 +819,7 @@ var BilData = [
     "Sitteplasser": "2"
   },
   {
-    "Bilde I.D.": "",
+    "BildeID": "",
     "Merke": "Smart",
     "Modell": "ForTwo",
     "Type": "Cabrio",
@@ -832,7 +832,7 @@ var BilData = [
     "Sitteplasser": "2"
   },
   {
-    "Bilde I.D.": "",
+    "BildeID": "",
     "Merke": "Smart",
     "Modell": "ForTwo",
     "Type": "Cabrio STAR",
@@ -845,7 +845,7 @@ var BilData = [
     "Sitteplasser": "2"
   },
   {
-    "Bilde I.D.": "",
+    "BildeID": "",
     "Merke": "",
     "Modell": "",
     "Type": "",
@@ -858,7 +858,7 @@ var BilData = [
     "Sitteplasser": ""
   },
   {
-    "Bilde I.D.": "",
+    "BildeID": "",
     "Merke": "Tesla",
     "Modell": "Model 3",
     "Type": "Standard Range RWD",
@@ -871,7 +871,7 @@ var BilData = [
     "Sitteplasser": "5"
   },
   {
-    "Bilde I.D.": "",
+    "BildeID": "",
     "Merke": "Tesla",
     "Modell": "Model 3",
     "Type": "Long Range AWD",
@@ -884,7 +884,7 @@ var BilData = [
     "Sitteplasser": "5"
   },
   {
-    "Bilde I.D.": "",
+    "BildeID": "",
     "Merke": "Tesla",
     "Modell": "Model 3",
     "Type": "Performance AWD",
@@ -897,7 +897,7 @@ var BilData = [
     "Sitteplasser": "5"
   },
   {
-    "Bilde I.D.": "",
+    "BildeID": "",
     "Merke": "Tesla",
     "Modell": "Model S",
     "Type": "Long Range",
@@ -910,7 +910,7 @@ var BilData = [
     "Sitteplasser": "5"
   },
   {
-    "Bilde I.D.": "",
+    "BildeID": "",
     "Merke": "Tesla",
     "Modell": "Model S",
     "Type": "Performance",
@@ -923,7 +923,7 @@ var BilData = [
     "Sitteplasser": "5"
   },
   {
-    "Bilde I.D.": "",
+    "BildeID": "",
     "Merke": "Tesla",
     "Modell": "Model X",
     "Type": "Long Range 5-s",
@@ -936,7 +936,7 @@ var BilData = [
     "Sitteplasser": "5"
   },
   {
-    "Bilde I.D.": "",
+    "BildeID": "",
     "Merke": "Tesla",
     "Modell": "Model X",
     "Type": "Long Range 7-s",
@@ -949,7 +949,7 @@ var BilData = [
     "Sitteplasser": "7"
   },
   {
-    "Bilde I.D.": "",
+    "BildeID": "",
     "Merke": "Tesla",
     "Modell": "Model X",
     "Type": "Long Range 6-s",
@@ -962,7 +962,7 @@ var BilData = [
     "Sitteplasser": "6"
   },
   {
-    "Bilde I.D.": "",
+    "BildeID": "",
     "Merke": "Tesla",
     "Modell": "Model X",
     "Type": "Performance 5-s",
@@ -975,7 +975,7 @@ var BilData = [
     "Sitteplasser": "5"
   },
   {
-    "Bilde I.D.": "",
+    "BildeID": "",
     "Merke": "Tesla",
     "Modell": "Model X",
     "Type": "Performance 7-s",
@@ -988,7 +988,7 @@ var BilData = [
     "Sitteplasser": "7"
   },
   {
-    "Bilde I.D.": "",
+    "BildeID": "",
     "Merke": "Tesla",
     "Modell": "Model X",
     "Type": "Performance 6-s",
@@ -1001,7 +1001,7 @@ var BilData = [
     "Sitteplasser": "6"
   },
   {
-    "Bilde I.D.": "",
+    "BildeID": "",
     "Merke": "",
     "Modell": "",
     "Type": "",
@@ -1014,7 +1014,7 @@ var BilData = [
     "Sitteplasser": ""
   },
   {
-    "Bilde I.D.": "",
+    "BildeID": "",
     "Merke": "VW",
     "Modell": "eGolf",
     "Type": "35.8 kWt",
@@ -1027,7 +1027,7 @@ var BilData = [
     "Sitteplasser": "5"
   },
   {
-    "Bilde I.D.": "",
+    "BildeID": "",
     "Merke": "VW",
     "Modell": "eUP!",
     "Type": "60 kWt",

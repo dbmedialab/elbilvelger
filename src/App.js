@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+/* import logo from './logo.svg'; */
 import './App.css';
 import Car from './Car';
 import Headline from './Headline';
@@ -13,7 +13,7 @@ class App extends Component {
     return (
       <div className="App">
         <div className="App-header">
-          <h1>{HEADERTITLE}</h1>
+          <Headline>{HEADERTITLE}</Headline>
         </div>
         <FlexWrapper>
           <Car />

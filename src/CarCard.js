@@ -1,6 +1,7 @@
 import React from "react";
 import Headline from "./Headline";
 import Image from "./Image";
+
 const carWrapper = {
   border: "2px solid #fafafa",
   borderRadius: "5px"
@@ -8,7 +9,6 @@ const carWrapper = {
 
 const carHeader = {};
 
-const carDescription = {};
 class CarCard extends React.Component {
   render() {
     return (
@@ -16,9 +16,9 @@ class CarCard extends React.Component {
         <div className={carHeader}>
           <Image backgroundImage={"../img/zoey.jpg"} />
           <Headline>{this.props.Merke}</Headline>
+          <Headline>{this.props.Modell}</Headline>
         </div>
         <div />
-        <p className={carDescription}>Description henta fra json her</p>
       </div>
     );
   }

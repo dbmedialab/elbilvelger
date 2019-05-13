@@ -5,8 +5,8 @@ const FlexWrapperStyle = {
   display: 'flex',
   flexDirection: 'column',
   justifyContent: 'center',
-  padding: '.5rem',
-  margin: '2rem'
+  width: "95vw",
+  padding: '.5rem'
 };
 
 class FlexWrapper extends React.Component {

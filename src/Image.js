@@ -1,6 +1,6 @@
 import React from 'react'; 
 
-const imgUrl = "";
+const imgUrl = "../img/zoey.jpg";
 const imgStyle = {
   backgroundImage: 'url(' + 'imgURL' + ')'
 };
