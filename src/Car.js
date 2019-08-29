@@ -1,25 +1,29 @@
 import React from "react";
-import Headline from "./Headline";
-import Image from "./Image";
-import CarData from "./BilData";
 import CarCard from "./CarCard";
-
-const carWrapper = {
-  borderRadius: "5px",
-  background: "yellow",
-  margin: "0px 0px 20px 0px"
-};
-
-const carHeader = {};
-
-const carDescription = {};
+import axios from "axios";
 
 class Car extends React.Component {
+    state = {
+      elbiler: []
+  }
+
+  // Getting data from after first render
+  componentDidMount() {
+    axios.get("elbier.json")
+    .then(response => {
+        this.setState({elbiler: response.data})
+    })
+
+    .catch(error => {
+      console.log(error)
+    })
+  }
+
   render() {
-    console.log(CarData);
-    const list = CarData.map(car => <CarCard Modell={car.Merke} Merke={car.Modell} BildeID={car.BildeID}/> );
+    console.log(this.state.elbiler);
+    const list = this.state.elbiler.map(car => <CarCard Modell={car.Merke} Merke={car.Modell} BildeID={car.BildeID}/> );
     return (
-      <div style={carWrapper}>
+      <div>
         <div>{list}</div>
       </div>
     );
