@@ -13,7 +13,7 @@
     },
     
     {
-      "bildeURL": "default.jpg",
+      "bildeURL": "etron.jpg",
       "merke":"Audi",
       "modell":"e-tron",
       "type":"55 advanced plus",
@@ -27,7 +27,7 @@
     },
       
     {
-      "bildeURL": "default.jpg",
+      "bildeURL": "etron.jpg",
       "merke":"Audi",
       "modell":"e-tron",
       "type":"Exclusive",
@@ -389,7 +389,6 @@
       "sitteplasser": "5",
       "tester": ["https://www.dinside.no/motor/opel-ampera-e-innfrir-til-fulle/66931394"],
       "leverandorer":"https://www.opel.no/personbil/ampera-e/modelloversikt.html"
-      
     },
     
     {

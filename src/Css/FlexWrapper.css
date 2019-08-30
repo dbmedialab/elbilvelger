@@ -1,7 +1,27 @@
 .FlexWrapper{
     background: none;
     display: flex;
-    flexDirection: column;
-    justifyContent: center;
+    flex-direction: column;
+    justify-content: center;
     margin: .5rem;
+    padding-bottom: 3rem;
+    align-content: center;
+    align-items: center;
 }
+
+.FlexWrapper .react-reveal{
+    width: 100%;
+}
+
+@media only screen and (min-width: 600px) {
+    .FlexWrapper{
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .FlexWrapper .react-reveal{
+        width: 30vw;
+        margin: 1rem;
+    }
+  }

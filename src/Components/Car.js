@@ -4,6 +4,8 @@ import elbiler from '../elbiler.json';
 import "../Css/Footer.css";
 import TransitionGroup from 'react-transition-group/TransitionGroup';
 import Fade from 'react-reveal/Fade';
+import FlexWrapper from '../Components/FlexWrapper';
+
 
 
 class Car extends React.Component {
@@ -58,7 +60,7 @@ class Car extends React.Component {
     );
 
     return (
-      <div>
+      <FlexWrapper>
         {elBiler}
         <div className="Footer">
           <div className="Footer-inner">
@@ -67,7 +69,7 @@ class Car extends React.Component {
               <button onClick={this.reset}>Reset</button>
           </div>
         </div>
-      </div>
+      </FlexWrapper>
     );
   }
 }

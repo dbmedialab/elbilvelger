@@ -5,8 +5,7 @@ class Footer extends Component {
     render() {
         return(
             <div className="Footer">
-                <div className="Footer-inner">
-                <button onClick={this.sortByPrice}>Sort by Range</button>
+                <div className="Footer-inner">  
                 </div>
             </div>
         )

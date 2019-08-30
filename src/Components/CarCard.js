@@ -18,12 +18,12 @@ class CarCard extends React.Component {
               <span>{this.props.merke} </span>
               <span>{this.props.type}</span>
           </h2>
+          
         </div>
         <div className="cardFooter">
           <ul>
             <li><span><FaMapPin  /></span> {this.props.rekkevidde} km | {this.props.pris},-</li>
-            <li><FaBookmark /></li>
-           
+            <li><FaBookmark /></li>           
           </ul>
         </div>
       </div>
