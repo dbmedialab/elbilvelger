@@ -1,14 +1,9 @@
 import React from 'react'; 
 
-const imgUrl = "../img/zoey.jpg";
-const imgStyle = {
-  backgroundImage: 'url(' + 'imgURL' + ')'
-};
-
 class Image extends React.Component {
   render() {
     return (
-      <div style={imgStyle} >
+      <div>
          {this.props.backgroundImage}
       </div>
     );

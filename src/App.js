@@ -1,20 +1,15 @@
 import React, { Component } from 'react';
-/* import logo from './logo.svg'; */
-import './App.css';
-import Car from './Car';
-import Headline from './Headline';
-import FlexWrapper from './FlexWrapper';
+import Car from './Components/Car';
+import FlexWrapper from './Components/FlexWrapper';
+import Navbar from "./Components/Navbar";
 
-const HEADERTITLE = "Elbilvelgeren";
 
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <div className="App-header">
-          <Headline>{HEADERTITLE}</Headline>
-        </div>
+        <Navbar />
         <FlexWrapper>
           <Car />
         </FlexWrapper>
