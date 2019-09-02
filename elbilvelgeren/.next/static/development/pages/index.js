@@ -25,8 +25,7 @@ __webpack_require__.r(__webpack_exports__);
 var _elbiler_json__WEBPACK_IMPORTED_MODULE_11___namespace = /*#__PURE__*/__webpack_require__.t(/*! ../elbiler.json */ "./elbiler.json", 1);
 /* harmony import */ var react_reveal_Fade__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! react-reveal/Fade */ "./node_modules/react-reveal/Fade.js");
 /* harmony import */ var react_reveal_Fade__WEBPACK_IMPORTED_MODULE_12___default = /*#__PURE__*/__webpack_require__.n(react_reveal_Fade__WEBPACK_IMPORTED_MODULE_12__);
-/* harmony import */ var _Components_FlexWrapper__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../Components/FlexWrapper */ "./Components/FlexWrapper.js");
-/* harmony import */ var _emotion_styled__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! @emotion/styled */ "./node_modules/@emotion/styled/dist/styled.browser.esm.js");
+/* harmony import */ var _emotion_styled__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @emotion/styled */ "./node_modules/@emotion/styled/dist/styled.browser.esm.js");
 
 
 
@@ -39,8 +38,18 @@ var _elbiler_json__WEBPACK_IMPORTED_MODULE_11___namespace = /*#__PURE__*/__webpa
 var _jsxFileName = "/Users/mariusgrondahl/Documents/GitHub/elbilvelger/elbilvelgeren/Components/Car.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement;
 
+function _templateObject3() {
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_8__["default"])(["\n    background: none;\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    margin: .5rem;\n    padding-bottom: 3rem;\n    align-content: center;\n    align-items: center;\n    @media (min-width: 600px) {\n      flex-direction: row;\n      justify-content: center;\n      flex-wrap: wrap;\n    }\n\n    .react-reveal{\n      width: 100%;\n      @media (min-width: 600px) {\n        width: 30vw;\n        margin: 1rem;\n      }\n  }"]);
+
+  _templateObject3 = function _templateObject3() {
+    return data;
+  };
+
+  return data;
+}
+
 function _templateObject2() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_8__["default"])(["\n    display: flex;\n    flex-direction: row;\n    justify-content: center;\n    width: 100%;\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_8__["default"])(["\n    display: flex;\n    flex-direction: row;\n    justify-content: center;\n    width: 100%;\n    \n    button{\n      background: none; \n      border: none;\n      margin: .5rem;\n    }\n"]);
 
   _templateObject2 = function _templateObject2() {
     return data;
@@ -64,9 +73,9 @@ function _templateObject() {
 
 
 
-
-var Footer = _emotion_styled__WEBPACK_IMPORTED_MODULE_14__["default"].footer(_templateObject());
-var Footerinner = _emotion_styled__WEBPACK_IMPORTED_MODULE_14__["default"].div(_templateObject2());
+var Footer = _emotion_styled__WEBPACK_IMPORTED_MODULE_13__["default"].footer(_templateObject());
+var Footerinner = _emotion_styled__WEBPACK_IMPORTED_MODULE_13__["default"].div(_templateObject2());
+var FlexWrapper = _emotion_styled__WEBPACK_IMPORTED_MODULE_13__["default"].div(_templateObject3());
 
 var Car =
 /*#__PURE__*/
@@ -81,7 +90,7 @@ function (_React$Component) {
     _this = Object(_babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_3__["default"])(this, Object(_babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4__["default"])(Car).call(this, props));
 
     Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_7__["default"])(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_5__["default"])(_this), "sortByRange", function (index) {
-      var filterCopy = Object(_babel_runtime_corejs2_helpers_esm_toConsumableArray__WEBPACK_IMPORTED_MODULE_0__["default"])(_this.state.elbiler);
+      var filterCopy = Object(_babel_runtime_corejs2_helpers_esm_toConsumableArray__WEBPACK_IMPORTED_MODULE_0__["default"])(_this.state.elbilDefault);
 
       filterCopy.sort(function (a, b) {
         return a.rekkevidde - b.rekkevidde;
@@ -90,17 +99,19 @@ function (_React$Component) {
       _this.setState({
         elbiler: filterCopy
       });
+
+      filterCopy.reverse();
     });
 
     Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_7__["default"])(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_5__["default"])(_this), "sortByPrice", function (index) {
-      var filterCopy = Object(_babel_runtime_corejs2_helpers_esm_toConsumableArray__WEBPACK_IMPORTED_MODULE_0__["default"])(_this.state.elbiler);
+      var filterCopy = Object(_babel_runtime_corejs2_helpers_esm_toConsumableArray__WEBPACK_IMPORTED_MODULE_0__["default"])(_this.state.elbilDefault);
 
       filterCopy.sort(function (a, b) {
         return a.pris - b.pris;
       });
 
       _this.setState({
-        elbiler: filterCopy
+        elbiler: filterCopy.reverse()
       });
     });
 
@@ -115,8 +126,7 @@ function (_React$Component) {
     _this.state = {
       elbiler: _elbiler_json__WEBPACK_IMPORTED_MODULE_11__,
       elbilDefault: Object(_babel_runtime_corejs2_helpers_esm_toConsumableArray__WEBPACK_IMPORTED_MODULE_0__["default"])(_elbiler_json__WEBPACK_IMPORTED_MODULE_11__)
-    }; //this.reset = this.reset.bind(this);
-
+    };
     return _this;
   }
 
@@ -127,7 +137,7 @@ function (_React$Component) {
         return __jsx(react_reveal_Fade__WEBPACK_IMPORTED_MODULE_12___default.a, {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 65
+            lineNumber: 93
           },
           __self: this
         }, __jsx(_Components_CarCard__WEBPACK_IMPORTED_MODULE_10__["default"], {
@@ -139,51 +149,51 @@ function (_React$Component) {
           type: elbil.type,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 66
+            lineNumber: 94
           },
           __self: this
         }));
       });
-      return __jsx(_Components_FlexWrapper__WEBPACK_IMPORTED_MODULE_13__["default"], {
+      return __jsx(FlexWrapper, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 78
+          lineNumber: 106
         },
         __self: this
       }, elBiler, __jsx(Footer, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 80
+          lineNumber: 108
         },
         __self: this
       }, __jsx(Footerinner, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 81
+          lineNumber: 109
         },
         __self: this
       }, __jsx("button", {
         onClick: this.sortByRange,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 82
+          lineNumber: 110
         },
         __self: this
-      }, "Sort by Range"), __jsx("button", {
+      }, "Rekkevidde"), __jsx("button", {
         onClick: this.sortByPrice,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 83
+          lineNumber: 111
         },
         __self: this
-      }, "Sort by Price"), __jsx("button", {
+      }, "Pris"), __jsx("button", {
         onClick: this.reset,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 84
+          lineNumber: 112
         },
         __self: this
-      }, "Reset"))));
+      }, "Tilbakestill"))));
     }
   }]);
 
@@ -223,7 +233,7 @@ var _jsxFileName = "/Users/mariusgrondahl/Documents/GitHub/elbilvelger/elbilvelg
 var __jsx = react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement;
 
 function _templateObject() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  display: flex;\n  flex-direction: column;\n  justify-content: flex-end;\n  background-size: cover;\n  background-position: center center;\n  background-image: url(/static/img/", ");\n  padding: 0;\n  margin-bottom: 1.3rem;\n  height: 35vh;\n  color: #fff;   \n\n    .imgTitle{\n      position: relative;\n      color: #fff;\n      background: linear-gradient(to top, rgba(0,0,0,0.8) 0%,rgba(0,0,0,0) 100%);\n      width: auto;\n      bottom: 0;\n      font-weigth: bold;\n      padding: 2rem 0 .7rem 0rem;\n      font-size: 1.4rem;\n      text-align: center;\n      text-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2);\n    }\n  \n    ul {\n      width: 100%;\n      list-style: none;\n      display: flex;\n      flex-direction: row;\n      justify-content: space-between;\n      margin: 0 ;\n      padding: 0;\n   }\n  \n    ul li{\n      margin: 1rem;\n    }\n  \n    .cardFooter{\n      position: relative;\n      display: flex;\n      flex-direction: row;\n      padding: .5rem;\n\n      background: rgba(0,0,0,0.8);\n      color: #fff;\n      border-bottom-left-radius: 5px;\n      border-bottom-right-radius: 5px;\n    }\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  display: flex;\n  flex-direction: column;\n  justify-content: flex-end;\n  background-size: cover;\n  background-position: center center;\n  background-image: url(/static/img/", ");\n  padding: 0;\n  margin-bottom: 1.3rem;\n  height: 35vh;\n  color: #fff;  \n  border-bottom-left-radius: 5px;\n  border-bottom-right-radius: 5px; \n\n    .imgTitle{\n      position: relative;\n      color: #fff;\n      background: linear-gradient(to top, rgba(0,0,0,0.8) 0%,rgba(0,0,0,0) 100%);\n      width: auto;\n      bottom: 0;\n      font-weigth: bold;\n      padding: 2rem 0 .7rem 0rem;\n      font-size: 1.4rem;\n      text-align: center;\n      font-weight: bold;\n      text-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2);\n    }\n  \n    ul {\n      width: 100%;\n      list-style: none;\n      display: flex;\n      flex-direction: row;\n      justify-content: space-between;\n      margin: 0 ;\n      padding: 0;\n   }\n  \n    ul li{\n      margin: 1rem;\n    }\n  \n    .cardFooter{\n      position: relative;\n      display: flex;\n      flex-direction: row;\n      padding: .5rem;\n      background: rgba(0,0,0,0.8);\n      color: #fff;\n      border-bottom-left-radius: 5px;\n      border-bottom-right-radius: 5px;\n    }\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -254,75 +264,75 @@ function (_Component) {
       return __jsx(CardWrapper, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 64
+          lineNumber: 63
         },
         __self: this
       }, __jsx("div", {
         className: "imgTitle",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 66
+          lineNumber: 65
         },
         __self: this
       }, __jsx("span", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 67
+          lineNumber: 66
         },
         __self: this
       }, this.props.modell, " "), __jsx("span", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 68
+          lineNumber: 67
         },
         __self: this
       }, this.props.merke, " "), __jsx("span", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 69
+          lineNumber: 68
         },
         __self: this
       }, this.props.type)), __jsx("div", {
         className: "cardFooter",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 72
+          lineNumber: 71
         },
         __self: this
       }, __jsx("ul", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 73
+          lineNumber: 72
         },
         __self: this
       }, __jsx("li", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 74
+          lineNumber: 73
         },
         __self: this
       }, __jsx("span", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 74
+          lineNumber: 73
         },
         __self: this
       }, __jsx(react_icons_fa__WEBPACK_IMPORTED_MODULE_7__["FaMapPin"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 74
+          lineNumber: 73
         },
         __self: this
       })), " ", this.props.rekkevidde, " km | ", this.props.pris, ",-"), __jsx("li", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 75
+          lineNumber: 74
         },
         __self: this
       }, __jsx(react_icons_fa__WEBPACK_IMPORTED_MODULE_7__["FaBookmark"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 75
+          lineNumber: 74
         },
         __self: this
       })))));
@@ -333,63 +343,6 @@ function (_Component) {
 }(react__WEBPACK_IMPORTED_MODULE_6__["Component"]);
 
 /* harmony default export */ __webpack_exports__["default"] = (CarCard);
-
-/***/ }),
-
-/***/ "./Components/FlexWrapper.js":
-/*!***********************************!*\
-  !*** ./Components/FlexWrapper.js ***!
-  \***********************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/classCallCheck */ "./node_modules/@babel/runtime-corejs2/helpers/esm/classCallCheck.js");
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/createClass */ "./node_modules/@babel/runtime-corejs2/helpers/esm/createClass.js");
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/possibleConstructorReturn */ "./node_modules/@babel/runtime-corejs2/helpers/esm/possibleConstructorReturn.js");
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/getPrototypeOf */ "./node_modules/@babel/runtime-corejs2/helpers/esm/getPrototypeOf.js");
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/inherits */ "./node_modules/@babel/runtime-corejs2/helpers/esm/inherits.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_5__);
-
-
-
-
-
-var _jsxFileName = "/Users/mariusgrondahl/Documents/GitHub/elbilvelger/elbilvelgeren/Components/FlexWrapper.js";
-var __jsx = react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement;
-
-
-var FlexWrapper =
-/*#__PURE__*/
-function (_React$Component) {
-  Object(_babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_4__["default"])(FlexWrapper, _React$Component);
-
-  function FlexWrapper() {
-    Object(_babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_0__["default"])(this, FlexWrapper);
-
-    return Object(_babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__["default"])(this, Object(_babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__["default"])(FlexWrapper).apply(this, arguments));
-  }
-
-  Object(_babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_1__["default"])(FlexWrapper, [{
-    key: "render",
-    value: function render() {
-      return __jsx("div", {
-        className: "FlexWrapper",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 7
-        },
-        __self: this
-      }, this.props.children);
-    }
-  }]);
-
-  return FlexWrapper;
-}(react__WEBPACK_IMPORTED_MODULE_5___default.a.Component);
-
-/* harmony default export */ __webpack_exports__["default"] = (FlexWrapper);
 
 /***/ }),
 
@@ -488,7 +441,7 @@ function (_Component) {
 /*! exports provided: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, default */
 /***/ (function(module) {
 
-module.exports = JSON.parse("[{\"id\":1,\"bildeURL\":\"etron.jpg\",\"merke\":\"Audi\",\"modell\":\"e-tron\",\"type\":\"55\",\"rekkevidde\":\"415\",\"pris\":\"652 061\",\"storelse\":\"Stor\",\"sitteplasser\":\"5\",\"tester\":[\"https://www.dinside.no/motor/derfor-gir-vi-elbilen-til-audi-terningkast-seks/70709759\"],\"leverandorer\":\"https://www.audi.no/no/web/no/bilmodeller/audi-tron/audi-e-tron.html\"},{\"id\":2,\"bildeURL\":\"etron.jpg\",\"merke\":\"Audi\",\"modell\":\"e-tron\",\"type\":\"55 advanced plus\",\"rekkevidde\":\"415\",\"pris\":\"739 580\",\"storelse\":\"Stor\",\"sitteplasser\":\"5\",\"tester\":[\"https://www.dinside.no/motor/derfor-gir-vi-elbilen-til-audi-terningkast-seks/70709759\"],\"leverandorer\":\"https://www.audi.no/no/web/no/bilmodeller/audi-tron/audi-e-tron.html\"},{\"id\":3,\"bildeURL\":\"etron.jpg\",\"merke\":\"Audi\",\"modell\":\"e-tron\",\"type\":\"Exclusive\",\"rekkevidde\":\"415\",\"pris\":\"821 900\",\"storelse\":\"Stor\",\"sitteplasser\":\"5\",\"tester\":[\"https://www.dinside.no/motor/derfor-gir-vi-elbilen-til-audi-terningkast-seks/70709759\"],\"leverandorer\":\"https://www.audi.no/no/web/no/bilmodeller/audi-tron/audi-e-tron.html\"},{\"id\":4,\"bildeURL\":\"default.jpg\",\"merke\":\"BMW\",\"modell\":\"i3\",\"type\":\"120Ah\",\"rekkevidde\":\"310\",\"pris\":\"309000\",\"storelse\":\"Liten\",\"sitteplasser\":\"4\",\"tester\":[\"https://www.dinside.no/motor/norges-favoritten-far-lengre-rekkevidde/70261709\"],\"leverandorer\":\"https://www.bmw.no/no/ssl/configurator.html#/8P21/FBHGI,S0230,S02D6,S02VB,S02VC,S0428,S0494,S04EX,S04T9,S04U6,S04U7,S0548,S0570,S05DA,S0654,S06AC,S06AE,S06AK,S06AP,S0853,S0885,S08R9,S08SM,S08TG,S0993,S09AA/I01/esl/new/\"},{\"id\":5,\"bildeURL\":\"default.jpg\",\"merke\":\"BMW\",\"modell\":\"i3\",\"type\":\"120Ah Charged\",\"rekkevidde\":\"310\",\"pris\":\"318900\",\"storelse\":\"Liten\",\"sitteplasser\":\"4\",\"tester\":[\"https://www.dinside.no/motor/norges-favoritten-far-lengre-rekkevidde/70261709\"],\"leverandorer\":\"https://www.bmw.no/no/ssl/configurator.html#/8P21/FBHGI,S0230,S02D6,S02VB,S02VC,S0428,S0494,S04EX,S04T9,S04U6,S04U7,S0548,S0570,S05DA,S0654,S06AC,S06AE,S06AK,S06AP,S0853,S0885,S08R9,S08SM,S08TG,S0993,S09AA/I01/esl/new/\"},{\"id\":6,\"bildeURL\":\"default.jpg\",\"merke\":\"BMW\",\"modell\":\"i3\",\"type\":\"120Ah Charged +\",\"rekkevidde\":\"310\",\"pris\":\"338900\",\"storelse\":\"Liten\",\"sitteplasser\":\"4\",\"tester\":[\"https://www.dinside.no/motor/norges-favoritten-far-lengre-rekkevidde/70261709\"],\"leverandorer\":\"https://www.bmw.no/no/ssl/configurator.html#/8P21/FBHGI,S0230,S02D6,S02VB,S02VC,S0428,S0494,S04EX,S04T9,S04U6,S04U7,S0548,S0570,S05DA,S0654,S06AC,S06AE,S06AK,S06AP,S0853,S0885,S08R9,S08SM,S08TG,S0993,S09AA/I01/esl/new/\"},{\"id\":7,\"bildeURL\":\"default.jpg\",\"merke\":\"BMW\",\"modell\":\"i3\",\"type\":\"120Ah fully Charged\",\"rekkevidde\":\"310\",\"pris\":\"368900\",\"storelse\":\"Liten\",\"sitteplasser\":\"4\",\"tester\":[\"https://www.dinside.no/motor/norges-favoritten-far-lengre-rekkevidde/70261709\"],\"leverandorer\":\"https://www.bmw.no/no/ssl/configurator.html#/8P21/FBHGI,S0230,S02D6,S02VB,S02VC,S0428,S0494,S04EX,S04T9,S04U6,S04U7,S0548,S0570,S05DA,S0654,S06AC,S06AE,S06AK,S06AP,S0853,S0885,S08R9,S08SM,S08TG,S0993,S09AA/I01/esl/new/\"},{\"id\":8,\"bildeURL\":\"default.jpg\",\"merke\":\"Citroen\",\"modell\":\"E-Berlingo\",\"type\":\"Multispace\",\"rekkevidde\":\"170\",\"pris\":\"227500\",\"storelse\":\"Mellom\",\"sitteplasser\":\"2\",\"tester\":[\"https://www.dinside.no/motor/psa-tar-alle-pa-senga-med-to-nye-elbiler/69199883\"],\"leverandorer\":\"https://www.citroen.no/modeller/citroen/berlingo-electric-multispace.html\"},{\"id\":9,\"bildeURL\":\"default.jpg\",\"merke\":\"Citroen\",\"modell\":\"C-Zero\",\"type\":\"Feel\",\"rekkevidde\":\"150\",\"pris\":\"144380\",\"storelse\":\"Liten\",\"sitteplasser\":\"4\",\"tester\":[\"https://www.dinside.no/motor/test-elbil-som-duger/61639141\"],\"leverandorer\":\"https://www.citroen.no/biler/citroen/c-zero.html\"},{\"id\":10,\"bildeURL\":\"default.jpg\",\"merke\":\"Hyundai\",\"modell\":\"Ioniq\",\"type\":\"EV\",\"rekkevidde\":\"280\",\"pris\":\"244000\",\"storelse\":\"Mellom\",\"sitteplasser\":\"5\",\"tester\":[\"https://www.dinside.no/motor/test-hyundai-ioniq---svaert-attraktiv-elbil/60948143\"],\"leverandorer\":\"https://www.hyundai.no/modeller/ioniq-electric/\"},{\"id\":11,\"bildeURL\":\"default.jpg\",\"merke\":\"Hyundai\",\"modell\":\"Ioniq\",\"type\":\"Teknikk\",\"rekkevidde\":\"280\",\"pris\":\"269000\",\"storelse\":\"Mellom\",\"sitteplasser\":\"5\",\"tester\":[\"https://www.dinside.no/motor/test-hyundai-ioniq---svaert-attraktiv-elbil/60948143\"],\"leverandorer\":\"https://www.hyundai.no/modeller/ioniq-electric/\"},{\"id\":12,\"bildeURL\":\"default.jpg\",\"merke\":\"Hyundai\",\"modell\":\"Kona Electric\",\"type\":\"Teknikk\",\"rekkevidde\":\"449\",\"pris\":\"325000\",\"storelse\":\"Mellom\",\"sitteplasser\":\"5\",\"tester\":[\"https://www.dinside.no/motor/vi-har-kjort-nissan-leafs-sterkeste-konkurrent/70039730\"],\"leverandorer\":\"https://www.hyundai.no/modeller/kona-electric/\"},{\"id\":13,\"bildeURL\":\"default.jpg\",\"merke\":\"DS\",\"modell\":\"3 Crossback E-Tense\",\"type\":\"136 So Chic\",\"rekkevidde\":\"300\",\"pris\":\"319 900\",\"storelse\":\"Liten\",\"sitteplasser\":\"5\",\"tester\":[\"https://www.dinside.no/motor/norges-forste-test-av-elektrisk-suv-fra-ds/70865528\"],\"leverandorer\":\"https://www.dsautomobiles.no/elbil-hybrid/elbiler.html\"},{\"id\":14,\"bildeURL\":\"default.jpg\",\"merke\":\"DS\",\"modell\":\"3 Crossback E-Tense\",\"type\":\"136 Grand Chic\",\"rekkevidde\":\"300\",\"pris\":\"349900\",\"storelse\":\"Liten\",\"sitteplasser\":\"5\",\"tester\":[\"https://www.dinside.no/motor/norges-forste-test-av-elektrisk-suv-fra-ds/70865528\"],\"leverandorer\":\"https://www.dsautomobiles.no/elbil-hybrid/elbiler.html\"},{\"id\":15,\"bildeURL\":\"default.jpg\",\"merke\":\"Kia\",\"modell\":\"E-Niro\",\"type\":\"First Edition\",\"rekkevidde\":\"485\",\"pris\":\"370600\",\"storelse\":\"Mellom\",\"sitteplasser\":\"5\",\"tester\":[\"https://www.dinside.no/motor/vi-har-testet-elbilen-6000-nordmenn-star-i-ko-for-her-er-var-dom/70531310\"],\"leverandorer\":\"https://www.kia.com/no/modeller/e-niro/opplev-e-Niro/\"},{\"id\":16,\"bildeURL\":\"default.jpg\",\"merke\":\"Kia\",\"modell\":\"E-Soul\",\"type\":\"Classic\",\"rekkevidde\":\"250\",\"pris\":\"228100\",\"storelse\":\"Mellom\",\"sitteplasser\":\"5\",\"tester\":[\"https://www.elbil24.no/tester/denne-gir-mest-elbil-for-penga/70747144\"],\"leverandorer\":\"https://www.kia.com/no/modeller/e-soul/opplev-e-soul/\"},{\"id\":17,\"bildeURL\":\"default.jpg\",\"merke\":\"Kia\",\"modell\":\"E-Soul\",\"type\":\"Active\",\"rekkevidde\":\"250\",\"pris\":\"228100\",\"storelse\":\"Mellom\",\"sitteplasser\":\"5\",\"tester\":[\"https://www.elbil24.no/tester/denne-gir-mest-elbil-for-penga/70747144\"],\"leverandorer\":\"https://www.kia.com/no/modeller/e-soul/opplev-e-soul/\"},{\"id\":18,\"bildeURL\":\"default.jpg\",\"merke\":\"Kia\",\"modell\":\"E-Soul\",\"type\":\"Exclusive\",\"rekkevidde\":\"250\",\"pris\":\"265100\",\"storelse\":\"Mellom\",\"sitteplasser\":\"5\",\"tester\":[\"https://www.elbil24.no/tester/denne-gir-mest-elbil-for-penga/70747144\"],\"leverandorer\":\"https://www.kia.com/no/modeller/e-soul/opplev-e-soul/\"},{\"id\":19,\"bildeURL\":\"default.jpg\",\"merke\":\"Mitsubishi\",\"modell\":\"i-Miev\",\"type\":\"16 kWh\",\"rekkevidde\":\"105\",\"pris\":\"149900\",\"storelse\":\"Liten\",\"sitteplasser\":\"4\",\"tester\":[\"https://www.dinside.no/motor/testkjort-mitsubishi-i-miev-klar-for-kundene/61732696\"],\"leverandorer\":\"https://www.mitsubishi-motors.no/biler/imiev\"},{\"id\":20,\"bildeURL\":\"default.jpg\",\"merke\":\"Nissan\",\"modell\":\"Leaf\",\"type\":\"40kWh Acenta\",\"rekkevidde\":\"270\",\"pris\":\"278000\",\"storelse\":\"Mellom\",\"sitteplasser\":\"5\",\"tester\":[\"https://www.dinside.no/motor/kommer-til-kort-i-kulda/69570276\"],\"leverandorer\":\"https://www.nissan.no/biler/nye-biler/leaf.html\"},{\"id\":21,\"bildeURL\":\"default.jpg\",\"merke\":\"Nissan\",\"modell\":\"Leaf\",\"type\":\"40kWh N-Conneca\",\"rekkevidde\":\"270\",\"pris\":\"294500\",\"storelse\":\"Mellom\",\"sitteplasser\":\"5\",\"tester\":[\"https://www.dinside.no/motor/kommer-til-kort-i-kulda/69570276\"],\"leverandorer\":\"https://www.nissan.no/biler/nye-biler/leaf.html\"},{\"id\":22,\"bildeURL\":\"default.jpg\",\"merke\":\"Nissan\",\"modell\":\"Leaf\",\"type\":\"40kWh Tekna\",\"rekkevidde\":\"270\",\"pris\":\"307500\",\"storelse\":\"Mellom\",\"sitteplasser\":\"5\",\"tester\":[\"https://www.dinside.no/motor/kommer-til-kort-i-kulda/69570276\"],\"leverandorer\":\"https://www.nissan.no/biler/nye-biler/leaf.html\"},{\"id\":23,\"bildeURL\":\"default.jpg\",\"merke\":\"Nissan\",\"modell\":\"Leaf\",\"type\":\"62kWh e+ N-Conneca\",\"rekkevidde\":\"385\",\"pris\":\"346800\",\"storelse\":\"Mellom\",\"sitteplasser\":\"5\",\"tester\":[\"https://www.elbil24.no/tester/okt-rekkevidde-men-hva-med-resten/71082650\"],\"leverandorer\":\"https://www.nissan.no/biler/nye-biler/leaf.html\"},{\"id\":24,\"bildeURL\":\"default.jpg\",\"merke\":\"Nissan\",\"modell\":\"Leaf\",\"type\":\"62 kWh e+ Tekna\",\"rekkevidde\":\"385\",\"pris\":\"375000\",\"storelse\":\"Mellom\",\"sitteplasser\":\"5\",\"tester\":[\"https://www.elbil24.no/tester/okt-rekkevidde-men-hva-med-resten/71082650\"],\"leverandorer\":\"https://www.nissan.no/biler/nye-biler/leaf.html\"},{\"id\":25,\"bildeURL\":\"default.jpg\",\"merke\":\"Nissan\",\"modell\":\"E-NV200\",\"type\":\"Evalia 40 kWt 5-s\",\"rekkevidde\":\"200\",\"pris\":\"322840\",\"storelse\":\"Stor\",\"sitteplasser\":\"5\",\"tester\":[\"https://www.dinside.no/motor/nissan-e-nv200-provekjort/61216187\"],\"leverandorer\":\"https://www.nissan.no/biler/nye-biler/e-nv200-evalia.html\"},{\"id\":26,\"bildeURL\":\"default.jpg\",\"merke\":\"Nissan\",\"modell\":\"E-NV200\",\"type\":\"Evalia 40 kWt 7-s\",\"rekkevidde\":\"200\",\"pris\":\"334840\",\"storelse\":\"Stor\",\"sitteplasser\":\"7\",\"tester\":[\"https://www.dinside.no/motor/nissan-e-nv200-provekjort/61216187\"],\"leverandorer\":\"https://www.nissan.no/biler/nye-biler/e-nv200-evalia.html\"},{\"id\":27,\"bildeURL\":\"default.jpg\",\"merke\":\"Nissan\",\"modell\":\"E-NV200\",\"type\":\"Comfort Plus 40 kWt\",\"rekkevidde\":\"200\",\"pris\":\"288990\",\"storelse\":\"Stor\",\"sitteplasser\":\"2\",\"tester\":[\"https://www.dinside.no/motor/nissan-e-nv200-provekjort/61216187\"],\"leverandorer\":\"https://www.nissan.no/biler/nye-biler/e-nv200-evalia.html\"},{\"id\":28,\"bildeURL\":\"default.jpg\",\"merke\":\"Nissan\",\"modell\":\"E-NV200\",\"type\":\"Premium 40 kWt\",\"rekkevidde\":\"200\",\"pris\":\"305990\",\"storelse\":\"Stor\",\"sitteplasser\":\"2\",\"tester\":[\"https://www.dinside.no/motor/nissan-e-nv200-provekjort/61216187\"],\"leverandorer\":\"https://www.nissan.no/biler/nye-biler/e-nv200-evalia.html\"},{\"id\":29,\"bildeURL\":\"default.jpg\",\"merke\":\"Opel\",\"modell\":\"Ampera-E\",\"type\":\"Premium\",\"rekkevidde\":\"423\",\"pris\":\"359900\",\"storelse\":\"Mellom\",\"sitteplasser\":\"5\",\"tester\":[\"https://www.dinside.no/motor/opel-ampera-e-innfrir-til-fulle/66931394\"],\"leverandorer\":\"https://www.opel.no/personbil/ampera-e/modelloversikt.html\"},{\"id\":30,\"bildeURL\":\"default.jpg\",\"merke\":\"Peugeot\",\"modell\":\"iOn\",\"type\":\"Active\",\"rekkevidde\":\"150\",\"pris\":\"163600\",\"storelse\":\"Liten\",\"sitteplasser\":\"4\",\"tester\":[\"https://www.dinside.no/motor/test-elbil-som-duger/61639141\"],\"leverandorer\":\"https://www.peugeot.no/modell/peugeot-modeller/ion.html\"},{\"id\":31,\"bildeURL\":\"default.jpg\",\"merke\":\"Peugeot\",\"modell\":\"e-Partner Tepee\",\"rekkevidde\":\"170\",\"pris\":\"192000\",\"storelse\":\"Mellom\",\"sitteplasser\":\"3\",\"tester\":[\"https://www.dinside.no/motor/psa-tar-alle-pa-senga-med-to-nye-elbiler/69199883\"],\"leverandorer\":\"https://www.peugeot.no/modell/peugeot-modeller/partner-tepee-electric.html\"},{\"id\":32,\"bildeURL\":\"default.jpg\",\"merke\":\"Renault\",\"modell\":\"Kangoo Electric\",\"type\":\"5-seter\",\"rekkevidde\":\"270\",\"pris\":\"268400\",\"storelse\":\"Mellom\",\"sitteplasser\":\"5\",\"tester\":[\"https://www.dinside.no/motor/billigere-renault-kangoo-ze/61290789\"],\"leverandorer\":\"https://renault.no/elbil/kangoo-maxi-ze-personbil\"},{\"id\":33,\"bildeURL\":\"default.jpg\",\"merke\":\"Renault\",\"modell\":\"Twizy\",\"type\":\"Intens\",\"rekkevidde\":\"90\",\"pris\":\"93000\",\"storelse\":\"Liten\",\"sitteplasser\":\"2\",\"tester\":[\"https://www.dinside.no/motor/renault-twizy-vintertestes/61501189\"],\"leverandorer\":\"https://renault.no/elbil/twizy\"},{\"id\":34,\"bildeURL\":\"default.jpg\",\"merke\":\"Renault\",\"modell\":\"Zoe\",\"type\":\"Z.E 40 R90 Life\",\"rekkevidde\":\"400\",\"pris\":\"245000\",\"storelse\":\"Mellom\",\"sitteplasser\":\"5\",\"tester\":[\"https://www.dinside.no/motor/zoe-i-strupen-pa-konkurrentene/63605077\"],\"leverandorer\":\"https://renault.no/elbil/zoe\"},{\"id\":35,\"bildeURL\":\"default.jpg\",\"merke\":\"Renault\",\"modell\":\"Zoe\",\"type\":\"Z.E 40 R110 Intens\",\"rekkevidde\":\"400\",\"pris\":\"270000\",\"storelse\":\"Mellom\",\"sitteplasser\":\"5\",\"tester\":[\"https://www.dinside.no/motor/zoe-i-strupen-pa-konkurrentene/63605077\"],\"leverandorer\":\"https://renault.no/elbil/zoe\"},{\"id\":36,\"bildeURL\":\"default.jpg\",\"merke\":\"VW\",\"modell\":\"Golf\",\"rekkevidde\":\"229\",\"pris\":\"326200\",\"storelse\":\"Mellom\",\"sitteplasser\":\"5\",\"tester\":[\"https://www.dinside.no/motor/endelig-med-bedre-rekkevidde/67454759\"],\"leverandorer\":\"https://www.volkswagen.no/no/biler/e-golf-elbil.html\"},{\"id\":37,\"bildeURL\":\"default.jpg\",\"merke\":\"VW\",\"modell\":\"UP!\",\"rekkevidde\":\"133\",\"pris\":\"211300\",\"storelse\":\"Liten\",\"sitteplasser\":\"4\",\"tester\":[\"https://www.dinside.no/motor/vi-sparte-200-kroner-dagen-med-elbil/61244198\"],\"leverandorer\":\"https://www.volkswagen.no/no/biler/e-up-elbil.html\"}]");
+module.exports = JSON.parse("[{\"id\":1,\"bildeURL\":\"etron.jpg\",\"merke\":\"Audi\",\"modell\":\"e-tron\",\"type\":\"55\",\"rekkevidde\":415,\"pris\":652061,\"storelse\":\"Stor\",\"sitteplasser\":\"5\",\"tester\":[\"https://www.dinside.no/motor/derfor-gir-vi-elbilen-til-audi-terningkast-seks/70709759\"],\"leverandorer\":\"https://www.audi.no/no/web/no/bilmodeller/audi-tron/audi-e-tron.html\"},{\"id\":2,\"bildeURL\":\"etron.jpg\",\"merke\":\"Audi\",\"modell\":\"e-tron\",\"type\":\"55 advanced plus\",\"rekkevidde\":415,\"pris\":739580,\"storelse\":\"Stor\",\"sitteplasser\":\"5\",\"tester\":[\"https://www.dinside.no/motor/derfor-gir-vi-elbilen-til-audi-terningkast-seks/70709759\"],\"leverandorer\":\"https://www.audi.no/no/web/no/bilmodeller/audi-tron/audi-e-tron.html\"},{\"id\":3,\"bildeURL\":\"etron.jpg\",\"merke\":\"Audi\",\"modell\":\"e-tron\",\"type\":\"Exclusive\",\"rekkevidde\":415,\"pris\":821900,\"storelse\":\"Stor\",\"sitteplasser\":\"5\",\"tester\":[\"https://www.dinside.no/motor/derfor-gir-vi-elbilen-til-audi-terningkast-seks/70709759\"],\"leverandorer\":\"https://www.audi.no/no/web/no/bilmodeller/audi-tron/audi-e-tron.html\"},{\"id\":4,\"bildeURL\":\"default.jpg\",\"merke\":\"BMW\",\"modell\":\"i3\",\"type\":\"120Ah\",\"rekkevidde\":310,\"pris\":309000,\"storelse\":\"Liten\",\"sitteplasser\":\"4\",\"tester\":[\"https://www.dinside.no/motor/norges-favoritten-far-lengre-rekkevidde/70261709\"],\"leverandorer\":\"https://www.bmw.no/no/ssl/configurator.html#/8P21/FBHGI,S0230,S02D6,S02VB,S02VC,S0428,S0494,S04EX,S04T9,S04U6,S04U7,S0548,S0570,S05DA,S0654,S06AC,S06AE,S06AK,S06AP,S0853,S0885,S08R9,S08SM,S08TG,S0993,S09AA/I01/esl/new/\"},{\"id\":5,\"bildeURL\":\"default.jpg\",\"merke\":\"BMW\",\"modell\":\"i3\",\"type\":\"120Ah Charged\",\"rekkevidde\":310,\"pris\":318900,\"storelse\":\"Liten\",\"sitteplasser\":\"4\",\"tester\":[\"https://www.dinside.no/motor/norges-favoritten-far-lengre-rekkevidde/70261709\"],\"leverandorer\":\"https://www.bmw.no/no/ssl/configurator.html#/8P21/FBHGI,S0230,S02D6,S02VB,S02VC,S0428,S0494,S04EX,S04T9,S04U6,S04U7,S0548,S0570,S05DA,S0654,S06AC,S06AE,S06AK,S06AP,S0853,S0885,S08R9,S08SM,S08TG,S0993,S09AA/I01/esl/new/\"},{\"id\":6,\"bildeURL\":\"default.jpg\",\"merke\":\"BMW\",\"modell\":\"i3\",\"type\":\"120Ah Charged +\",\"rekkevidde\":310,\"pris\":338900,\"storelse\":\"Liten\",\"sitteplasser\":\"4\",\"tester\":[\"https://www.dinside.no/motor/norges-favoritten-far-lengre-rekkevidde/70261709\"],\"leverandorer\":\"https://www.bmw.no/no/ssl/configurator.html#/8P21/FBHGI,S0230,S02D6,S02VB,S02VC,S0428,S0494,S04EX,S04T9,S04U6,S04U7,S0548,S0570,S05DA,S0654,S06AC,S06AE,S06AK,S06AP,S0853,S0885,S08R9,S08SM,S08TG,S0993,S09AA/I01/esl/new/\"},{\"id\":7,\"bildeURL\":\"default.jpg\",\"merke\":\"BMW\",\"modell\":\"i3\",\"type\":\"120Ah fully Charged\",\"rekkevidde\":310,\"pris\":368900,\"storelse\":\"Liten\",\"sitteplasser\":\"4\",\"tester\":[\"https://www.dinside.no/motor/norges-favoritten-far-lengre-rekkevidde/70261709\"],\"leverandorer\":\"https://www.bmw.no/no/ssl/configurator.html#/8P21/FBHGI,S0230,S02D6,S02VB,S02VC,S0428,S0494,S04EX,S04T9,S04U6,S04U7,S0548,S0570,S05DA,S0654,S06AC,S06AE,S06AK,S06AP,S0853,S0885,S08R9,S08SM,S08TG,S0993,S09AA/I01/esl/new/\"},{\"id\":8,\"bildeURL\":\"default.jpg\",\"merke\":\"Citroen\",\"modell\":\"E-Berlingo\",\"type\":\"Multispace\",\"rekkevidde\":170,\"pris\":227500,\"storelse\":\"Mellom\",\"sitteplasser\":\"2\",\"tester\":[\"https://www.dinside.no/motor/psa-tar-alle-pa-senga-med-to-nye-elbiler/69199883\"],\"leverandorer\":\"https://www.citroen.no/modeller/citroen/berlingo-electric-multispace.html\"},{\"id\":9,\"bildeURL\":\"default.jpg\",\"merke\":\"Citroen\",\"modell\":\"C-Zero\",\"type\":\"Feel\",\"rekkevidde\":150,\"pris\":144380,\"storelse\":\"Liten\",\"sitteplasser\":\"4\",\"tester\":[\"https://www.dinside.no/motor/test-elbil-som-duger/61639141\"],\"leverandorer\":\"https://www.citroen.no/biler/citroen/c-zero.html\"},{\"id\":10,\"bildeURL\":\"default.jpg\",\"merke\":\"Hyundai\",\"modell\":\"Ioniq\",\"type\":\"EV\",\"rekkevidde\":280,\"pris\":244000,\"storelse\":\"Mellom\",\"sitteplasser\":\"5\",\"tester\":[\"https://www.dinside.no/motor/test-hyundai-ioniq---svaert-attraktiv-elbil/60948143\"],\"leverandorer\":\"https://www.hyundai.no/modeller/ioniq-electric/\"},{\"id\":11,\"bildeURL\":\"default.jpg\",\"merke\":\"Hyundai\",\"modell\":\"Ioniq\",\"type\":\"Teknikk\",\"rekkevidde\":280,\"pris\":269000,\"storelse\":\"Mellom\",\"sitteplasser\":\"5\",\"tester\":[\"https://www.dinside.no/motor/test-hyundai-ioniq---svaert-attraktiv-elbil/60948143\"],\"leverandorer\":\"https://www.hyundai.no/modeller/ioniq-electric/\"},{\"id\":12,\"bildeURL\":\"default.jpg\",\"merke\":\"Hyundai\",\"modell\":\"Kona Electric\",\"type\":\"Teknikk\",\"rekkevidde\":449,\"pris\":325000,\"storelse\":\"Mellom\",\"sitteplasser\":\"5\",\"tester\":[\"https://www.dinside.no/motor/vi-har-kjort-nissan-leafs-sterkeste-konkurrent/70039730\"],\"leverandorer\":\"https://www.hyundai.no/modeller/kona-electric/\"},{\"id\":13,\"bildeURL\":\"default.jpg\",\"merke\":\"DS\",\"modell\":\"3 Crossback E-Tense\",\"type\":\"136 So Chic\",\"rekkevidde\":300,\"pris\":319900,\"storelse\":\"Liten\",\"sitteplasser\":\"5\",\"tester\":[\"https://www.dinside.no/motor/norges-forste-test-av-elektrisk-suv-fra-ds/70865528\"],\"leverandorer\":\"https://www.dsautomobiles.no/elbil-hybrid/elbiler.html\"},{\"id\":14,\"bildeURL\":\"default.jpg\",\"merke\":\"DS\",\"modell\":\"3 Crossback E-Tense\",\"type\":\"136 Grand Chic\",\"rekkevidde\":300,\"pris\":349900,\"storelse\":\"Liten\",\"sitteplasser\":\"5\",\"tester\":[\"https://www.dinside.no/motor/norges-forste-test-av-elektrisk-suv-fra-ds/70865528\"],\"leverandorer\":\"https://www.dsautomobiles.no/elbil-hybrid/elbiler.html\"},{\"id\":15,\"bildeURL\":\"default.jpg\",\"merke\":\"Kia\",\"modell\":\"E-Niro\",\"type\":\"First Edition\",\"rekkevidde\":485,\"pris\":370600,\"storelse\":\"Mellom\",\"sitteplasser\":\"5\",\"tester\":[\"https://www.dinside.no/motor/vi-har-testet-elbilen-6000-nordmenn-star-i-ko-for-her-er-var-dom/70531310\"],\"leverandorer\":\"https://www.kia.com/no/modeller/e-niro/opplev-e-Niro/\"},{\"id\":16,\"bildeURL\":\"default.jpg\",\"merke\":\"Kia\",\"modell\":\"E-Soul\",\"type\":\"Classic\",\"rekkevidde\":250,\"pris\":228100,\"storelse\":\"Mellom\",\"sitteplasser\":\"5\",\"tester\":[\"https://www.elbil24.no/tester/denne-gir-mest-elbil-for-penga/70747144\"],\"leverandorer\":\"https://www.kia.com/no/modeller/e-soul/opplev-e-soul/\"},{\"id\":17,\"bildeURL\":\"default.jpg\",\"merke\":\"Kia\",\"modell\":\"E-Soul\",\"type\":\"Active\",\"rekkevidde\":250,\"pris\":228100,\"storelse\":\"Mellom\",\"sitteplasser\":\"5\",\"tester\":[\"https://www.elbil24.no/tester/denne-gir-mest-elbil-for-penga/70747144\"],\"leverandorer\":\"https://www.kia.com/no/modeller/e-soul/opplev-e-soul/\"},{\"id\":18,\"bildeURL\":\"default.jpg\",\"merke\":\"Kia\",\"modell\":\"E-Soul\",\"type\":\"Exclusive\",\"rekkevidde\":250,\"pris\":265100,\"storelse\":\"Mellom\",\"sitteplasser\":\"5\",\"tester\":[\"https://www.elbil24.no/tester/denne-gir-mest-elbil-for-penga/70747144\"],\"leverandorer\":\"https://www.kia.com/no/modeller/e-soul/opplev-e-soul/\"},{\"id\":19,\"bildeURL\":\"default.jpg\",\"merke\":\"Mitsubishi\",\"modell\":\"i-Miev\",\"type\":\"16 kWh\",\"rekkevidde\":105,\"pris\":149900,\"storelse\":\"Liten\",\"sitteplasser\":\"4\",\"tester\":[\"https://www.dinside.no/motor/testkjort-mitsubishi-i-miev-klar-for-kundene/61732696\"],\"leverandorer\":\"https://www.mitsubishi-motors.no/biler/imiev\"},{\"id\":20,\"bildeURL\":\"default.jpg\",\"merke\":\"Nissan\",\"modell\":\"Leaf\",\"type\":\"40kWh Acenta\",\"rekkevidde\":270,\"pris\":278000,\"storelse\":\"Mellom\",\"sitteplasser\":\"5\",\"tester\":[\"https://www.dinside.no/motor/kommer-til-kort-i-kulda/69570276\"],\"leverandorer\":\"https://www.nissan.no/biler/nye-biler/leaf.html\"},{\"id\":21,\"bildeURL\":\"default.jpg\",\"merke\":\"Nissan\",\"modell\":\"Leaf\",\"type\":\"40kWh N-Conneca\",\"rekkevidde\":270,\"pris\":294500,\"storelse\":\"Mellom\",\"sitteplasser\":\"5\",\"tester\":[\"https://www.dinside.no/motor/kommer-til-kort-i-kulda/69570276\"],\"leverandorer\":\"https://www.nissan.no/biler/nye-biler/leaf.html\"},{\"id\":22,\"bildeURL\":\"default.jpg\",\"merke\":\"Nissan\",\"modell\":\"Leaf\",\"type\":\"40kWh Tekna\",\"rekkevidde\":270,\"pris\":307500,\"storelse\":\"Mellom\",\"sitteplasser\":\"5\",\"tester\":[\"https://www.dinside.no/motor/kommer-til-kort-i-kulda/69570276\"],\"leverandorer\":\"https://www.nissan.no/biler/nye-biler/leaf.html\"},{\"id\":23,\"bildeURL\":\"default.jpg\",\"merke\":\"Nissan\",\"modell\":\"Leaf\",\"type\":\"62kWh e+ N-Conneca\",\"rekkevidde\":385,\"pris\":346800,\"storelse\":\"Mellom\",\"sitteplasser\":\"5\",\"tester\":[\"https://www.elbil24.no/tester/okt-rekkevidde-men-hva-med-resten/71082650\"],\"leverandorer\":\"https://www.nissan.no/biler/nye-biler/leaf.html\"},{\"id\":24,\"bildeURL\":\"default.jpg\",\"merke\":\"Nissan\",\"modell\":\"Leaf\",\"type\":\"62 kWh e+ Tekna\",\"rekkevidde\":385,\"pris\":375000,\"storelse\":\"Mellom\",\"sitteplasser\":\"5\",\"tester\":[\"https://www.elbil24.no/tester/okt-rekkevidde-men-hva-med-resten/71082650\"],\"leverandorer\":\"https://www.nissan.no/biler/nye-biler/leaf.html\"},{\"id\":25,\"bildeURL\":\"default.jpg\",\"merke\":\"Nissan\",\"modell\":\"E-NV200\",\"type\":\"Evalia 40 kWt 5-s\",\"rekkevidde\":200,\"pris\":322840,\"storelse\":\"Stor\",\"sitteplasser\":\"5\",\"tester\":[\"https://www.dinside.no/motor/nissan-e-nv200-provekjort/61216187\"],\"leverandorer\":\"https://www.nissan.no/biler/nye-biler/e-nv200-evalia.html\"},{\"id\":26,\"bildeURL\":\"default.jpg\",\"merke\":\"Nissan\",\"modell\":\"E-NV200\",\"type\":\"Evalia 40 kWt 7-s\",\"rekkevidde\":200,\"pris\":334840,\"storelse\":\"Stor\",\"sitteplasser\":\"7\",\"tester\":[\"https://www.dinside.no/motor/nissan-e-nv200-provekjort/61216187\"],\"leverandorer\":\"https://www.nissan.no/biler/nye-biler/e-nv200-evalia.html\"},{\"id\":27,\"bildeURL\":\"default.jpg\",\"merke\":\"Nissan\",\"modell\":\"E-NV200\",\"type\":\"Comfort Plus 40 kWt\",\"rekkevidde\":200,\"pris\":288990,\"storelse\":\"Stor\",\"sitteplasser\":\"2\",\"tester\":[\"https://www.dinside.no/motor/nissan-e-nv200-provekjort/61216187\"],\"leverandorer\":\"https://www.nissan.no/biler/nye-biler/e-nv200-evalia.html\"},{\"id\":28,\"bildeURL\":\"default.jpg\",\"merke\":\"Nissan\",\"modell\":\"E-NV200\",\"type\":\"Premium 40 kWt\",\"rekkevidde\":200,\"pris\":305990,\"storelse\":\"Stor\",\"sitteplasser\":\"2\",\"tester\":[\"https://www.dinside.no/motor/nissan-e-nv200-provekjort/61216187\"],\"leverandorer\":\"https://www.nissan.no/biler/nye-biler/e-nv200-evalia.html\"},{\"id\":29,\"bildeURL\":\"default.jpg\",\"merke\":\"Opel\",\"modell\":\"Ampera-E\",\"type\":\"Premium\",\"rekkevidde\":423,\"pris\":359900,\"storelse\":\"Mellom\",\"sitteplasser\":\"5\",\"tester\":[\"https://www.dinside.no/motor/opel-ampera-e-innfrir-til-fulle/66931394\"],\"leverandorer\":\"https://www.opel.no/personbil/ampera-e/modelloversikt.html\"},{\"id\":30,\"bildeURL\":\"default.jpg\",\"merke\":\"Peugeot\",\"modell\":\"iOn\",\"type\":\"Active\",\"rekkevidde\":150,\"pris\":163600,\"storelse\":\"Liten\",\"sitteplasser\":\"4\",\"tester\":[\"https://www.dinside.no/motor/test-elbil-som-duger/61639141\"],\"leverandorer\":\"https://www.peugeot.no/modell/peugeot-modeller/ion.html\"},{\"id\":31,\"bildeURL\":\"default.jpg\",\"merke\":\"Peugeot\",\"modell\":\"e-Partner Tepee\",\"rekkevidde\":170,\"pris\":192000,\"storelse\":\"Mellom\",\"sitteplasser\":\"3\",\"tester\":[\"https://www.dinside.no/motor/psa-tar-alle-pa-senga-med-to-nye-elbiler/69199883\"],\"leverandorer\":\"https://www.peugeot.no/modell/peugeot-modeller/partner-tepee-electric.html\"},{\"id\":32,\"bildeURL\":\"default.jpg\",\"merke\":\"Renault\",\"modell\":\"Kangoo Electric\",\"type\":\"5-seter\",\"rekkevidde\":270,\"pris\":268400,\"storelse\":\"Mellom\",\"sitteplasser\":\"5\",\"tester\":[\"https://www.dinside.no/motor/billigere-renault-kangoo-ze/61290789\"],\"leverandorer\":\"https://renault.no/elbil/kangoo-maxi-ze-personbil\"},{\"id\":33,\"bildeURL\":\"default.jpg\",\"merke\":\"Renault\",\"modell\":\"Twizy\",\"type\":\"Intens\",\"rekkevidde\":90,\"pris\":93000,\"storelse\":\"Liten\",\"sitteplasser\":\"2\",\"tester\":[\"https://www.dinside.no/motor/renault-twizy-vintertestes/61501189\"],\"leverandorer\":\"https://renault.no/elbil/twizy\"},{\"id\":34,\"bildeURL\":\"default.jpg\",\"merke\":\"Renault\",\"modell\":\"Zoe\",\"type\":\"Z.E 40 R90 Life\",\"rekkevidde\":400,\"pris\":245000,\"storelse\":\"Mellom\",\"sitteplasser\":\"5\",\"tester\":[\"https://www.dinside.no/motor/zoe-i-strupen-pa-konkurrentene/63605077\"],\"leverandorer\":\"https://renault.no/elbil/zoe\"},{\"id\":35,\"bildeURL\":\"default.jpg\",\"merke\":\"Renault\",\"modell\":\"Zoe\",\"type\":\"Z.E 40 R110 Intens\",\"rekkevidde\":400,\"pris\":270000,\"storelse\":\"Mellom\",\"sitteplasser\":\"5\",\"tester\":[\"https://www.dinside.no/motor/zoe-i-strupen-pa-konkurrentene/63605077\"],\"leverandorer\":\"https://renault.no/elbil/zoe\"},{\"id\":36,\"bildeURL\":\"default.jpg\",\"merke\":\"VW\",\"modell\":\"Golf\",\"rekkevidde\":229,\"pris\":326200,\"storelse\":\"Mellom\",\"sitteplasser\":\"5\",\"tester\":[\"https://www.dinside.no/motor/endelig-med-bedre-rekkevidde/67454759\"],\"leverandorer\":\"https://www.volkswagen.no/no/biler/e-golf-elbil.html\"},{\"id\":37,\"bildeURL\":\"default.jpg\",\"merke\":\"VW\",\"modell\":\"UP!\",\"rekkevidde\":133,\"pris\":211300,\"storelse\":\"Liten\",\"sitteplasser\":\"4\",\"tester\":[\"https://www.dinside.no/motor/vi-sparte-200-kroner-dagen-med-elbil/61244198\"],\"leverandorer\":\"https://www.volkswagen.no/no/biler/e-up-elbil.html\"}]");
 
 /***/ }),
 
@@ -14213,7 +14166,7 @@ var _jsxFileName = "/Users/mariusgrondahl/Documents/GitHub/elbilvelger/elbilvelg
 var __jsx = react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement;
 
 function _templateObject() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_5__["default"])(["\n    background: none;\n    padding: 0;\n    margin:  60px 0 100px 0;    \n    text-align: center;\n    font-family: 'helvetica', sans-serif;\n\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_5__["default"])(["\n    background: none;\n    padding: 0;\n    margin:  60px 0 0 0;    \n    text-align: center;\n    font-family: 'barlow', 'helvetica', sans-serif;\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -14246,19 +14199,32 @@ function (_Component) {
       return __jsx(Appwrapper, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 20
+          lineNumber: 21
         },
         __self: this
-      }, __jsx(_Components_Navbar__WEBPACK_IMPORTED_MODULE_8__["default"], {
+      }, __jsx(_emotion_core__WEBPACK_IMPORTED_MODULE_10__["Global"], {
+        styles: {
+          'body, html': {
+            margin: 0,
+            padding: ".1rem",
+            background: "#2d2d2d"
+          }
+        },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 21
+          lineNumber: 22
+        },
+        __self: this
+      }), __jsx(_Components_Navbar__WEBPACK_IMPORTED_MODULE_8__["default"], {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 31
         },
         __self: this
       }), __jsx(_Components_Car__WEBPACK_IMPORTED_MODULE_7__["default"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 22
+          lineNumber: 32
         },
         __self: this
       }));

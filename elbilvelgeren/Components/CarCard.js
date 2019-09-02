@@ -2,9 +2,6 @@ import React, { Component } from "react";
 import { FaBookmark, FaMapPin } from 'react-icons/fa';
 import styled from '@emotion/styled';
 
-
-
-
 class CarCard extends Component {
   render() {
 
@@ -18,7 +15,9 @@ class CarCard extends Component {
   padding: 0;
   margin-bottom: 1.3rem;
   height: 35vh;
-  color: #fff;   
+  color: #fff;  
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px; 
 
     .imgTitle{
       position: relative;
@@ -30,6 +29,7 @@ class CarCard extends Component {
       padding: 2rem 0 .7rem 0rem;
       font-size: 1.4rem;
       text-align: center;
+      font-weight: bold;
       text-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2);
     }
   
@@ -52,7 +52,6 @@ class CarCard extends Component {
       display: flex;
       flex-direction: row;
       padding: .5rem;
-
       background: rgba(0,0,0,0.8);
       color: #fff;
       border-bottom-left-radius: 5px;

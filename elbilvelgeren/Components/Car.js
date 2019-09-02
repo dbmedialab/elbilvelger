@@ -2,7 +2,6 @@ import React from "react";
 import CarCard from "../Components/CarCard";
 import elbiler from '../elbiler.json';
 import Fade from 'react-reveal/Fade';
-import FlexWrapper from '../Components/FlexWrapper';
 import styled from '@emotion/styled';
 
 const Footer = styled.footer`
@@ -22,7 +21,36 @@ const Footerinner = styled.div`
     flex-direction: row;
     justify-content: center;
     width: 100%;
+    
+    button{
+      background: none; 
+      border: none;
+      margin: .5rem;
+    }
 `
+
+const FlexWrapper = styled.div`
+    background: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: .5rem;
+    padding-bottom: 3rem;
+    align-content: center;
+    align-items: center;
+    @media (min-width: 600px) {
+      flex-direction: row;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .react-reveal{
+      width: 100%;
+      @media (min-width: 600px) {
+        width: 30vw;
+        margin: 1rem;
+      }
+  }`
 
 class Car extends React.Component {
   constructor(props) {
@@ -32,26 +60,26 @@ class Car extends React.Component {
       elbiler: elbiler,
       elbilDefault: [...elbiler]
     };
-
-    //this.reset = this.reset.bind(this);
   }
 
   sortByRange = (index) => {
-    let filterCopy = [...this.state.elbiler]
+    let filterCopy = [...this.state.elbilDefault]
     filterCopy.sort(function(a, b) {
       return a.rekkevidde - b.rekkevidde;
     })
-
+    
     this.setState({elbiler: filterCopy});
+    filterCopy.reverse() 
   }
 
   sortByPrice = (index) => {
-    let filterCopy = [...this.state.elbiler]
+    let filterCopy = [...this.state.elbilDefault]
     filterCopy.sort(function(a, b) {
-      return a.pris - b.pris;
+      return a.pris - b.pris
     })
 
-    this.setState({elbiler: filterCopy});
+    this.setState({elbiler: filterCopy.reverse()});
+
   }
 
   reset = () =>{
@@ -79,9 +107,9 @@ class Car extends React.Component {
         {elBiler}
         <Footer>
           <Footerinner>
-              <button onClick={this.sortByRange}>Sort by Range</button>
-              <button onClick={this.sortByPrice}>Sort by Price</button>
-              <button onClick={this.reset}>Reset</button>
+              <button onClick={this.sortByRange}>Rekkevidde</button>
+              <button onClick={this.sortByPrice}>Pris</button>
+              <button onClick={this.reset}>Tilbakestill</button>
           </Footerinner>
         </Footer>
       </FlexWrapper>
