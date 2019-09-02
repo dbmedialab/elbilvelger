@@ -271,19 +271,26 @@ class CarCard extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
     const CardWrapper = _emotion_styled__WEBPACK_IMPORTED_MODULE_2___default.a.div`
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-end;
   background-size: cover;
   background-position: center center;
   background-image: url(/static/img/${this.props.bildeURL});
-  padding: 0rem;
+  padding: 0;
   margin-bottom: 1.3rem;
   height: 35vh;
   color: #fff;   
 
     .imgTitle{
+      position: relative;
       color: #fff;
-      text-shadow: 0px 0px 8px rgba(0, 0, 0, 0.6);
-      line-height: 2rem;
+      background: linear-gradient(to top, rgba(0,0,0,0.8) 0%,rgba(0,0,0,0) 100%);
+      width: auto;
+      bottom: 0;
+      font-weigth: bold;
+      padding: 2rem 0 .7rem 0rem;
+      font-size: 1.4rem;
+      text-align: center;
+      text-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2);
     }
   
     ul {
@@ -292,7 +299,6 @@ class CarCard extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       display: flex;
       flex-direction: row;
       justify-content: space-between;
-      text-align: center;
       margin: 0 ;
       padding: 0;
    }
@@ -303,12 +309,12 @@ class CarCard extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
   
     .cardFooter{
       position: relative;
-      bottom: -4px;
       display: flex;
       flex-direction: row;
       padding: .5rem;
-      background: #fafafa;
-      color: #2d2d2d;
+
+      background: rgba(0,0,0,0.8);
+      color: #fff;
       border-bottom-left-radius: 5px;
       border-bottom-right-radius: 5px;
     }
@@ -316,75 +322,75 @@ class CarCard extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
     return __jsx(CardWrapper, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 58
+        lineNumber: 64
       },
       __self: this
-    }, __jsx("h2", {
+    }, __jsx("div", {
       className: "imgTitle",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 60
+        lineNumber: 66
       },
       __self: this
     }, __jsx("span", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 61
+        lineNumber: 67
       },
       __self: this
     }, this.props.modell, " "), __jsx("span", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 62
+        lineNumber: 68
       },
       __self: this
     }, this.props.merke, " "), __jsx("span", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 63
+        lineNumber: 69
       },
       __self: this
     }, this.props.type)), __jsx("div", {
       className: "cardFooter",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 66
+        lineNumber: 72
       },
       __self: this
     }, __jsx("ul", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 67
+        lineNumber: 73
       },
       __self: this
     }, __jsx("li", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 68
+        lineNumber: 74
       },
       __self: this
     }, __jsx("span", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 68
+        lineNumber: 74
       },
       __self: this
     }, __jsx(react_icons_fa__WEBPACK_IMPORTED_MODULE_1__["FaMapPin"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 68
+        lineNumber: 74
       },
       __self: this
     })), " ", this.props.rekkevidde, " km | ", this.props.pris, ",-"), __jsx("li", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 69
+        lineNumber: 75
       },
       __self: this
     }, __jsx(react_icons_fa__WEBPACK_IMPORTED_MODULE_1__["FaBookmark"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 69
+        lineNumber: 75
       },
       __self: this
     })))));
@@ -572,10 +578,11 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
 const Appwrapper = _emotion_styled__WEBPACK_IMPORTED_MODULE_3___default.a.div`
-    background: #fff;
+    background: none;
     padding: 0;
-    margin:  50px 0 100px 0;    
+    margin:  60px 0 100px 0;    
     text-align: center;
+    font-family: 'helvetica', sans-serif;
 
 `;
 
@@ -584,19 +591,19 @@ class App extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
     return __jsx(Appwrapper, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 21
+        lineNumber: 20
       },
       __self: this
     }, __jsx(_Components_Navbar__WEBPACK_IMPORTED_MODULE_2__["default"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 22
+        lineNumber: 21
       },
       __self: this
     }), __jsx(_Components_Car__WEBPACK_IMPORTED_MODULE_1__["default"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 23
+        lineNumber: 22
       },
       __self: this
     }));

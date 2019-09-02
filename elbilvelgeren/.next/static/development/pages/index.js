@@ -223,7 +223,7 @@ var _jsxFileName = "/Users/mariusgrondahl/Documents/GitHub/elbilvelger/elbilvelg
 var __jsx = react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement;
 
 function _templateObject() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  display: flex;\n  flex-direction: column;\n  justify-content: space-between;\n  background-size: cover;\n  background-position: center center;\n  background-image: url(/static/img/", ");\n  padding: 0rem;\n  margin-bottom: 1.3rem;\n  height: 35vh;\n  color: #fff;   \n\n    .imgTitle{\n      color: #fff;\n      text-shadow: 0px 0px 8px rgba(0, 0, 0, 0.6);\n      line-height: 2rem;\n    }\n  \n    ul {\n      width: 100%;\n      list-style: none;\n      display: flex;\n      flex-direction: row;\n      justify-content: space-between;\n      text-align: center;\n      margin: 0 ;\n      padding: 0;\n   }\n  \n    ul li{\n      margin: 1rem;\n    }\n  \n    .cardFooter{\n      position: relative;\n      bottom: -4px;\n      display: flex;\n      flex-direction: row;\n      padding: .5rem;\n      background: #fafafa;\n      color: #2d2d2d;\n      border-bottom-left-radius: 5px;\n      border-bottom-right-radius: 5px;\n    }\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  display: flex;\n  flex-direction: column;\n  justify-content: flex-end;\n  background-size: cover;\n  background-position: center center;\n  background-image: url(/static/img/", ");\n  padding: 0;\n  margin-bottom: 1.3rem;\n  height: 35vh;\n  color: #fff;   \n\n    .imgTitle{\n      position: relative;\n      color: #fff;\n      background: linear-gradient(to top, rgba(0,0,0,0.8) 0%,rgba(0,0,0,0) 100%);\n      width: auto;\n      bottom: 0;\n      font-weigth: bold;\n      padding: 2rem 0 .7rem 0rem;\n      font-size: 1.4rem;\n      text-align: center;\n      text-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2);\n    }\n  \n    ul {\n      width: 100%;\n      list-style: none;\n      display: flex;\n      flex-direction: row;\n      justify-content: space-between;\n      margin: 0 ;\n      padding: 0;\n   }\n  \n    ul li{\n      margin: 1rem;\n    }\n  \n    .cardFooter{\n      position: relative;\n      display: flex;\n      flex-direction: row;\n      padding: .5rem;\n\n      background: rgba(0,0,0,0.8);\n      color: #fff;\n      border-bottom-left-radius: 5px;\n      border-bottom-right-radius: 5px;\n    }\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -254,75 +254,75 @@ function (_Component) {
       return __jsx(CardWrapper, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 58
+          lineNumber: 64
         },
         __self: this
-      }, __jsx("h2", {
+      }, __jsx("div", {
         className: "imgTitle",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 60
+          lineNumber: 66
         },
         __self: this
       }, __jsx("span", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 61
+          lineNumber: 67
         },
         __self: this
       }, this.props.modell, " "), __jsx("span", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 62
+          lineNumber: 68
         },
         __self: this
       }, this.props.merke, " "), __jsx("span", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 63
+          lineNumber: 69
         },
         __self: this
       }, this.props.type)), __jsx("div", {
         className: "cardFooter",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 66
+          lineNumber: 72
         },
         __self: this
       }, __jsx("ul", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 67
+          lineNumber: 73
         },
         __self: this
       }, __jsx("li", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 68
+          lineNumber: 74
         },
         __self: this
       }, __jsx("span", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 68
+          lineNumber: 74
         },
         __self: this
       }, __jsx(react_icons_fa__WEBPACK_IMPORTED_MODULE_7__["FaMapPin"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 68
+          lineNumber: 74
         },
         __self: this
       })), " ", this.props.rekkevidde, " km | ", this.props.pris, ",-"), __jsx("li", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 69
+          lineNumber: 75
         },
         __self: this
       }, __jsx(react_icons_fa__WEBPACK_IMPORTED_MODULE_7__["FaBookmark"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 69
+          lineNumber: 75
         },
         __self: this
       })))));
@@ -14213,7 +14213,7 @@ var _jsxFileName = "/Users/mariusgrondahl/Documents/GitHub/elbilvelger/elbilvelg
 var __jsx = react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement;
 
 function _templateObject() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_5__["default"])(["\n    background: #fff;\n    padding: 0;\n    margin:  50px 0 100px 0;    \n    text-align: center;\n\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_5__["default"])(["\n    background: none;\n    padding: 0;\n    margin:  60px 0 100px 0;    \n    text-align: center;\n    font-family: 'helvetica', sans-serif;\n\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -14246,19 +14246,19 @@ function (_Component) {
       return __jsx(Appwrapper, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 21
+          lineNumber: 20
         },
         __self: this
       }, __jsx(_Components_Navbar__WEBPACK_IMPORTED_MODULE_8__["default"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 22
+          lineNumber: 21
         },
         __self: this
       }), __jsx(_Components_Car__WEBPACK_IMPORTED_MODULE_7__["default"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 23
+          lineNumber: 22
         },
         __self: this
       }));

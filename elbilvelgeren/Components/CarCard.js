@@ -11,19 +11,26 @@ class CarCard extends Component {
   const CardWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-end;
   background-size: cover;
   background-position: center center;
   background-image: url(/static/img/${this.props.bildeURL});
-  padding: 0rem;
+  padding: 0;
   margin-bottom: 1.3rem;
   height: 35vh;
   color: #fff;   
 
     .imgTitle{
+      position: relative;
       color: #fff;
-      text-shadow: 0px 0px 8px rgba(0, 0, 0, 0.6);
-      line-height: 2rem;
+      background: linear-gradient(to top, rgba(0,0,0,0.8) 0%,rgba(0,0,0,0) 100%);
+      width: auto;
+      bottom: 0;
+      font-weigth: bold;
+      padding: 2rem 0 .7rem 0rem;
+      font-size: 1.4rem;
+      text-align: center;
+      text-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2);
     }
   
     ul {
@@ -32,7 +39,6 @@ class CarCard extends Component {
       display: flex;
       flex-direction: row;
       justify-content: space-between;
-      text-align: center;
       margin: 0 ;
       padding: 0;
    }
@@ -43,12 +49,12 @@ class CarCard extends Component {
   
     .cardFooter{
       position: relative;
-      bottom: -4px;
       display: flex;
       flex-direction: row;
       padding: .5rem;
-      background: #fafafa;
-      color: #2d2d2d;
+
+      background: rgba(0,0,0,0.8);
+      color: #fff;
       border-bottom-left-radius: 5px;
       border-bottom-right-radius: 5px;
     }
@@ -57,11 +63,11 @@ class CarCard extends Component {
     return (
       <CardWrapper>
 
-        <h2 className="imgTitle">
+        <div className="imgTitle">
           <span>{this.props.modell} </span>
           <span>{this.props.merke} </span>
           <span>{this.props.type}</span>
-        </h2>
+        </div>
 
         <div className="cardFooter">
           <ul>
