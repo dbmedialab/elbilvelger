@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import styled from '@emotion/styled';
+import Link from 'next/link';
 
 const NavbarWrapper = styled.div`
     position: absolute;
@@ -21,9 +22,11 @@ class Navbar extends Component {
     render() {
         return(
             <NavbarWrapper>
-                <div className="logo">
-                    <img src="../static/img/elbilvelgerlogo.svg" alt="elbilvelger" width="140" />
-                </div>
+                <Link href="/">
+                    <div className="logo">
+                        <img src="../static/img/elbilvelgerlogo.svg" alt="elbilvelger" width="140" />
+                    </div>
+                </Link>
             </NavbarWrapper>
         )
     }

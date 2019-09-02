@@ -400,6 +400,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_6__);
 /* harmony import */ var _emotion_styled__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @emotion/styled */ "./node_modules/@emotion/styled/dist/styled.browser.esm.js");
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_8__);
 
 
 
@@ -418,6 +420,7 @@ function _templateObject() {
 
   return data;
 }
+
 
 
 
@@ -440,14 +443,21 @@ function (_Component) {
       return __jsx(NavbarWrapper, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 23
+          lineNumber: 24
+        },
+        __self: this
+      }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_8___default.a, {
+        href: "/",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 25
         },
         __self: this
       }, __jsx("div", {
         className: "logo",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 24
+          lineNumber: 26
         },
         __self: this
       }, __jsx("img", {
@@ -456,10 +466,10 @@ function (_Component) {
         width: "140",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 25
+          lineNumber: 27
         },
         __self: this
-      })));
+      }))));
     }
   }]);
 
@@ -21132,8 +21142,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_6__);
 /* harmony import */ var _Components_Car__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../Components/Car */ "./Components/Car.js");
 /* harmony import */ var _Components_Navbar__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../Components/Navbar */ "./Components/Navbar.js");
-/* harmony import */ var _emotion_styled__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @emotion/styled */ "./node_modules/@emotion/styled/dist/styled.browser.esm.js");
-/* harmony import */ var _emotion_core__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @emotion/core */ "./node_modules/@emotion/core/dist/core.browser.esm.js");
+/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../style.css */ "./style.css");
+/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_style_css__WEBPACK_IMPORTED_MODULE_9__);
+/* harmony import */ var _emotion_styled__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @emotion/styled */ "./node_modules/@emotion/styled/dist/styled.browser.esm.js");
+/* harmony import */ var _emotion_core__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @emotion/core */ "./node_modules/@emotion/core/dist/core.browser.esm.js");
 
 
 
@@ -21158,7 +21170,8 @@ function _templateObject() {
 
 
 
-var Appwrapper = _emotion_styled__WEBPACK_IMPORTED_MODULE_9__["default"].div(_templateObject());
+
+var Appwrapper = _emotion_styled__WEBPACK_IMPORTED_MODULE_10__["default"].div(_templateObject());
 
 var App =
 /*#__PURE__*/
@@ -21177,35 +21190,19 @@ function (_Component) {
       return __jsx(Appwrapper, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 20
-        },
-        __self: this
-      }, __jsx(_emotion_core__WEBPACK_IMPORTED_MODULE_10__["Global"], {
-        styles: {
-          'body': {
-            margin: 0,
-            padding: ".1rem",
-            background: "#2d2d2d"
-          },
-          'html': {
-            background: "#2d2d2d"
-          }
-        },
-        __source: {
-          fileName: _jsxFileName,
           lineNumber: 21
         },
         __self: this
-      }), __jsx(_Components_Navbar__WEBPACK_IMPORTED_MODULE_8__["default"], {
+      }, __jsx(_Components_Navbar__WEBPACK_IMPORTED_MODULE_8__["default"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 35
+          lineNumber: 22
         },
         __self: this
       }), __jsx(_Components_Car__WEBPACK_IMPORTED_MODULE_7__["default"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 36
+          lineNumber: 23
         },
         __self: this
       }));
@@ -21219,7 +21216,7 @@ function (_Component) {
 
 /***/ }),
 
-/***/ 2:
+/***/ 0:
 /*!****************************************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2F&absolutePagePath=%2FUsers%2Fmariusgrondahl%2FDocuments%2FGitHub%2Felbilvelger%2Felbilvelgeren%2Fpages%2Findex.js ***!
   \****************************************************************************************************************************************************************/
@@ -21242,5 +21239,5 @@ module.exports = dll_129a35c7ec57967eb265;
 
 /***/ })
 
-},[[2,"static/runtime/webpack.js"]]]);
+},[[0,"static/runtime/webpack.js","styles"]]]);
 //# sourceMappingURL=index.js.map
