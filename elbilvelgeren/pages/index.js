@@ -6,7 +6,6 @@ import styled from '@emotion/styled';
 import { Global } from '@emotion/core'
 
 
-
 const Appwrapper = styled.div`
     background: none;
     padding: 0;
@@ -21,11 +20,16 @@ class App extends Component {
       <Appwrapper>
         <Global
             styles={{
-              'body, html': {
+              'body': {
                 margin: 0,
                 padding: ".1rem",
                 background: "#2d2d2d"
+              },
+
+              'html': {
+                background: "#2d2d2d"
               }
+
             }}
         />
         <Navbar />

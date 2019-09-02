@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { FaBookmark, FaMapPin } from 'react-icons/fa';
 import styled from '@emotion/styled';
+import Link from 'next/link';
 
 class CarCard extends Component {
   render() {
@@ -57,9 +58,10 @@ class CarCard extends Component {
       border-bottom-left-radius: 5px;
       border-bottom-right-radius: 5px;
     }
-`
-    
+`   
     return (
+    <Link href={{ pathname: '/detail', query: { elbil: `${this.props.id}` } }}>
+
       <CardWrapper>
 
         <div className="imgTitle">
@@ -76,6 +78,7 @@ class CarCard extends Component {
         </div>
 
       </CardWrapper>
+      </Link>
     );
   }
 }

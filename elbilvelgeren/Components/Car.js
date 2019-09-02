@@ -1,7 +1,7 @@
 import React from "react";
 import CarCard from "../Components/CarCard";
-import elbiler from '../elbiler.json';
 import Fade from 'react-reveal/Fade';
+import elbiler from '../elbiler.json';
 import styled from '@emotion/styled';
 
 const Footer = styled.footer`
@@ -58,33 +58,40 @@ class Car extends React.Component {
 
     this.state = { 
       elbiler: elbiler,
-      elbilDefault: [...elbiler]
+      elbilDefault: [...elbiler],
+      orderByRange: 'asc',
+      orderByPrice: 'asc'
     };
   }
 
-  sortByRange = (index) => {
-    let filterCopy = [...this.state.elbilDefault]
-    filterCopy.sort(function(a, b) {
+  sortByRange = () => {
+    let elbilerCopy = [...this.state.elbiler]
+    elbilerCopy.sort(function(a, b) {
       return a.rekkevidde - b.rekkevidde;
     })
+
+    if(this.state.orderByRange === "desc") {
+      elbilerCopy.reverse() 
+    }
     
-    this.setState({elbiler: filterCopy});
-    filterCopy.reverse() 
+    this.setState({elbiler: elbilerCopy});
   }
 
-  sortByPrice = (index) => {
-    let filterCopy = [...this.state.elbilDefault]
-    filterCopy.sort(function(a, b) {
+  sortByPrice = () => {
+    let elbilerCopy = [...this.state.elbiler]
+    elbilerCopy.sort(function(a, b) {
       return a.pris - b.pris
     })
 
-    this.setState({elbiler: filterCopy.reverse()});
+    if(this.state.orderByPrice === "desc") {
+      elbilerCopy.reverse() 
+    }
 
+    this.setState({elbiler: elbilerCopy});
   }
 
   reset = () =>{
-    let elbilDefault = [...this.state.elbilDefault]
-    this.setState({elbiler: elbilDefault});
+    this.setState({elbiler: this.state.elbilDefault});
   }
 
   render() {
@@ -98,6 +105,7 @@ class Car extends React.Component {
           pris={elbil.pris} 
           bildeURL={elbil.bildeURL}
           type={elbil.type}
+          id={elbil.id}
       /> 
     </Fade>
     );
@@ -107,8 +115,22 @@ class Car extends React.Component {
         {elBiler}
         <Footer>
           <Footerinner>
-              <button onClick={this.sortByRange}>Rekkevidde</button>
-              <button onClick={this.sortByPrice}>Pris</button>
+              <button onClick={() => {
+                this.setState({
+                  orderByRange: (this.state.orderByRange === 'asc' ? 'desc' : 'asc')
+                }, () => {
+                  this.sortByRange();
+                })
+              }}>
+                Rekkevidde
+              </button>
+              <button onClick={() => {
+                this.setState({
+                  orderByPrice: (this.state.orderByPrice === 'asc' ? 'desc' : 'asc')
+                }, () => {
+                  this.sortByPrice();
+                })
+              }}>Pris</button>
               <button onClick={this.reset}>Tilbakestill</button>
           </Footerinner>
         </Footer>
