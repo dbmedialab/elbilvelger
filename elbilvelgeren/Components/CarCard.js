@@ -1,9 +1,13 @@
 import React, { Component } from "react";
-import { FaBookmark, FaMapPin } from 'react-icons/fa';
+import { FaMapMarkerAlt} from 'react-icons/fa';
 import styled from '@emotion/styled';
 import Link from 'next/link';
 
 class CarCard extends Component {
+
+   numberWithSpaces(x) {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+  }
   render() {
 
   const CardWrapper = styled.div`
@@ -57,6 +61,22 @@ class CarCard extends Component {
       color: #fff;
       border-bottom-left-radius: 5px;
       border-bottom-right-radius: 5px;
+
+      li{
+        font-size: 1.2rem;
+        font-weight: bold;
+
+        .price{
+          font-weight: 400;
+          background: #3CA069;
+          padding: .3rem .7rem;
+          border-radius: 3px;
+        }
+
+        .light{
+          font-weight: 200;
+        }
+      }
     }
 `   
     return (
@@ -71,8 +91,9 @@ class CarCard extends Component {
 
         <div className="cardFooter">
           <ul>
-            <li><span><FaMapPin  /></span> {this.props.rekkevidde} km | {this.props.pris},-</li>
-            <li><FaBookmark /></li>           
+            <li><span><FaMapMarkerAlt  /></span> {this.props.rekkevidde} <span className="light">km</span></li>
+            <li><span className="price">{this.props.pris},-</span></li>
+                  
           </ul>
         </div>
       </CardWrapper>

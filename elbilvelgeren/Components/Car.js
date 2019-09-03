@@ -3,6 +3,7 @@ import CarCard from "../Components/CarCard";
 import Fade from 'react-reveal/Fade';
 import elbiler from '../elbiler.json';
 import styled from '@emotion/styled';
+import { FaMapMarkerAlt, FaCoins, FaArrowsAltV } from 'react-icons/fa';
 
 const Footer = styled.footer`
     position: fixed;
@@ -12,7 +13,7 @@ const Footer = styled.footer`
     box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
     bottom: 0;
     left: 0;
-    height: 50px;
+    height: 60px;
     background: #fff;        
 `
 
@@ -21,11 +22,22 @@ const Footerinner = styled.div`
     flex-direction: row;
     justify-content: center;
     width: 100%;
+
     
     button{
       background: none; 
       border: none;
       margin: .5rem;
+      outline: none;
+      font-size: .7rem;
+      font-weight: 200;
+      color: #2d2d2d;
+
+      svg{
+        width: 20px;
+        height: 20px;
+        margin-bottom: .3rem;
+      }
     }
 `
 
@@ -57,10 +69,11 @@ class Car extends React.Component {
     super(props);
 
     this.state = { 
-      elbiler: elbiler,
+      elbiler: this.shuffle(elbiler),
       elbilDefault: [...elbiler],
       orderByRange: 'asc',
-      orderByPrice: 'asc'
+      orderByPrice: 'asc',
+      orderBySize:  'asc'
     };
   }
 
@@ -71,8 +84,11 @@ class Car extends React.Component {
       return a.storelse - b.storelse
     })
 
-    this.setState({elbiler: elbilerSize})
+    if(this.state.orderByRange === "desc") {
+      elbilerSize.reverse() 
+    }
 
+    this.setState({elbiler: elbilerSize})
   }
 
   sortByRange = () => {
@@ -105,6 +121,26 @@ class Car extends React.Component {
     this.setState({elbiler: this.state.elbilDefault});
   }
 
+
+  shuffle(array) {
+    var currentIndex = array.length, temporaryValue, randomIndex;
+  
+    // While there remain elements to shuffle...
+    while (0 !== currentIndex) {
+  
+      // Pick a remaining element...
+      randomIndex = Math.floor(Math.random() * currentIndex);
+      currentIndex -= 1;
+  
+      // And swap it with the current element.
+      temporaryValue = array[currentIndex];
+      array[currentIndex] = array[randomIndex];
+      array[randomIndex] = temporaryValue;
+    }
+  
+    return array;
+  }
+
   render() {
     const elBiler = this.state.elbiler.map(elbil => 
 
@@ -133,17 +169,27 @@ class Car extends React.Component {
                   this.sortByRange();
                 })
               }}>
-                Rekkevidde
+                <FaMapMarkerAlt  /><br />Rekkevidde
               </button>
+              
               <button onClick={() => {
                 this.setState({
                   orderByPrice: (this.state.orderByPrice === 'asc' ? 'desc' : 'asc')
                 }, () => {
                   this.sortByPrice();
                 })
-              }}>Pris</button>
-               <button onClick={this.sortBySize}>Størrelse</button>
-              <button onClick={this.reset}>Tilbakestill</button>
+              }}><FaCoins  /><br />Pris</button>
+          
+
+              <button onClick={() => {
+                this.setState({
+                  orderBySize: (this.state.orderBySize === 'asc' ? 'desc' : 'asc')
+                }, () => {
+                  this.sortBySize();
+                })
+              }}><FaArrowsAltV  /> <br />Størrelse</button>
+
+              <button onClick={this.reset}>Reset</button>
           </Footerinner>
         </Footer>
       </FlexWrapper>

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Navbar from "../Components/Navbar";
 import elbiler from '../elbiler.json';
 import Fade from 'react-reveal/Fade';
+import CarCard from "../Components/CarCard";
 import styled from '@emotion/styled';
 
 const Appwrapper = styled.div`
@@ -9,11 +10,10 @@ background: none;
 padding: 0;
 margin:  60px 0 100px 0;    
 text-align: center;
-`
 
-const FullscreenHeader = styled.div`
-background-size: cover;
-background-position: center center;
+ a {
+   color: #fff;
+ }
 `
 
 class App extends Component {
@@ -40,16 +40,25 @@ class App extends Component {
     const elBiler = elbilDetail.map(elbil => 
       
       <Fade>
-        <FullscreenHeader>
-        <img src="´/static/img/${elbil.bildeURL}´" />
-        </FullscreenHeader>
-       
+   
+
+        <CarCard 
+          merke={elbil.modell} 
+          modell={elbil.merke}  
+          rekkevidde={elbil.rekkevidde} 
+          pris={elbil.pris} 
+          bildeURL={elbil.bildeURL}
+          type={elbil.type}
+          id={elbil.id}
+      />
+
         <h1>{elbil.merke} {elbil.modell} {elbil.type}</h1>
-        <p>{elbil.pris}</p>
+        <h3>Pris: {elbil.pris} ,-</h3>
         <h3>Sitteplasser: {elbil.sitteplasser}</h3>
+
+        <h3>Tester:</h3>
         <a href={elbil.tester} target="_blank">{elbil.tester}</a>
 
-        
       </Fade>
       );
 
