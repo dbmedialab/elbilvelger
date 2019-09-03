@@ -63,7 +63,6 @@ class CarCard extends Component {
     <Link href={{ pathname: '/detail', query: { elbil: `${this.props.id}` } }}>
 
       <CardWrapper>
-
         <div className="imgTitle">
           <span>{this.props.modell} </span>
           <span>{this.props.merke} </span>
@@ -76,7 +75,6 @@ class CarCard extends Component {
             <li><FaBookmark /></li>           
           </ul>
         </div>
-
       </CardWrapper>
       </Link>
     );
