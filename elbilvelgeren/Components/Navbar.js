@@ -23,9 +23,11 @@ class Navbar extends Component {
         return(
             <NavbarWrapper>
                 <Link href="/">
+                    <a>
                     <div className="logo">
                         <img src="../static/img/elbilvelgerlogo.svg" alt="elbilvelger" width="140" />
                     </div>
+                    </a>
                 </Link>
             </NavbarWrapper>
         )

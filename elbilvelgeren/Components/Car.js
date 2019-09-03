@@ -64,6 +64,17 @@ class Car extends React.Component {
     };
   }
 
+  // Have to change from string to number  in json for it to work
+  sortBySize = () => {
+    let elbilerSize = [...this.state.elbiler]
+    elbilerSize.sort(function(a, b) {
+      return a.storelse - b.storelse
+    })
+
+    this.setState({elbiler: elbilerSize})
+
+  }
+
   sortByRange = () => {
     let elbilerCopy = [...this.state.elbiler]
     elbilerCopy.sort(function(a, b) {
@@ -131,6 +142,7 @@ class Car extends React.Component {
                   this.sortByPrice();
                 })
               }}>Pris</button>
+               <button onClick={this.sortBySize}>Størrelse</button>
               <button onClick={this.reset}>Tilbakestill</button>
           </Footerinner>
         </Footer>
