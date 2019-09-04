@@ -302,7 +302,19 @@ function (_React$Component) {
           lineNumber: 192
         },
         __self: this
-      }, "Reset"))));
+      }, __jsx(react_icons_fa__WEBPACK_IMPORTED_MODULE_14__["FaRedo"], {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 192
+        },
+        __self: this
+      }), " ", __jsx("br", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 192
+        },
+        __self: this
+      }), "Reset"))));
     }
   }]);
 

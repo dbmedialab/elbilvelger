@@ -3,7 +3,7 @@ import CarCard from "../Components/CarCard";
 import Fade from 'react-reveal/Fade';
 import elbiler from '../elbiler.json';
 import styled from '@emotion/styled';
-import { FaMapMarkerAlt, FaCoins, FaArrowsAltV } from 'react-icons/fa';
+import { FaMapMarkerAlt, FaCoins, FaArrowsAltV, FaRedo } from 'react-icons/fa';
 
 const Footer = styled.footer`
     position: fixed;
@@ -189,7 +189,7 @@ class Car extends React.Component {
                 })
               }}><FaArrowsAltV  /> <br />Størrelse</button>
 
-              <button onClick={this.reset}>Reset</button>
+              <button onClick={this.reset}><FaRedo  /> <br />Reset</button>
           </Footerinner>
         </Footer>
       </FlexWrapper>

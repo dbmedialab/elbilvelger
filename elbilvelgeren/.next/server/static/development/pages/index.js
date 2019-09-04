@@ -384,7 +384,19 @@ class Car extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
         lineNumber: 192
       },
       __self: this
-    }, "Reset"))));
+    }, __jsx(react_icons_fa__WEBPACK_IMPORTED_MODULE_6__["FaRedo"], {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 192
+      },
+      __self: this
+    }), " ", __jsx("br", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 192
+      },
+      __self: this
+    }), "Reset"))));
   }
 
 }
