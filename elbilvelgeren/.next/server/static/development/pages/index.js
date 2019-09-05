@@ -482,6 +482,7 @@ class BottomNav extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return CarCard; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_icons_fa__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-icons/fa */ "react-icons/fa");
@@ -566,114 +567,108 @@ border-bottom-right-radius: 5px;
     }
   }
 `;
-
-class CarCard extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
-  numberWithSpaces(x) {
+function CarCard(props) {
+  function numberWithSpaces(x) {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
   }
 
-  render() {
-    return __jsx(next_link__WEBPACK_IMPORTED_MODULE_3___default.a, {
-      href: {
-        pathname: '/elbil',
-        query: {
-          id: `${this.props.id}`
-        }
-      },
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 85
-      },
-      __self: this
-    }, __jsx(CardWrapper, {
-      bildeURL: this.props.bildeURL,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 86
-      },
-      __self: this
-    }, __jsx("div", {
-      className: "imgTitle",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 87
-      },
-      __self: this
-    }, __jsx("span", {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 88
-      },
-      __self: this
-    }, this.props.modell, " "), __jsx("span", {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 89
-      },
-      __self: this
-    }, this.props.merke, " "), __jsx("span", {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 90
-      },
-      __self: this
-    }, this.props.type)), __jsx("div", {
-      className: "cardFooter",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 93
-      },
-      __self: this
-    }, __jsx("ul", {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 94
-      },
-      __self: this
-    }, __jsx("li", {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 95
-      },
-      __self: this
-    }, __jsx("span", {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 95
-      },
-      __self: this
-    }, __jsx(react_icons_fa__WEBPACK_IMPORTED_MODULE_1__["FaMapMarkerAlt"], {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 95
-      },
-      __self: this
-    })), " ", this.props.rekkevidde, " ", __jsx("span", {
-      className: "light",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 95
-      },
-      __self: this
-    }, "km")), __jsx("li", {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 96
-      },
-      __self: this
-    }, __jsx("span", {
-      className: "price",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 96
-      },
-      __self: this
-    }, "Fra: ", this.numberWithSpaces(`${this.props.pris}`), ",-"))))));
-  }
-
+  return __jsx(next_link__WEBPACK_IMPORTED_MODULE_3___default.a, {
+    href: {
+      pathname: '/elbil',
+      query: {
+        id: `${props.id}`
+      }
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 83
+    },
+    __self: this
+  }, __jsx(CardWrapper, {
+    bildeURL: props.bildeURL,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 84
+    },
+    __self: this
+  }, __jsx("div", {
+    className: "imgTitle",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 85
+    },
+    __self: this
+  }, __jsx("span", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 86
+    },
+    __self: this
+  }, props.modell, " "), __jsx("span", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 87
+    },
+    __self: this
+  }, props.merke, " "), __jsx("span", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 88
+    },
+    __self: this
+  }, props.type)), __jsx("div", {
+    className: "cardFooter",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 91
+    },
+    __self: this
+  }, __jsx("ul", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 92
+    },
+    __self: this
+  }, __jsx("li", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 93
+    },
+    __self: this
+  }, __jsx("span", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 93
+    },
+    __self: this
+  }, __jsx(react_icons_fa__WEBPACK_IMPORTED_MODULE_1__["FaMapMarkerAlt"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 93
+    },
+    __self: this
+  })), " ", props.rekkevidde, " ", __jsx("span", {
+    className: "light",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 93
+    },
+    __self: this
+  }, "km")), __jsx("li", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 94
+    },
+    __self: this
+  }, __jsx("span", {
+    className: "price",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 94
+    },
+    __self: this
+  }, "Fra: ", numberWithSpaces(`${props.pris}`), ",-"))))));
 }
-
-/* harmony default export */ __webpack_exports__["default"] = (CarCard);
 
 /***/ }),
 
@@ -755,6 +750,7 @@ var _jsxFileName = "/Users/mariusgrondahl/Documents/GitHub/elbilvelger/elbilvelg
 var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
 
 
+ // import { Global, css } from '@emotion/core'
 
 
 
@@ -818,27 +814,27 @@ class Navbar extends react__WEBPACK_IMPORTED_MODULE_1__["Component"] {
       onScroll: this.handleScroll,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 58
+        lineNumber: 59
       },
       __self: this
     }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_3___default.a, {
       href: "/",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 59
+        lineNumber: 60
       },
       __self: this
     }, __jsx("a", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 60
+        lineNumber: 61
       },
       __self: this
     }, __jsx("div", {
       className: "logo",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 61
+        lineNumber: 62
       },
       __self: this
     }, __jsx("img", {
@@ -847,7 +843,7 @@ class Navbar extends react__WEBPACK_IMPORTED_MODULE_1__["Component"] {
       width: "140",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 62
+        lineNumber: 63
       },
       __self: this
     })))));

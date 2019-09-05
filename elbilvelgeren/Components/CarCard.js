@@ -74,32 +74,29 @@ border-bottom-right-radius: 5px;
   }
 `
 
-class CarCard extends Component {
-
-   numberWithSpaces(x) {
+export default function CarCard(props) {
+   function numberWithSpaces(x) {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
   }
 
-  render() {   
     return (
-    <Link href={{ pathname: '/elbil', query: { id: `${this.props.id}` } }}>
-      <CardWrapper bildeURL={this.props.bildeURL}>
+    <Link href={{ pathname: '/elbil', query: { id: `${props.id}` } }}>
+      <CardWrapper bildeURL={props.bildeURL}>
         <div className="imgTitle">
-          <span>{this.props.modell} </span>
-          <span>{this.props.merke} </span>
-          <span>{this.props.type}</span>
+          <span>{props.modell} </span>
+          <span>{props.merke} </span>
+          <span>{props.type}</span>
         </div>
 
         <div className="cardFooter">
           <ul>
-            <li><span><FaMapMarkerAlt  /></span> {this.props.rekkevidde} <span className="light">km</span></li>
-            <li><span className="price">Fra: {this.numberWithSpaces(`${this.props.pris}`)},-</span></li>   
+            <li><span><FaMapMarkerAlt  /></span> {props.rekkevidde} <span className="light">km</span></li>
+            <li><span className="price">Fra: {numberWithSpaces(`${props.pris}`)},-</span></li>   
           </ul>
         </div>
       </CardWrapper>
       </Link>
     );
-  }
+  
 }
 
-export default CarCard;

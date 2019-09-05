@@ -51,7 +51,6 @@ function ElbilDetail({queryId}) {
     }
   )
 
-
   // Filtering out all the Cars that does not match the id 
   const elbilDetail = elbiler.filter (elbil => elbil.id === queryId)
   // Mapping the id that remains after filtering
