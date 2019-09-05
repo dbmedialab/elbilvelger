@@ -4,7 +4,6 @@ import CarCard from "../Components/CarCard";
 import FlexWrapper from "../Components/FlexWrapper"
 import styled from '@emotion/styled';
 
-
 import elbiler from '../elbiler.json';
 import Fade from 'react-reveal/Fade';
 
@@ -19,14 +18,17 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      elbilId: "23"
+      elbilId: "0"
     };
     this.componentDidMount = this.componentDidMount.bind(this);
   }
 
   componentDidMount() {
+    // Fetching this location: http://localhost:3000/elbil?id=1
     let url = window.location.href
+    // Spltting the URL to this http://localhost:3000/elbil?id = 1 
     let query = url.split("=")
+    // Getting the id from the second part of the URL
     let queryId = Number(query[1])
     // Setting elbilId state to the id from Params
     this.setState({elbilId: queryId});

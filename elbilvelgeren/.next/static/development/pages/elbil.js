@@ -20854,8 +20854,11 @@ function (_Component) {
   Object(_babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_1__["default"])(App, [{
     key: "componentDidMount",
     value: function componentDidMount() {
-      var url = window.location.href;
-      var query = url.split("=");
+      // Fetching this location: http://localhost:3000/elbil?id=1
+      var url = window.location.href; // Spltting the URL to this http://localhost:3000/elbil?id = 1 
+
+      var query = url.split("="); // Getting the id from the second part of the URL
+
       var queryId = Number(query[1]); // Setting elbilId state to the id from Params
 
       this.setState({
@@ -20876,13 +20879,13 @@ function (_Component) {
         return __jsx(react_reveal_Fade__WEBPACK_IMPORTED_MODULE_13___default.a, {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 41
+            lineNumber: 43
           },
           __self: this
         }, __jsx(Detail, {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 42
+            lineNumber: 44
           },
           __self: this
         }, __jsx(_Components_CarCard__WEBPACK_IMPORTED_MODULE_9__["default"], {
@@ -20895,25 +20898,25 @@ function (_Component) {
           id: elbil.id,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 43
+            lineNumber: 45
           },
           __self: this
         }), __jsx("h1", {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 53
+            lineNumber: 55
           },
           __self: this
         }, elbil.merke, " ", elbil.modell, " ", elbil.type), __jsx("h3", {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 54
+            lineNumber: 56
           },
           __self: this
         }, "Sitteplasser: ", elbil.sitteplasser), __jsx("h3", {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 56
+            lineNumber: 58
           },
           __self: this
         }, "Tester:"), __jsx("a", {
@@ -20921,7 +20924,7 @@ function (_Component) {
           target: "_blank",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 57
+            lineNumber: 59
           },
           __self: this
         }, elbil.tester)));
@@ -20929,13 +20932,13 @@ function (_Component) {
       return __jsx(_Components_FlexWrapper__WEBPACK_IMPORTED_MODULE_10__["default"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 63
+          lineNumber: 65
         },
         __self: this
       }, __jsx(_Components_Navbar__WEBPACK_IMPORTED_MODULE_8__["default"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 64
+          lineNumber: 66
         },
         __self: this
       }), elBiler);

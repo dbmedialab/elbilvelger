@@ -18,7 +18,7 @@ flex-direction: row;
 justify-content: center;
 width: 100%;
 
-button{
+button, input{
   background: none; 
   border: none;
   margin: .5rem;

@@ -111,10 +111,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_reveal_Fade__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react_reveal_Fade__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var _elbiler_json__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../elbiler.json */ "./elbiler.json");
 var _elbiler_json__WEBPACK_IMPORTED_MODULE_5___namespace = /*#__PURE__*/__webpack_require__.t(/*! ../elbiler.json */ "./elbiler.json", 1);
-/* harmony import */ var react_awesome_modal__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react-awesome-modal */ "react-awesome-modal");
-/* harmony import */ var react_awesome_modal__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(react_awesome_modal__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var react_icons_fa__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react-icons/fa */ "react-icons/fa");
-/* harmony import */ var react_icons_fa__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(react_icons_fa__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var _emotion_styled__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @emotion/styled */ "@emotion/styled");
+/* harmony import */ var _emotion_styled__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_emotion_styled__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var react_awesome_modal__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react-awesome-modal */ "react-awesome-modal");
+/* harmony import */ var react_awesome_modal__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(react_awesome_modal__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var react_icons_fa__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react-icons/fa */ "react-icons/fa");
+/* harmony import */ var react_icons_fa__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(react_icons_fa__WEBPACK_IMPORTED_MODULE_8__);
 
 var _jsxFileName = "/Users/mariusgrondahl/Documents/GitHub/elbilvelger/elbilvelgeren/Components/AllCars.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
@@ -125,6 +127,12 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
 
 
 
+
+const ModalContent = _emotion_styled__WEBPACK_IMPORTED_MODULE_6___default.a.div`
+  color: #2d2d2d;
+  text-align: center;
+  padding: 1rem;
+`;
 
 class AllCars extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
   constructor(props) {
@@ -208,7 +216,7 @@ class AllCars extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
     const elBiler = this.state.elbiler.map(elbil => __jsx(react_reveal_Fade__WEBPACK_IMPORTED_MODULE_4___default.a, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 84
+        lineNumber: 91
       },
       __self: this
     }, __jsx(_CarCard__WEBPACK_IMPORTED_MODULE_2__["default"], {
@@ -221,11 +229,11 @@ class AllCars extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
       id: elbil.id,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 85
+        lineNumber: 92
       },
       __self: this
     })));
-    return __jsx(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, null, elBiler, __jsx(react_awesome_modal__WEBPACK_IMPORTED_MODULE_6___default.a, {
+    return __jsx(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, null, elBiler, __jsx(react_awesome_modal__WEBPACK_IMPORTED_MODULE_7___default.a, {
       visible: this.state.visible,
       width: "400",
       height: "300",
@@ -233,39 +241,33 @@ class AllCars extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
       onClickAway: () => this.closeModal(),
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 100
-      },
-      __self: this
-    }, __jsx("div", {
-      __source: {
-        fileName: _jsxFileName,
         lineNumber: 107
       },
       __self: this
-    }, __jsx("h1", {
+    }, __jsx(ModalContent, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 108
+        lineNumber: 114
       },
       __self: this
-    }, "Title"), __jsx("p", {
+    }, __jsx("h3", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 109
+        lineNumber: 115
       },
       __self: this
-    }, "Some Contents"), __jsx("a", {
+    }, "Her kommer avanserte filtere:"), __jsx("a", {
       href: "javascript:void(0);",
       onClick: () => this.closeModal(),
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 110
+        lineNumber: 116
       },
       __self: this
     }, "Close"))), __jsx(_BottomNav__WEBPACK_IMPORTED_MODULE_3__["default"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 114
+        lineNumber: 120
       },
       __self: this
     }, __jsx("button", {
@@ -278,19 +280,19 @@ class AllCars extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
       },
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 115
+        lineNumber: 121
       },
       __self: this
-    }, __jsx(react_icons_fa__WEBPACK_IMPORTED_MODULE_7__["FaMapMarkerAlt"], {
+    }, __jsx(react_icons_fa__WEBPACK_IMPORTED_MODULE_8__["FaMapMarkerAlt"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 122
+        lineNumber: 128
       },
       __self: this
     }), __jsx("br", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 122
+        lineNumber: 128
       },
       __self: this
     }), "Rekkevidde"), __jsx("button", {
@@ -303,19 +305,19 @@ class AllCars extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
       },
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 125
+        lineNumber: 131
       },
       __self: this
-    }, __jsx(react_icons_fa__WEBPACK_IMPORTED_MODULE_7__["FaCoins"], {
+    }, __jsx(react_icons_fa__WEBPACK_IMPORTED_MODULE_8__["FaCoins"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 132
+        lineNumber: 138
       },
       __self: this
     }), __jsx("br", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 132
+        lineNumber: 138
       },
       __self: this
     }), "Pris"), __jsx("button", {
@@ -328,50 +330,68 @@ class AllCars extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
       },
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 136
+        lineNumber: 142
       },
       __self: this
-    }, __jsx(react_icons_fa__WEBPACK_IMPORTED_MODULE_7__["FaArrowsAltV"], {
+    }, __jsx(react_icons_fa__WEBPACK_IMPORTED_MODULE_8__["FaArrowsAltV"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 143
+        lineNumber: 149
       },
       __self: this
     }), " ", __jsx("br", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 143
+        lineNumber: 149
       },
       __self: this
     }), "St\xF8rrelse"), __jsx("button", {
       onClick: this.reset,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 146
+        lineNumber: 152
       },
       __self: this
-    }, __jsx(react_icons_fa__WEBPACK_IMPORTED_MODULE_7__["FaRedo"], {
+    }, __jsx(react_icons_fa__WEBPACK_IMPORTED_MODULE_8__["FaRedo"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 147
+        lineNumber: 153
       },
       __self: this
     }), " ", __jsx("br", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 147
+        lineNumber: 153
       },
       __self: this
-    }), "Reset"), __jsx("input", {
+    }), "Reset"), __jsx("div", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 156
+      },
+      __self: this
+    }, __jsx(react_icons_fa__WEBPACK_IMPORTED_MODULE_8__["FaRedo"], {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 157
+      },
+      __self: this
+    }), __jsx("br", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 157
+      },
+      __self: this
+    }), __jsx("input", {
       type: "button",
       value: "Filter",
       onClick: () => this.openModal(),
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 150
+        lineNumber: 158
       },
       __self: this
-    })));
+    }))));
   }
 
 }
@@ -413,7 +433,7 @@ flex-direction: row;
 justify-content: center;
 width: 100%;
 
-button{
+button, input{
   background: none; 
   border: none;
   margin: .5rem;

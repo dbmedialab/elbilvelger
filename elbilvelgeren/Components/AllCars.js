@@ -3,10 +3,16 @@ import CarCard from "./CarCard";
 import BottomNav from "./BottomNav"
 import Fade from 'react-reveal/Fade';
 import elbiler from '../elbiler.json';
+import styled from '@emotion/styled';
 
 import Modal from 'react-awesome-modal';
-import { FaMapMarkerAlt, FaCoins, FaArrowsAltV, FaRedo } from 'react-icons/fa';
+import { FaMapMarkerAlt, FaCoins, FaArrowsAltV, FaRedo, FaSlidersH } from 'react-icons/fa';
 
+const ModalContent = styled.div`
+  color: #2d2d2d;
+  text-align: center;
+  padding: 1rem;
+`
 
 class AllCars extends React.Component {
   constructor(props) {
@@ -104,11 +110,10 @@ class AllCars extends React.Component {
                     effect="fadeInUp"
                     onClickAway={() => this.closeModal()}
                 >
-                    <div>
-                        <h1>Title</h1>
-                        <p>Some Contents</p>
+                    <ModalContent>
+                        <h3>Her kommer avanserte filtere:</h3>
                         <a href="javascript:void(0);" onClick={() => this.closeModal()}>Close</a>
-                    </div>
+                    </ModalContent>
         </Modal>
         
         <BottomNav>
@@ -146,8 +151,13 @@ class AllCars extends React.Component {
                 <button onClick={this.reset}>
                   <FaRedo  /> <br />Reset
                 </button>
-
-                <input type="button" value="Filter" onClick={() => this.openModal()} />
+                
+                <div>
+                  <FaRedo  /><br />
+                  <input type="button" value="Filter" onClick={() => this.openModal()} />
+                </div>
+                
+               
 
         </BottomNav>
       </>

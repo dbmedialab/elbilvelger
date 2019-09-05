@@ -17,17 +17,20 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/assertThisInitialized */ "./node_modules/@babel/runtime-corejs2/helpers/esm/assertThisInitialized.js");
 /* harmony import */ var _babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/inherits */ "./node_modules/@babel/runtime-corejs2/helpers/esm/inherits.js");
 /* harmony import */ var _babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/defineProperty */ "./node_modules/@babel/runtime-corejs2/helpers/esm/defineProperty.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_8__);
-/* harmony import */ var _CarCard__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./CarCard */ "./Components/CarCard.js");
-/* harmony import */ var _BottomNav__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./BottomNav */ "./Components/BottomNav.js");
-/* harmony import */ var react_reveal_Fade__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! react-reveal/Fade */ "./node_modules/react-reveal/Fade.js");
-/* harmony import */ var react_reveal_Fade__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(react_reveal_Fade__WEBPACK_IMPORTED_MODULE_11__);
-/* harmony import */ var _elbiler_json__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../elbiler.json */ "./elbiler.json");
-var _elbiler_json__WEBPACK_IMPORTED_MODULE_12___namespace = /*#__PURE__*/__webpack_require__.t(/*! ../elbiler.json */ "./elbiler.json", 1);
-/* harmony import */ var react_awesome_modal__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! react-awesome-modal */ "./node_modules/react-awesome-modal/lib/index.js");
-/* harmony import */ var react_awesome_modal__WEBPACK_IMPORTED_MODULE_13___default = /*#__PURE__*/__webpack_require__.n(react_awesome_modal__WEBPACK_IMPORTED_MODULE_13__);
-/* harmony import */ var react_icons_fa__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! react-icons/fa */ "./node_modules/react-icons/fa/index.esm.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/taggedTemplateLiteral */ "./node_modules/@babel/runtime-corejs2/helpers/esm/taggedTemplateLiteral.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_9__);
+/* harmony import */ var _CarCard__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./CarCard */ "./Components/CarCard.js");
+/* harmony import */ var _BottomNav__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./BottomNav */ "./Components/BottomNav.js");
+/* harmony import */ var react_reveal_Fade__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! react-reveal/Fade */ "./node_modules/react-reveal/Fade.js");
+/* harmony import */ var react_reveal_Fade__WEBPACK_IMPORTED_MODULE_12___default = /*#__PURE__*/__webpack_require__.n(react_reveal_Fade__WEBPACK_IMPORTED_MODULE_12__);
+/* harmony import */ var _elbiler_json__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../elbiler.json */ "./elbiler.json");
+var _elbiler_json__WEBPACK_IMPORTED_MODULE_13___namespace = /*#__PURE__*/__webpack_require__.t(/*! ../elbiler.json */ "./elbiler.json", 1);
+/* harmony import */ var _emotion_styled__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! @emotion/styled */ "./node_modules/@emotion/styled/dist/styled.browser.esm.js");
+/* harmony import */ var react_awesome_modal__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! react-awesome-modal */ "./node_modules/react-awesome-modal/lib/index.js");
+/* harmony import */ var react_awesome_modal__WEBPACK_IMPORTED_MODULE_15___default = /*#__PURE__*/__webpack_require__.n(react_awesome_modal__WEBPACK_IMPORTED_MODULE_15__);
+/* harmony import */ var react_icons_fa__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! react-icons/fa */ "./node_modules/react-icons/fa/index.esm.js");
+
 
 
 
@@ -37,7 +40,17 @@ var _elbiler_json__WEBPACK_IMPORTED_MODULE_12___namespace = /*#__PURE__*/__webpa
 
 
 var _jsxFileName = "/Users/mariusgrondahl/Documents/GitHub/elbilvelger/elbilvelgeren/Components/AllCars.js";
-var __jsx = react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement;
+var __jsx = react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement;
+
+function _templateObject() {
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_8__["default"])(["\n  color: #2d2d2d;\n  text-align: center;\n  padding: 1rem;\n"]);
+
+  _templateObject = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
 
 
 
@@ -45,6 +58,9 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement;
 
 
 
+
+
+var ModalContent = _emotion_styled__WEBPACK_IMPORTED_MODULE_14__["default"].div(_templateObject());
 
 var AllCars =
 /*#__PURE__*/
@@ -113,8 +129,8 @@ function (_React$Component) {
     });
 
     _this.state = {
-      elbiler: _elbiler_json__WEBPACK_IMPORTED_MODULE_12__,
-      elbilDefault: Object(_babel_runtime_corejs2_helpers_esm_toConsumableArray__WEBPACK_IMPORTED_MODULE_0__["default"])(_elbiler_json__WEBPACK_IMPORTED_MODULE_12__),
+      elbiler: _elbiler_json__WEBPACK_IMPORTED_MODULE_13__,
+      elbilDefault: Object(_babel_runtime_corejs2_helpers_esm_toConsumableArray__WEBPACK_IMPORTED_MODULE_0__["default"])(_elbiler_json__WEBPACK_IMPORTED_MODULE_13__),
       orderByRange: 'asc',
       orderByPrice: 'asc',
       orderBySize: 'asc',
@@ -144,13 +160,13 @@ function (_React$Component) {
       var _this2 = this;
 
       var elBiler = this.state.elbiler.map(function (elbil) {
-        return __jsx(react_reveal_Fade__WEBPACK_IMPORTED_MODULE_11___default.a, {
+        return __jsx(react_reveal_Fade__WEBPACK_IMPORTED_MODULE_12___default.a, {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 84
+            lineNumber: 91
           },
           __self: this
-        }, __jsx(_CarCard__WEBPACK_IMPORTED_MODULE_9__["default"], {
+        }, __jsx(_CarCard__WEBPACK_IMPORTED_MODULE_10__["default"], {
           merke: elbil.modell,
           modell: elbil.merke,
           rekkevidde: elbil.rekkevidde,
@@ -160,12 +176,12 @@ function (_React$Component) {
           id: elbil.id,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 85
+            lineNumber: 92
           },
           __self: this
         }));
       });
-      return __jsx(react__WEBPACK_IMPORTED_MODULE_8___default.a.Fragment, null, elBiler, __jsx(react_awesome_modal__WEBPACK_IMPORTED_MODULE_13___default.a, {
+      return __jsx(react__WEBPACK_IMPORTED_MODULE_9___default.a.Fragment, null, elBiler, __jsx(react_awesome_modal__WEBPACK_IMPORTED_MODULE_15___default.a, {
         visible: this.state.visible,
         width: "400",
         height: "300",
@@ -175,41 +191,35 @@ function (_React$Component) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 100
-        },
-        __self: this
-      }, __jsx("div", {
-        __source: {
-          fileName: _jsxFileName,
           lineNumber: 107
         },
         __self: this
-      }, __jsx("h1", {
+      }, __jsx(ModalContent, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 108
+          lineNumber: 114
         },
         __self: this
-      }, "Title"), __jsx("p", {
+      }, __jsx("h3", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 109
+          lineNumber: 115
         },
         __self: this
-      }, "Some Contents"), __jsx("a", {
+      }, "Her kommer avanserte filtere:"), __jsx("a", {
         href: "javascript:void(0);",
         onClick: function onClick() {
           return _this2.closeModal();
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 110
+          lineNumber: 116
         },
         __self: this
-      }, "Close"))), __jsx(_BottomNav__WEBPACK_IMPORTED_MODULE_10__["default"], {
+      }, "Close"))), __jsx(_BottomNav__WEBPACK_IMPORTED_MODULE_11__["default"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 114
+          lineNumber: 120
         },
         __self: this
       }, __jsx("button", {
@@ -222,19 +232,19 @@ function (_React$Component) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 115
+          lineNumber: 121
         },
         __self: this
-      }, __jsx(react_icons_fa__WEBPACK_IMPORTED_MODULE_14__["FaMapMarkerAlt"], {
+      }, __jsx(react_icons_fa__WEBPACK_IMPORTED_MODULE_16__["FaMapMarkerAlt"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 122
+          lineNumber: 128
         },
         __self: this
       }), __jsx("br", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 122
+          lineNumber: 128
         },
         __self: this
       }), "Rekkevidde"), __jsx("button", {
@@ -247,19 +257,19 @@ function (_React$Component) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 125
+          lineNumber: 131
         },
         __self: this
-      }, __jsx(react_icons_fa__WEBPACK_IMPORTED_MODULE_14__["FaCoins"], {
+      }, __jsx(react_icons_fa__WEBPACK_IMPORTED_MODULE_16__["FaCoins"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 132
+          lineNumber: 138
         },
         __self: this
       }), __jsx("br", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 132
+          lineNumber: 138
         },
         __self: this
       }), "Pris"), __jsx("button", {
@@ -272,41 +282,59 @@ function (_React$Component) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 136
+          lineNumber: 142
         },
         __self: this
-      }, __jsx(react_icons_fa__WEBPACK_IMPORTED_MODULE_14__["FaArrowsAltV"], {
+      }, __jsx(react_icons_fa__WEBPACK_IMPORTED_MODULE_16__["FaArrowsAltV"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 143
+          lineNumber: 149
         },
         __self: this
       }), " ", __jsx("br", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 143
+          lineNumber: 149
         },
         __self: this
       }), "St\xF8rrelse"), __jsx("button", {
         onClick: this.reset,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 146
+          lineNumber: 152
         },
         __self: this
-      }, __jsx(react_icons_fa__WEBPACK_IMPORTED_MODULE_14__["FaRedo"], {
+      }, __jsx(react_icons_fa__WEBPACK_IMPORTED_MODULE_16__["FaRedo"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 147
+          lineNumber: 153
         },
         __self: this
       }), " ", __jsx("br", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 147
+          lineNumber: 153
         },
         __self: this
-      }), "Reset"), __jsx("input", {
+      }), "Reset"), __jsx("div", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 156
+        },
+        __self: this
+      }, __jsx(react_icons_fa__WEBPACK_IMPORTED_MODULE_16__["FaRedo"], {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 157
+        },
+        __self: this
+      }), __jsx("br", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 157
+        },
+        __self: this
+      }), __jsx("input", {
         type: "button",
         value: "Filter",
         onClick: function onClick() {
@@ -314,15 +342,15 @@ function (_React$Component) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 150
+          lineNumber: 158
         },
         __self: this
-      })));
+      }))));
     }
   }]);
 
   return AllCars;
-}(react__WEBPACK_IMPORTED_MODULE_8___default.a.Component);
+}(react__WEBPACK_IMPORTED_MODULE_9___default.a.Component);
 
 /* harmony default export */ __webpack_exports__["default"] = (AllCars);
 
@@ -356,7 +384,7 @@ var _jsxFileName = "/Users/mariusgrondahl/Documents/GitHub/elbilvelger/elbilvelg
 var __jsx = react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement;
 
 function _templateObject2() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_5__["default"])(["\ndisplay: flex;\nflex-direction: row;\njustify-content: center;\nwidth: 100%;\n\nbutton{\n  background: none; \n  border: none;\n  margin: .5rem;\n  outline: none;\n  font-size: .7rem;\n  font-weight: 200;\n  color: #2d2d2d;\n\n  svg{\n    width: 20px;\n    height: 20px;\n    margin-bottom: .3rem;\n  }\n}\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_5__["default"])(["\ndisplay: flex;\nflex-direction: row;\njustify-content: center;\nwidth: 100%;\n\nbutton, input{\n  background: none; \n  border: none;\n  margin: .5rem;\n  outline: none;\n  font-size: .7rem;\n  font-weight: 200;\n  color: #2d2d2d;\n\n  svg{\n    width: 20px;\n    height: 20px;\n    margin-bottom: .3rem;\n  }\n}\n"]);
 
   _templateObject2 = function _templateObject2() {
     return data;
