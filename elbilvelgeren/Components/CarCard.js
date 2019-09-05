@@ -8,6 +8,7 @@ class CarCard extends Component {
    numberWithSpaces(x) {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
   }
+
   render() {
 
   const CardWrapper = styled.div`
@@ -69,7 +70,7 @@ class CarCard extends Component {
         .price{
           font-weight: 400;
           background: #3CA069;
-          padding: .3rem .7rem;
+          padding: .2rem .7rem;
           border-radius: 3px;
         }
 
@@ -80,8 +81,7 @@ class CarCard extends Component {
     }
 `   
     return (
-    <Link href={{ pathname: '/detail', query: { elbil: `${this.props.id}` } }}>
-
+    <Link href={{ pathname: '/elbil', query: { id: `${this.props.id}` } }}>
       <CardWrapper>
         <div className="imgTitle">
           <span>{this.props.modell} </span>
@@ -92,8 +92,7 @@ class CarCard extends Component {
         <div className="cardFooter">
           <ul>
             <li><span><FaMapMarkerAlt  /></span> {this.props.rekkevidde} <span className="light">km</span></li>
-            <li><span className="price">{this.props.pris},-</span></li>
-                  
+            <li><span className="price">Fra: {this.numberWithSpaces(`${this.props.pris}`)},-</span></li>   
           </ul>
         </div>
       </CardWrapper>

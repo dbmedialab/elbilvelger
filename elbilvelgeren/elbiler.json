@@ -15,7 +15,7 @@
     
     {
       "id": 2,
-      "bildeURL": "etron.jpg",
+      "bildeURL": "Audi-e-tron.jpg",
       "merke":"Audi",
       "modell":"e-tron",
       "type":"55 advanced plus",
@@ -30,7 +30,7 @@
       
     {
       "id": 3,
-      "bildeURL": "etron.jpg",
+      "bildeURL": "Audi-e-tron2.jpg",
       "merke":"Audi",
       "modell":"e-tron",
       "type":"Exclusive",
@@ -45,7 +45,7 @@
     
     {
       "id": 4,
-      "bildeURL": "default.jpg",
+      "bildeURL": "BMW-i3.jpg",
       "merke":"BMW",
       "modell":"i3",
       "type":"120Ah",
@@ -59,7 +59,7 @@
     
     {
       "id": 5,
-      "bildeURL": "default.jpg",
+      "bildeURL": "BMW-i3-2018.jpg",
       "merke":"BMW",
       "modell":"i3",
       "type":"120Ah Charged",
@@ -73,7 +73,7 @@
       
     {
       "id": 6,
-      "bildeURL": "default.jpg",
+      "bildeURL": "BMW-i3-2018.jpg",
       "merke":"BMW",
       "modell":"i3",
       "type":"120Ah Charged +",
@@ -88,7 +88,7 @@
       
     {
       "id": 7,
-      "bildeURL": "default.jpg",
+      "bildeURL": "BMW-i3-2018.jpg",
       "merke":"BMW",
       "modell":"i3",
       "type":"120Ah fully Charged",
@@ -102,7 +102,7 @@
     
     {
       "id": 8,
-      "bildeURL": "default.jpg",
+      "bildeURL": "Citroen-Berlingo-2019.jpg",
       "merke":"Citroen",
       "modell":"E-Berlingo",
       "type":"Multispace",
@@ -116,7 +116,7 @@
     
     {
       "id": 9,
-      "bildeURL": "default.jpg",
+      "bildeURL": "Citroen-C-Zero-2011.jpg",
       "merke":"Citroen",
       "modell":"C-Zero",
       "type":"Feel",
@@ -130,7 +130,7 @@
     
     {
       "id": 10,
-      "bildeURL": "default.jpg",
+      "bildeURL": "Hyundai-Ioniq-2017.jpg",
       "merke":"Hyundai",
       "modell":"Ioniq",
       "type":"EV",
@@ -144,7 +144,7 @@
     
     {
       "id": 11,
-      "bildeURL": "default.jpg",
+      "bildeURL": "Hyundai-Ioniq-20172.jpg",
       "merke":"Hyundai",
       "modell":"Ioniq",
       "type":"Teknikk",
@@ -158,9 +158,9 @@
     
     {
       "id": 12,
-      "bildeURL": "default.jpg",
+      "bildeURL": "Hyundai-Ioniq-20172.jpg",
       "merke":"Hyundai",
-      "modell":"Kona Electric",
+      "modell":"Hyundai-Ioniq_Electric",
       "type":"Teknikk",
       "rekkevidde": 449,
       "pris": 325000,
@@ -172,7 +172,7 @@
     
     {
       "id": 13,
-      "bildeURL": "default.jpg",
+      "bildeURL": "DS-7_Crossback_E-Tense.jpg",
       "merke":"DS",
       "modell":"3 Crossback E-Tense",
       "type":"136 So Chic",
@@ -187,7 +187,7 @@
     
     {
       "id": 14,
-      "bildeURL": "default.jpg",
+      "bildeURL": "DS-7_Crossback_E-Tense.jpg",
       "merke":"DS",
       "modell":"3 Crossback E-Tense",
       "type":"136 Grand Chic",
@@ -202,7 +202,7 @@
     
     {
       "id": 15,
-      "bildeURL": "default.jpg",
+      "bildeURL": "Kia-e-Niro-2019.jpg",
       "merke":"Kia",
       "modell":"E-Niro",
       "type":"First Edition",
@@ -217,7 +217,7 @@
     
     {
       "id": 16,
-      "bildeURL": "default.jpg",
+      "bildeURL": "Kia-Soul_EV-2020-2.jpg",
       "merke":"Kia",
       "modell":"E-Soul",
       "type":"Classic",
@@ -232,7 +232,7 @@
     
     {
       "id": 17,
-      "bildeURL": "default.jpg",
+      "bildeURL": "Kia-Soul_EV-2020.jpg",
       "merke":"Kia",
       "modell":"E-Soul",
       "type":"Active",
@@ -247,7 +247,7 @@
     
     {
       "id": 18,
-      "bildeURL": "default.jpg",
+      "bildeURL": "Kia-Soul_EV-2020-2.jpg",
       "merke":"Kia",
       "modell":"E-Soul",
       "type":"Exclusive",
@@ -261,7 +261,7 @@
     
     {
       "id": 19,
-      "bildeURL": "default.jpg",
+      "bildeURL": "Mitsubishi-i-MiEV2.jpg",
       "merke":"Mitsubishi",
       "modell":"i-Miev",
       "type":"16 kWh",
@@ -275,7 +275,7 @@
     
     {
       "id": 20,
-      "bildeURL": "default.jpg",
+      "bildeURL": "Nissan-Leaf-2018.jpg",
       "merke":"Nissan",
       "modell":"Leaf",
       "type":"40kWh Acenta",
@@ -290,7 +290,7 @@
     
     { 
     "id": 21,
-    "bildeURL": "default.jpg",  
+    "bildeURL": "Nissan-Leaf-2018.jpg",  
     "merke":"Nissan",
     "modell":"Leaf",
     "type":"40kWh N-Conneca",
@@ -305,7 +305,7 @@
     
     {
       "id": 22,
-      "bildeURL": "default.jpg",
+      "bildeURL": "Nissan-Leaf-2018.jpg",
       "merke":"Nissan",
       "modell":"Leaf",
       "type":"40kWh Tekna",
@@ -320,7 +320,7 @@
     
     {
       "id": 23,
-      "bildeURL": "default.jpg",
+      "bildeURL": "Nissan-Leaf-2018.jpg",
       "merke":"Nissan",
       "modell":"Leaf",
       "type":"62kWh e+ N-Conneca",
@@ -335,7 +335,7 @@
     
     {
       "id": 24,
-      "bildeURL": "default.jpg",
+      "bildeURL": "Nissan-Leaf-2018.jpg",
       "merke":"Nissan",
       "modell":"Leaf",
       "type":"62 kWh e+ Tekna",
@@ -350,7 +350,7 @@
     
     {
       "id": 25,
-      "bildeURL": "default.jpg",
+      "bildeURL": "Nissan-e-NV200-2.jpg",
       "merke":"Nissan",
       "modell":"E-NV200",
       "type":"Evalia 40 kWt 5-s",
@@ -365,7 +365,7 @@
     
     {
       "id": 26,
-      "bildeURL": "default.jpg",
+      "bildeURL": "Nissan-e-NV200-2.jpg",
       "merke":"Nissan",
       "modell":"E-NV200",
       "type":"Evalia 40 kWt 7-s",
@@ -379,7 +379,7 @@
     
     {
       "id": 27,
-      "bildeURL": "default.jpg",
+      "bildeURL": "Nissan-e-NV200-2.jpg",
       "merke":"Nissan",
       "modell":"E-NV200",
       "type":"Comfort Plus 40 kWt",
@@ -393,7 +393,7 @@
     },
     {
       "id": 28,
-      "bildeURL": "default.jpg",
+      "bildeURL": "Nissan-e-NV200-2.jpg",
       "merke":"Nissan",
       "modell":"E-NV200",
       "type":"Premium 40 kWt",
@@ -408,7 +408,7 @@
     
     {
       "id": 29,
-      "bildeURL": "default.jpg",
+      "bildeURL": "Opel-Ampera-e-2017-3.jpg",
       "merke":"Opel",
       "modell":"Ampera-E",
       "type":"Premium",
@@ -422,7 +422,7 @@
     
     {
       "id": 30,
-      "bildeURL": "default.jpg",
+      "bildeURL": "Peugeot-iOn-2011-2.jpg",
       "merke":"Peugeot",
       "modell":"iOn",
       "type":"Active",
@@ -437,7 +437,7 @@
     
     {
       "id": 31,
-      "bildeURL": "default.jpg",
+      "bildeURL": "Peugeot-Partner_Tepee.jpg",
       "merke":"Peugeot",
       "modell":"e-Partner Tepee",
       "rekkevidde": 170,
@@ -451,7 +451,7 @@
     
     {
       "id": 32,
-      "bildeURL": "default.jpg",
+      "bildeURL": "Renault-Kangoo-2014.jpg",
       "merke":"Renault",
       "modell":"Kangoo Electric",
       "type":"5-seter",
@@ -466,7 +466,7 @@
     
     {
       "id": 33,
-      "bildeURL": "default.jpg",
+      "bildeURL": "Renault-Twizy-2012.jpg",
       "merke":"Renault",
       "modell":"Twizy",
       "type":"Intens",
@@ -481,7 +481,7 @@
       
     {
       "id": 34,
-      "bildeURL": "default.jpg",
+      "bildeURL": "Renault-Zoe-2017-1600-17.jpg",
       "merke":"Renault",
       "modell":"Zoe",
       "type":"Z.E 40 R90 Life",
@@ -495,7 +495,7 @@
     
     {
       "id": 35,
-      "bildeURL": "default.jpg",
+      "bildeURL": "Renault-Zoe-2017-1600-17.jpg",
       "merke":"Renault",
       "modell":"Zoe",
       "type":"Z.E 40 R110 Intens",
@@ -510,7 +510,7 @@
     
     {
       "id": 36,
-      "bildeURL": "default.jpg",
+      "bildeURL": "Volkswagen-e-Golf-2017.jpg",
       "merke":"VW",
       "modell":"Golf",
       "rekkevidde": 229,
@@ -524,7 +524,7 @@
     
     {
       "id": 37,
-      "bildeURL": "default.jpg",
+      "bildeURL": "Volkswagen-e-Up-2014.jpg",
       "merke":"VW",
       "modell":"UP!",
       "rekkevidde": 133,
