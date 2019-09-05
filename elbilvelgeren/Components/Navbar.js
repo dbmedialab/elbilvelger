@@ -6,7 +6,7 @@ class Navbar extends Component {
     constructor(props) {
         super(props);
         this.state = { 
-            navbarHeight: 50,
+            navbarHeight: 45,
             logoWidth: 140
         };
     }
@@ -15,7 +15,7 @@ class Navbar extends Component {
         if (pageYOffset > 300){
             this.setState({navbarHeight: 30, logoWidth: 100})
         } else if (pageYOffset < 300) {
-            this.setState({navbarHeight: 50, logoWidth: 140})
+            this.setState({navbarHeight: 45, logoWidth: 140})
         }
     }
 

@@ -7,8 +7,6 @@ const FlexWrapperCSS = styled.div`
     justify-content: center;
     margin: .5rem;
     padding: 4rem  0rem 3rem 0rem;
-    align-content: center;
-    align-items: center;
 
     @media (min-width: 800px) {
       flex-direction: row;

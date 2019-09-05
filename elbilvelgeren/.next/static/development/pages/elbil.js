@@ -9,12 +9,12 @@
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/taggedTemplateLiteral */ "./node_modules/@babel/runtime-corejs2/helpers/esm/taggedTemplateLiteral.js");
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/classCallCheck */ "./node_modules/@babel/runtime-corejs2/helpers/esm/classCallCheck.js");
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/createClass */ "./node_modules/@babel/runtime-corejs2/helpers/esm/createClass.js");
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/possibleConstructorReturn */ "./node_modules/@babel/runtime-corejs2/helpers/esm/possibleConstructorReturn.js");
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/getPrototypeOf */ "./node_modules/@babel/runtime-corejs2/helpers/esm/getPrototypeOf.js");
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/inherits */ "./node_modules/@babel/runtime-corejs2/helpers/esm/inherits.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/classCallCheck */ "./node_modules/@babel/runtime-corejs2/helpers/esm/classCallCheck.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/createClass */ "./node_modules/@babel/runtime-corejs2/helpers/esm/createClass.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/possibleConstructorReturn */ "./node_modules/@babel/runtime-corejs2/helpers/esm/possibleConstructorReturn.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/getPrototypeOf */ "./node_modules/@babel/runtime-corejs2/helpers/esm/getPrototypeOf.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/inherits */ "./node_modules/@babel/runtime-corejs2/helpers/esm/inherits.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/taggedTemplateLiteral */ "./node_modules/@babel/runtime-corejs2/helpers/esm/taggedTemplateLiteral.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_6__);
 /* harmony import */ var react_icons_fa__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react-icons/fa */ "./node_modules/react-icons/fa/index.esm.js");
@@ -31,7 +31,7 @@ var _jsxFileName = "/Users/mariusgrondahl/Documents/GitHub/elbilvelger/elbilvelg
 var __jsx = react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement;
 
 function _templateObject() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  display: flex;\n  flex-direction: column;\n  justify-content: flex-end;\n  background-size: cover;\n  background-position: center center;\n  background-image: url(/static/img/", ");\n  padding: 0;\n  margin-bottom: 1.3rem;\n  height: 35vh;\n  color: #fff;  \n  border-bottom-left-radius: 5px;\n  border-bottom-right-radius: 5px; \n\n    .imgTitle{\n      position: relative;\n      color: #fff;\n      background: linear-gradient(to top, rgba(0,0,0,0.8) 0%,rgba(0,0,0,0) 100%);\n      width: auto;\n      bottom: 0;\n      font-weigth: bold;\n      padding: 2rem 0 .7rem 0rem;\n      font-size: 1.4rem;\n      text-align: center;\n      font-weight: bold;\n      text-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2);\n    }\n  \n    ul {\n      width: 100%;\n      list-style: none;\n      display: flex;\n      flex-direction: row;\n      justify-content: space-between;\n      margin: 0 ;\n      padding: 0;\n   }\n  \n    ul li{\n      margin: 1rem;\n    }\n  \n    .cardFooter{\n      position: relative;\n      display: flex;\n      flex-direction: row;\n      padding: .5rem;\n      background: rgba(0,0,0,0.8);\n      color: #fff;\n      border-bottom-left-radius: 5px;\n      border-bottom-right-radius: 5px;\n\n      li{\n        font-size: 1.2rem;\n        font-weight: bold;\n\n        .price{\n          font-weight: 400;\n          background: #3CA069;\n          padding: .2rem .7rem;\n          border-radius: 3px;\n        }\n\n        .light{\n          font-weight: 200;\n        }\n      }\n    }\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_5__["default"])(["\ndisplay: flex;\nflex-direction: column;\njustify-content: flex-end;\nbackground-size: cover;\nbackground-position: center center;\nbackground-image: url(/static/img/", ");\npadding: 0;\nmargin-bottom: 1.3rem;\nheight: 35vh;\nmax-width: 1024px;\ncolor: #fff;  \nborder-bottom-left-radius: 5px;\nborder-bottom-right-radius: 5px; \n\n  .imgTitle{\n    position: relative;\n    color: #fff;\n    background: linear-gradient(to top, rgba(0,0,0,0.8) 0%,rgba(0,0,0,0) 100%);\n    width: auto;\n    bottom: 0;\n    font-weigth: bold;\n    padding: 2rem 0 .7rem 0rem;\n    font-size: 1.4rem;\n    text-align: center;\n    font-weight: bold;\n    text-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2);\n  }\n\n  ul {\n    width: 100%;\n    list-style: none;\n    display: flex;\n    flex-direction: row;\n    justify-content: space-between;\n    margin: 0 ;\n    padding: 0;\n }\n\n  ul li{\n    margin: 1rem;\n  }\n\n  .cardFooter{\n    position: relative;\n    display: flex;\n    flex-direction: row;\n    padding: .5rem;\n    background: rgba(0,0,0,0.8);\n    color: #fff;\n    border-bottom-left-radius: 5px;\n    border-bottom-right-radius: 5px;\n\n    li{\n      font-size: 1.2rem;\n      font-weight: bold;\n\n      .price{\n        font-weight: 400;\n        background: #3CA069;\n        padding: .2rem .7rem;\n        border-radius: 3px;\n      }\n\n      .light{\n        font-weight: 200;\n      }\n    }\n  }\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -44,19 +44,22 @@ function _templateObject() {
 
 
 
+var CardWrapper = _emotion_styled__WEBPACK_IMPORTED_MODULE_8__["default"].div(_templateObject(), function (props) {
+  return props.bildeURL;
+});
 
 var CarCard =
 /*#__PURE__*/
 function (_Component) {
-  Object(_babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_5__["default"])(CarCard, _Component);
+  Object(_babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_4__["default"])(CarCard, _Component);
 
   function CarCard() {
-    Object(_babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_1__["default"])(this, CarCard);
+    Object(_babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_0__["default"])(this, CarCard);
 
-    return Object(_babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_3__["default"])(this, Object(_babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4__["default"])(CarCard).apply(this, arguments));
+    return Object(_babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__["default"])(this, Object(_babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__["default"])(CarCard).apply(this, arguments));
   }
 
-  Object(_babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_2__["default"])(CarCard, [{
+  Object(_babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_1__["default"])(CarCard, [{
     key: "numberWithSpaces",
     value: function numberWithSpaces(x) {
       return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
@@ -64,7 +67,6 @@ function (_Component) {
   }, {
     key: "render",
     value: function render() {
-      var CardWrapper = _emotion_styled__WEBPACK_IMPORTED_MODULE_8__["default"].div(_templateObject(), this.props.bildeURL);
       return __jsx(next_link__WEBPACK_IMPORTED_MODULE_9___default.a, {
         href: {
           pathname: '/elbil',
@@ -74,89 +76,90 @@ function (_Component) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 84
+          lineNumber: 85
         },
         __self: this
       }, __jsx(CardWrapper, {
+        bildeURL: this.props.bildeURL,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 85
+          lineNumber: 86
         },
         __self: this
       }, __jsx("div", {
         className: "imgTitle",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 86
+          lineNumber: 87
         },
         __self: this
       }, __jsx("span", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 87
+          lineNumber: 88
         },
         __self: this
       }, this.props.modell, " "), __jsx("span", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 88
+          lineNumber: 89
         },
         __self: this
       }, this.props.merke, " "), __jsx("span", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 89
+          lineNumber: 90
         },
         __self: this
       }, this.props.type)), __jsx("div", {
         className: "cardFooter",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 92
+          lineNumber: 93
         },
         __self: this
       }, __jsx("ul", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 93
+          lineNumber: 94
         },
         __self: this
       }, __jsx("li", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 94
+          lineNumber: 95
         },
         __self: this
       }, __jsx("span", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 94
+          lineNumber: 95
         },
         __self: this
       }, __jsx(react_icons_fa__WEBPACK_IMPORTED_MODULE_7__["FaMapMarkerAlt"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 94
+          lineNumber: 95
         },
         __self: this
       })), " ", this.props.rekkevidde, " ", __jsx("span", {
         className: "light",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 94
+          lineNumber: 95
         },
         __self: this
       }, "km")), __jsx("li", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 95
+          lineNumber: 96
         },
         __self: this
       }, __jsx("span", {
         className: "price",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 95
+          lineNumber: 96
         },
         __self: this
       }, "Fra: ", this.numberWithSpaces("".concat(this.props.pris)), ",-"))))));
@@ -188,7 +191,7 @@ var _jsxFileName = "/Users/mariusgrondahl/Documents/GitHub/elbilvelger/elbilvelg
 var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
 
 function _templateObject() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    margin: .5rem;\n    padding: 4rem  0rem 3rem 0rem;\n    align-content: center;\n    align-items: center;\n\n    @media (min-width: 800px) {\n      flex-direction: row;\n      justify-content: flex-start;\n      flex-wrap: wrap;\n    }\n\n    .react-reveal{\n      width: 100%;\n\n      @media (min-width: 800px) {\n        width: 30vw;\n        margin: 1rem;\n      }\n  }\n  "]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    margin: .5rem;\n    padding: 4rem  0rem 3rem 0rem;\n\n    @media (min-width: 800px) {\n      flex-direction: row;\n      justify-content: flex-start;\n      flex-wrap: wrap;\n    }\n\n    .react-reveal{\n      width: 100%;\n\n      @media (min-width: 800px) {\n        width: 30vw;\n        margin: 1rem;\n      }\n  }\n  "]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -205,7 +208,7 @@ function FlexWrapper(props) {
   return __jsx(FlexWrapperCSS, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 30
+      lineNumber: 28
     },
     __self: this
   }, props.children);
@@ -283,14 +286,14 @@ function (_Component) {
         });
       } else if (pageYOffset < 300) {
         _this.setState({
-          navbarHeight: 50,
+          navbarHeight: 45,
           logoWidth: 140
         });
       }
     });
 
     _this.state = {
-      navbarHeight: 50,
+      navbarHeight: 45,
       logoWidth: 140
     };
     return _this;
@@ -20790,15 +20793,18 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/getPrototypeOf */ "./node_modules/@babel/runtime-corejs2/helpers/esm/getPrototypeOf.js");
 /* harmony import */ var _babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/assertThisInitialized */ "./node_modules/@babel/runtime-corejs2/helpers/esm/assertThisInitialized.js");
 /* harmony import */ var _babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/inherits */ "./node_modules/@babel/runtime-corejs2/helpers/esm/inherits.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var _Components_Navbar__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../Components/Navbar */ "./Components/Navbar.js");
-/* harmony import */ var _Components_CarCard__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../Components/CarCard */ "./Components/CarCard.js");
-/* harmony import */ var _Components_FlexWrapper__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../Components/FlexWrapper */ "./Components/FlexWrapper.js");
-/* harmony import */ var _elbiler_json__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../elbiler.json */ "./elbiler.json");
-var _elbiler_json__WEBPACK_IMPORTED_MODULE_10___namespace = /*#__PURE__*/__webpack_require__.t(/*! ../elbiler.json */ "./elbiler.json", 1);
-/* harmony import */ var react_reveal_Fade__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! react-reveal/Fade */ "./node_modules/react-reveal/Fade.js");
-/* harmony import */ var react_reveal_Fade__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(react_reveal_Fade__WEBPACK_IMPORTED_MODULE_11__);
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/taggedTemplateLiteral */ "./node_modules/@babel/runtime-corejs2/helpers/esm/taggedTemplateLiteral.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var _Components_Navbar__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../Components/Navbar */ "./Components/Navbar.js");
+/* harmony import */ var _Components_CarCard__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../Components/CarCard */ "./Components/CarCard.js");
+/* harmony import */ var _Components_FlexWrapper__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../Components/FlexWrapper */ "./Components/FlexWrapper.js");
+/* harmony import */ var _emotion_styled__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @emotion/styled */ "./node_modules/@emotion/styled/dist/styled.browser.esm.js");
+/* harmony import */ var _elbiler_json__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../elbiler.json */ "./elbiler.json");
+var _elbiler_json__WEBPACK_IMPORTED_MODULE_12___namespace = /*#__PURE__*/__webpack_require__.t(/*! ../elbiler.json */ "./elbiler.json", 1);
+/* harmony import */ var react_reveal_Fade__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! react-reveal/Fade */ "./node_modules/react-reveal/Fade.js");
+/* harmony import */ var react_reveal_Fade__WEBPACK_IMPORTED_MODULE_13___default = /*#__PURE__*/__webpack_require__.n(react_reveal_Fade__WEBPACK_IMPORTED_MODULE_13__);
+
 
 
 
@@ -20806,13 +20812,26 @@ var _elbiler_json__WEBPACK_IMPORTED_MODULE_10___namespace = /*#__PURE__*/__webpa
 
 
 var _jsxFileName = "/Users/mariusgrondahl/Documents/GitHub/elbilvelger/elbilvelgeren/pages/elbil.js";
-var __jsx = react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement;
+var __jsx = react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement;
+
+function _templateObject() {
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_6__["default"])(["\nwidth: 100%;\ndisplay: flex;\nflex-direction: column;\nalign-self: center;  \n"]);
+
+  _templateObject = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
 
 
 
 
 
 
+
+
+var Detail = _emotion_styled__WEBPACK_IMPORTED_MODULE_11__["default"].div(_templateObject());
 
 var App =
 /*#__PURE__*/
@@ -20849,46 +20868,52 @@ function (_Component) {
       var _this2 = this;
 
       // Filtering out all the Cars that does not match the id 
-      var elbilDetail = _elbiler_json__WEBPACK_IMPORTED_MODULE_10__.filter(function (elbil) {
+      var elbilDetail = _elbiler_json__WEBPACK_IMPORTED_MODULE_12__.filter(function (elbil) {
         return elbil.id === _this2.state.elbilId;
       }); // Mapping the id that remains after filtering
 
       var elBiler = elbilDetail.map(function (elbil) {
-        return __jsx(react_reveal_Fade__WEBPACK_IMPORTED_MODULE_11___default.a, {
+        return __jsx(react_reveal_Fade__WEBPACK_IMPORTED_MODULE_13___default.a, {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 32
+            lineNumber: 41
           },
           __self: this
-        }, __jsx(_Components_CarCard__WEBPACK_IMPORTED_MODULE_8__["default"], {
+        }, __jsx(Detail, {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 42
+          },
+          __self: this
+        }, __jsx(_Components_CarCard__WEBPACK_IMPORTED_MODULE_9__["default"], {
           merke: elbil.modell,
           modell: elbil.merke,
+          type: elbil.type,
           rekkevidde: elbil.rekkevidde,
           pris: elbil.pris,
           bildeURL: elbil.bildeURL,
-          type: elbil.type,
           id: elbil.id,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 33
-          },
-          __self: this
-        }), __jsx("h1", {
           __source: {
             fileName: _jsxFileName,
             lineNumber: 43
           },
           __self: this
+        }), __jsx("h1", {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 53
+          },
+          __self: this
         }, elbil.merke, " ", elbil.modell, " ", elbil.type), __jsx("h3", {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 44
+            lineNumber: 54
           },
           __self: this
         }, "Sitteplasser: ", elbil.sitteplasser), __jsx("h3", {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 46
+            lineNumber: 56
           },
           __self: this
         }, "Tester:"), __jsx("a", {
@@ -20896,21 +20921,21 @@ function (_Component) {
           target: "_blank",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 47
+            lineNumber: 57
           },
           __self: this
-        }, elbil.tester));
+        }, elbil.tester)));
       });
-      return __jsx(_Components_FlexWrapper__WEBPACK_IMPORTED_MODULE_9__["default"], {
+      return __jsx(_Components_FlexWrapper__WEBPACK_IMPORTED_MODULE_10__["default"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 53
+          lineNumber: 63
         },
         __self: this
-      }, __jsx(_Components_Navbar__WEBPACK_IMPORTED_MODULE_7__["default"], {
+      }, __jsx(_Components_Navbar__WEBPACK_IMPORTED_MODULE_8__["default"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 54
+          lineNumber: 64
         },
         __self: this
       }), elBiler);
@@ -20918,7 +20943,7 @@ function (_Component) {
   }]);
 
   return App;
-}(react__WEBPACK_IMPORTED_MODULE_6__["Component"]);
+}(react__WEBPACK_IMPORTED_MODULE_7__["Component"]);
 
 /* harmony default export */ __webpack_exports__["default"] = (App);
 

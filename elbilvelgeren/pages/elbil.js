@@ -2,9 +2,18 @@ import React, { Component } from 'react';
 import Navbar from "../Components/Navbar";
 import CarCard from "../Components/CarCard";
 import FlexWrapper from "../Components/FlexWrapper"
+import styled from '@emotion/styled';
+
 
 import elbiler from '../elbiler.json';
 import Fade from 'react-reveal/Fade';
+
+const Detail = styled.div`
+width: 100%;
+display: flex;
+flex-direction: column;
+align-self: center;  
+`
 
 class App extends Component {
   constructor(props) {
@@ -30,13 +39,14 @@ class App extends Component {
     const elBiler = elbilDetail.map(elbil => 
       
       <Fade>
+        <Detail>
         <CarCard 
           merke={elbil.modell} 
           modell={elbil.merke}  
+          type={elbil.type}
           rekkevidde={elbil.rekkevidde} 
           pris={elbil.pris} 
           bildeURL={elbil.bildeURL}
-          type={elbil.type}
           id={elbil.id}
       />
 
@@ -45,7 +55,7 @@ class App extends Component {
 
         <h3>Tester:</h3>
         <a href={elbil.tester} target="_blank">{elbil.tester}</a>
-
+        </Detail>
       </Fade>
       );
 

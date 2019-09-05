@@ -397,42 +397,41 @@ var _jsxFileName = "/Users/mariusgrondahl/Documents/GitHub/elbilvelger/elbilvelg
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
+const Footer = _emotion_styled__WEBPACK_IMPORTED_MODULE_1___default.a.footer`
+position: fixed;
+display: flex;
+width: 100vw;
+box-sizing: border-box;
+box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+bottom: 0;
+left: 0;
+background: rgba(255,255,255,1)       
+`;
+const Footerinner = _emotion_styled__WEBPACK_IMPORTED_MODULE_1___default.a.div`
+display: flex;
+flex-direction: row;
+justify-content: center;
+width: 100%;
+
+button{
+  background: none; 
+  border: none;
+  margin: .5rem;
+  outline: none;
+  font-size: .7rem;
+  font-weight: 200;
+  color: #2d2d2d;
+
+  svg{
+    width: 20px;
+    height: 20px;
+    margin-bottom: .3rem;
+  }
+}
+`;
 
 class BottomNav extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
   render() {
-    const Footer = _emotion_styled__WEBPACK_IMPORTED_MODULE_1___default.a.footer`
-    position: fixed;
-    display: flex;
-    width: 100vw;
-    height: ${this.props.size + "vh"};
-    box-sizing: border-box;
-    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
-    bottom: 0;
-    left: 0;
-    background: rgba(255,255,255,1)       
-`;
-    const Footerinner = _emotion_styled__WEBPACK_IMPORTED_MODULE_1___default.a.div`
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    width: 100%;
-
-    button{
-      background: none; 
-      border: none;
-      margin: .5rem;
-      outline: none;
-      font-size: .7rem;
-      font-weight: 200;
-      color: #2d2d2d;
-
-      svg{
-        width: 20px;
-        height: 20px;
-        margin-bottom: .3rem;
-      }
-    }
-`;
     return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx(Footer, {
       __source: {
         fileName: _jsxFileName,
@@ -477,6 +476,76 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
 
+const CardWrapper = _emotion_styled__WEBPACK_IMPORTED_MODULE_2___default.a.div`
+display: flex;
+flex-direction: column;
+justify-content: flex-end;
+background-size: cover;
+background-position: center center;
+background-image: url(/static/img/${props => props.bildeURL});
+padding: 0;
+margin-bottom: 1.3rem;
+height: 35vh;
+max-width: 1024px;
+color: #fff;  
+border-bottom-left-radius: 5px;
+border-bottom-right-radius: 5px; 
+
+  .imgTitle{
+    position: relative;
+    color: #fff;
+    background: linear-gradient(to top, rgba(0,0,0,0.8) 0%,rgba(0,0,0,0) 100%);
+    width: auto;
+    bottom: 0;
+    font-weigth: bold;
+    padding: 2rem 0 .7rem 0rem;
+    font-size: 1.4rem;
+    text-align: center;
+    font-weight: bold;
+    text-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  ul {
+    width: 100%;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 ;
+    padding: 0;
+ }
+
+  ul li{
+    margin: 1rem;
+  }
+
+  .cardFooter{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    padding: .5rem;
+    background: rgba(0,0,0,0.8);
+    color: #fff;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+
+    li{
+      font-size: 1.2rem;
+      font-weight: bold;
+
+      .price{
+        font-weight: 400;
+        background: #3CA069;
+        padding: .2rem .7rem;
+        border-radius: 3px;
+      }
+
+      .light{
+        font-weight: 200;
+      }
+    }
+  }
+`;
 
 class CarCard extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
   numberWithSpaces(x) {
@@ -484,75 +553,6 @@ class CarCard extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
   }
 
   render() {
-    const CardWrapper = _emotion_styled__WEBPACK_IMPORTED_MODULE_2___default.a.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  background-size: cover;
-  background-position: center center;
-  background-image: url(/static/img/${this.props.bildeURL});
-  padding: 0;
-  margin-bottom: 1.3rem;
-  height: 35vh;
-  color: #fff;  
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px; 
-
-    .imgTitle{
-      position: relative;
-      color: #fff;
-      background: linear-gradient(to top, rgba(0,0,0,0.8) 0%,rgba(0,0,0,0) 100%);
-      width: auto;
-      bottom: 0;
-      font-weigth: bold;
-      padding: 2rem 0 .7rem 0rem;
-      font-size: 1.4rem;
-      text-align: center;
-      font-weight: bold;
-      text-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2);
-    }
-  
-    ul {
-      width: 100%;
-      list-style: none;
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      margin: 0 ;
-      padding: 0;
-   }
-  
-    ul li{
-      margin: 1rem;
-    }
-  
-    .cardFooter{
-      position: relative;
-      display: flex;
-      flex-direction: row;
-      padding: .5rem;
-      background: rgba(0,0,0,0.8);
-      color: #fff;
-      border-bottom-left-radius: 5px;
-      border-bottom-right-radius: 5px;
-
-      li{
-        font-size: 1.2rem;
-        font-weight: bold;
-
-        .price{
-          font-weight: 400;
-          background: #3CA069;
-          padding: .2rem .7rem;
-          border-radius: 3px;
-        }
-
-        .light{
-          font-weight: 200;
-        }
-      }
-    }
-`;
     return __jsx(next_link__WEBPACK_IMPORTED_MODULE_3___default.a, {
       href: {
         pathname: '/elbil',
@@ -562,89 +562,90 @@ class CarCard extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       },
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 84
+        lineNumber: 85
       },
       __self: this
     }, __jsx(CardWrapper, {
+      bildeURL: this.props.bildeURL,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 85
+        lineNumber: 86
       },
       __self: this
     }, __jsx("div", {
       className: "imgTitle",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 86
+        lineNumber: 87
       },
       __self: this
     }, __jsx("span", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 87
+        lineNumber: 88
       },
       __self: this
     }, this.props.modell, " "), __jsx("span", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 88
+        lineNumber: 89
       },
       __self: this
     }, this.props.merke, " "), __jsx("span", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 89
+        lineNumber: 90
       },
       __self: this
     }, this.props.type)), __jsx("div", {
       className: "cardFooter",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 92
+        lineNumber: 93
       },
       __self: this
     }, __jsx("ul", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 93
+        lineNumber: 94
       },
       __self: this
     }, __jsx("li", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 94
+        lineNumber: 95
       },
       __self: this
     }, __jsx("span", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 94
+        lineNumber: 95
       },
       __self: this
     }, __jsx(react_icons_fa__WEBPACK_IMPORTED_MODULE_1__["FaMapMarkerAlt"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 94
+        lineNumber: 95
       },
       __self: this
     })), " ", this.props.rekkevidde, " ", __jsx("span", {
       className: "light",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 94
+        lineNumber: 95
       },
       __self: this
     }, "km")), __jsx("li", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 95
+        lineNumber: 96
       },
       __self: this
     }, __jsx("span", {
       className: "price",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 95
+        lineNumber: 96
       },
       __self: this
     }, "Fra: ", this.numberWithSpaces(`${this.props.pris}`), ",-"))))));
@@ -679,8 +680,6 @@ const FlexWrapperCSS = _emotion_styled__WEBPACK_IMPORTED_MODULE_1___default.a.di
     justify-content: center;
     margin: .5rem;
     padding: 4rem  0rem 3rem 0rem;
-    align-content: center;
-    align-items: center;
 
     @media (min-width: 800px) {
       flex-direction: row;
@@ -702,7 +701,7 @@ function FlexWrapper(props) {
   return __jsx(FlexWrapperCSS, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 30
+      lineNumber: 28
     },
     __self: this
   }, props.children);
@@ -748,14 +747,14 @@ class Navbar extends react__WEBPACK_IMPORTED_MODULE_1__["Component"] {
         });
       } else if (pageYOffset < 300) {
         this.setState({
-          navbarHeight: 50,
+          navbarHeight: 45,
           logoWidth: 140
         });
       }
     });
 
     this.state = {
-      navbarHeight: 50,
+      navbarHeight: 45,
       logoWidth: 140
     };
   }

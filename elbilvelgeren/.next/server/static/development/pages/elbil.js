@@ -116,6 +116,76 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
 
+const CardWrapper = _emotion_styled__WEBPACK_IMPORTED_MODULE_2___default.a.div`
+display: flex;
+flex-direction: column;
+justify-content: flex-end;
+background-size: cover;
+background-position: center center;
+background-image: url(/static/img/${props => props.bildeURL});
+padding: 0;
+margin-bottom: 1.3rem;
+height: 35vh;
+max-width: 1024px;
+color: #fff;  
+border-bottom-left-radius: 5px;
+border-bottom-right-radius: 5px; 
+
+  .imgTitle{
+    position: relative;
+    color: #fff;
+    background: linear-gradient(to top, rgba(0,0,0,0.8) 0%,rgba(0,0,0,0) 100%);
+    width: auto;
+    bottom: 0;
+    font-weigth: bold;
+    padding: 2rem 0 .7rem 0rem;
+    font-size: 1.4rem;
+    text-align: center;
+    font-weight: bold;
+    text-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  ul {
+    width: 100%;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 ;
+    padding: 0;
+ }
+
+  ul li{
+    margin: 1rem;
+  }
+
+  .cardFooter{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    padding: .5rem;
+    background: rgba(0,0,0,0.8);
+    color: #fff;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+
+    li{
+      font-size: 1.2rem;
+      font-weight: bold;
+
+      .price{
+        font-weight: 400;
+        background: #3CA069;
+        padding: .2rem .7rem;
+        border-radius: 3px;
+      }
+
+      .light{
+        font-weight: 200;
+      }
+    }
+  }
+`;
 
 class CarCard extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
   numberWithSpaces(x) {
@@ -123,75 +193,6 @@ class CarCard extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
   }
 
   render() {
-    const CardWrapper = _emotion_styled__WEBPACK_IMPORTED_MODULE_2___default.a.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  background-size: cover;
-  background-position: center center;
-  background-image: url(/static/img/${this.props.bildeURL});
-  padding: 0;
-  margin-bottom: 1.3rem;
-  height: 35vh;
-  color: #fff;  
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px; 
-
-    .imgTitle{
-      position: relative;
-      color: #fff;
-      background: linear-gradient(to top, rgba(0,0,0,0.8) 0%,rgba(0,0,0,0) 100%);
-      width: auto;
-      bottom: 0;
-      font-weigth: bold;
-      padding: 2rem 0 .7rem 0rem;
-      font-size: 1.4rem;
-      text-align: center;
-      font-weight: bold;
-      text-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2);
-    }
-  
-    ul {
-      width: 100%;
-      list-style: none;
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      margin: 0 ;
-      padding: 0;
-   }
-  
-    ul li{
-      margin: 1rem;
-    }
-  
-    .cardFooter{
-      position: relative;
-      display: flex;
-      flex-direction: row;
-      padding: .5rem;
-      background: rgba(0,0,0,0.8);
-      color: #fff;
-      border-bottom-left-radius: 5px;
-      border-bottom-right-radius: 5px;
-
-      li{
-        font-size: 1.2rem;
-        font-weight: bold;
-
-        .price{
-          font-weight: 400;
-          background: #3CA069;
-          padding: .2rem .7rem;
-          border-radius: 3px;
-        }
-
-        .light{
-          font-weight: 200;
-        }
-      }
-    }
-`;
     return __jsx(next_link__WEBPACK_IMPORTED_MODULE_3___default.a, {
       href: {
         pathname: '/elbil',
@@ -201,89 +202,90 @@ class CarCard extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       },
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 84
+        lineNumber: 85
       },
       __self: this
     }, __jsx(CardWrapper, {
+      bildeURL: this.props.bildeURL,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 85
+        lineNumber: 86
       },
       __self: this
     }, __jsx("div", {
       className: "imgTitle",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 86
+        lineNumber: 87
       },
       __self: this
     }, __jsx("span", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 87
+        lineNumber: 88
       },
       __self: this
     }, this.props.modell, " "), __jsx("span", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 88
+        lineNumber: 89
       },
       __self: this
     }, this.props.merke, " "), __jsx("span", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 89
+        lineNumber: 90
       },
       __self: this
     }, this.props.type)), __jsx("div", {
       className: "cardFooter",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 92
+        lineNumber: 93
       },
       __self: this
     }, __jsx("ul", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 93
+        lineNumber: 94
       },
       __self: this
     }, __jsx("li", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 94
+        lineNumber: 95
       },
       __self: this
     }, __jsx("span", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 94
+        lineNumber: 95
       },
       __self: this
     }, __jsx(react_icons_fa__WEBPACK_IMPORTED_MODULE_1__["FaMapMarkerAlt"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 94
+        lineNumber: 95
       },
       __self: this
     })), " ", this.props.rekkevidde, " ", __jsx("span", {
       className: "light",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 94
+        lineNumber: 95
       },
       __self: this
     }, "km")), __jsx("li", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 95
+        lineNumber: 96
       },
       __self: this
     }, __jsx("span", {
       className: "price",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 95
+        lineNumber: 96
       },
       __self: this
     }, "Fra: ", this.numberWithSpaces(`${this.props.pris}`), ",-"))))));
@@ -318,8 +320,6 @@ const FlexWrapperCSS = _emotion_styled__WEBPACK_IMPORTED_MODULE_1___default.a.di
     justify-content: center;
     margin: .5rem;
     padding: 4rem  0rem 3rem 0rem;
-    align-content: center;
-    align-items: center;
 
     @media (min-width: 800px) {
       flex-direction: row;
@@ -341,7 +341,7 @@ function FlexWrapper(props) {
   return __jsx(FlexWrapperCSS, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 30
+      lineNumber: 28
     },
     __self: this
   }, props.children);
@@ -387,14 +387,14 @@ class Navbar extends react__WEBPACK_IMPORTED_MODULE_1__["Component"] {
         });
       } else if (pageYOffset < 300) {
         this.setState({
-          navbarHeight: 50,
+          navbarHeight: 45,
           logoWidth: 140
         });
       }
     });
 
     this.state = {
-      navbarHeight: 50,
+      navbarHeight: 45,
       logoWidth: 140
     };
   }
@@ -1196,10 +1196,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Components_Navbar__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../Components/Navbar */ "./Components/Navbar.js");
 /* harmony import */ var _Components_CarCard__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../Components/CarCard */ "./Components/CarCard.js");
 /* harmony import */ var _Components_FlexWrapper__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../Components/FlexWrapper */ "./Components/FlexWrapper.js");
-/* harmony import */ var _elbiler_json__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../elbiler.json */ "./elbiler.json");
-var _elbiler_json__WEBPACK_IMPORTED_MODULE_4___namespace = /*#__PURE__*/__webpack_require__.t(/*! ../elbiler.json */ "./elbiler.json", 1);
-/* harmony import */ var react_reveal_Fade__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-reveal/Fade */ "react-reveal/Fade");
-/* harmony import */ var react_reveal_Fade__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react_reveal_Fade__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _emotion_styled__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @emotion/styled */ "@emotion/styled");
+/* harmony import */ var _emotion_styled__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_emotion_styled__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _elbiler_json__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../elbiler.json */ "./elbiler.json");
+var _elbiler_json__WEBPACK_IMPORTED_MODULE_5___namespace = /*#__PURE__*/__webpack_require__.t(/*! ../elbiler.json */ "./elbiler.json", 1);
+/* harmony import */ var react_reveal_Fade__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react-reveal/Fade */ "react-reveal/Fade");
+/* harmony import */ var react_reveal_Fade__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(react_reveal_Fade__WEBPACK_IMPORTED_MODULE_6__);
 var _jsxFileName = "/Users/mariusgrondahl/Documents/GitHub/elbilvelger/elbilvelgeren/pages/elbil.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
@@ -1208,6 +1210,13 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
 
+
+const Detail = _emotion_styled__WEBPACK_IMPORTED_MODULE_4___default.a.div`
+width: 100%;
+display: flex;
+flex-direction: column;
+align-self: center;  
+`;
 
 class App extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
   constructor(props) {
@@ -1230,43 +1239,49 @@ class App extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
 
   render() {
     // Filtering out all the Cars that does not match the id 
-    const elbilDetail = _elbiler_json__WEBPACK_IMPORTED_MODULE_4__.filter(elbil => elbil.id === this.state.elbilId); // Mapping the id that remains after filtering
+    const elbilDetail = _elbiler_json__WEBPACK_IMPORTED_MODULE_5__.filter(elbil => elbil.id === this.state.elbilId); // Mapping the id that remains after filtering
 
-    const elBiler = elbilDetail.map(elbil => __jsx(react_reveal_Fade__WEBPACK_IMPORTED_MODULE_5___default.a, {
+    const elBiler = elbilDetail.map(elbil => __jsx(react_reveal_Fade__WEBPACK_IMPORTED_MODULE_6___default.a, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 32
+        lineNumber: 41
+      },
+      __self: this
+    }, __jsx(Detail, {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 42
       },
       __self: this
     }, __jsx(_Components_CarCard__WEBPACK_IMPORTED_MODULE_2__["default"], {
       merke: elbil.modell,
       modell: elbil.merke,
+      type: elbil.type,
       rekkevidde: elbil.rekkevidde,
       pris: elbil.pris,
       bildeURL: elbil.bildeURL,
-      type: elbil.type,
       id: elbil.id,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 33
-      },
-      __self: this
-    }), __jsx("h1", {
       __source: {
         fileName: _jsxFileName,
         lineNumber: 43
       },
       __self: this
+    }), __jsx("h1", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 53
+      },
+      __self: this
     }, elbil.merke, " ", elbil.modell, " ", elbil.type), __jsx("h3", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 44
+        lineNumber: 54
       },
       __self: this
     }, "Sitteplasser: ", elbil.sitteplasser), __jsx("h3", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 46
+        lineNumber: 56
       },
       __self: this
     }, "Tester:"), __jsx("a", {
@@ -1274,20 +1289,20 @@ class App extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       target: "_blank",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 47
+        lineNumber: 57
       },
       __self: this
-    }, elbil.tester)));
+    }, elbil.tester))));
     return __jsx(_Components_FlexWrapper__WEBPACK_IMPORTED_MODULE_3__["default"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 53
+        lineNumber: 63
       },
       __self: this
     }, __jsx(_Components_Navbar__WEBPACK_IMPORTED_MODULE_1__["default"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 54
+        lineNumber: 64
       },
       __self: this
     }), elBiler);
