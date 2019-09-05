@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import styled from '@emotion/styled';
 import Link from 'next/link';
+import "../style.css"
 
 class Navbar extends Component {
     constructor(props) {
@@ -12,7 +13,7 @@ class Navbar extends Component {
     }
     
     handleScroll = () => {
-        if (pageYOffset > 300){
+        if (pageYOffset > 100){
             this.setState({navbarHeight: 30, logoWidth: 100})
         } else if (pageYOffset < 300) {
             this.setState({navbarHeight: 45, logoWidth: 140})

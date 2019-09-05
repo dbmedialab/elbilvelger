@@ -7,6 +7,10 @@ import styled from '@emotion/styled';
 import elbiler from '../elbiler.json';
 import Fade from 'react-reveal/Fade';
 
+import { useQuery } from '@apollo/react-hooks'
+import gql from 'graphql-tag'
+import { withApollo } from "../lib/apollo"
+
 const Detail = styled.div`
 width: 100%;
 display: flex;
@@ -14,60 +18,70 @@ flex-direction: column;
 align-self: center;  
 `
 
-class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      elbilId: "0"
-    };
-    this.componentDidMount = this.componentDidMount.bind(this);
+export const ALL_POSTS_QUERY = gql`
+{
+    labrador {
+    article(id: 71564397) {
+      title
+      bodytextHTML
+    }
   }
+}
+`
 
-  componentDidMount() {
-    // Fetching this location: http://localhost:3000/elbil?id=1
-    let url = window.location.href
-    // Spltting the URL to this http://localhost:3000/elbil?id = 1 
-    let query = url.split("=")
-    // Getting the id from the second part of the URL
-    let queryId = Number(query[1])
-    // Setting elbilId state to the id from Params
-    this.setState({elbilId: queryId});
+ElbilDetail.getInitialProps = async ({req}) =>{
+  let url = ''
+  if (typeof window !== "undefined") {
+    url = window.location.href
+  } else {
+    url = req.url
   }
+  let query = url.split("=")
+  // Getting the id from the second part of the URL
+  let queryId = Number(query[1])
+  // Setting elbilId state to the id from Params
+  return {queryId};
+}
 
-  render() {
-    // Filtering out all the Cars that does not match the id 
-    const elbilDetail = elbiler.filter (elbil => elbil.id === this.state.elbilId)
-    // Mapping the id that remains after filtering
-    const elBiler = elbilDetail.map(elbil => 
-      
-      <Fade>
-        <Detail>
-        <CarCard 
-          merke={elbil.modell} 
-          modell={elbil.merke}  
-          type={elbil.type}
-          rekkevidde={elbil.rekkevidde} 
-          pris={elbil.pris} 
-          bildeURL={elbil.bildeURL}
-          id={elbil.id}
-      />
+function ElbilDetail({queryId}) {
+  const { loading, error, data, fetchMore, networkStatus } = useQuery(
+    ALL_POSTS_QUERY,
+    {
+      notifyOnNetworkStatusChange: true
+    }
+  )
 
-        <h1>{elbil.merke} {elbil.modell} {elbil.type}</h1>
-        <h3>Sitteplasser: {elbil.sitteplasser}</h3>
 
-        <h3>Tester:</h3>
-        <a href={elbil.tester} target="_blank">{elbil.tester}</a>
-        </Detail>
-      </Fade>
-      );
+  // Filtering out all the Cars that does not match the id 
+  const elbilDetail = elbiler.filter (elbil => elbil.id === queryId)
+  // Mapping the id that remains after filtering
+  const elBiler = elbilDetail.map(elbil => 
+    
+    <Fade>
+      <Detail>
+      <CarCard 
+        merke={elbil.modell} 
+        modell={elbil.merke}  
+        type={elbil.type}
+        rekkevidde={elbil.rekkevidde} 
+        pris={elbil.pris} 
+        bildeURL={elbil.bildeURL}
+        id={elbil.id}
+    />
+      <h3>Sitteplasser: {elbil.sitteplasser}</h3>
+      {JSON.stringify({data})}
+      </Detail>
+    </Fade>
+    );
 
     return (
       <FlexWrapper>
         <Navbar />
         {elBiler}
       </FlexWrapper>
-    );
-  }
+    )
+
 }
 
-export default App;
+export default withApollo(ElbilDetail);
+
