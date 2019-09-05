@@ -145,6 +145,10 @@ color: #fff;
 border-bottom-left-radius: 5px;
 border-bottom-right-radius: 5px; 
 
+a{
+  text-decoration: none;
+}
+
   .imgTitle{
     position: relative;
     color: #fff;
@@ -157,7 +161,9 @@ border-bottom-right-radius: 5px;
     text-align: center;
     font-weight: bold;
     text-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2);
+ 
   }
+
 
   ul {
     width: 100%;
@@ -214,93 +220,100 @@ function CarCard(props) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 83
+      lineNumber: 89
+    },
+    __self: this
+  }, __jsx("a", {
+    title: "CarDetail",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 90
     },
     __self: this
   }, __jsx(CardWrapper, {
     bildeURL: props.bildeURL,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 84
+      lineNumber: 91
     },
     __self: this
   }, __jsx("div", {
     className: "imgTitle",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 85
+      lineNumber: 93
     },
     __self: this
   }, __jsx("span", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 86
+      lineNumber: 94
     },
     __self: this
   }, props.modell, " "), __jsx("span", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 87
+      lineNumber: 95
     },
     __self: this
   }, props.merke, " "), __jsx("span", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 88
+      lineNumber: 96
     },
     __self: this
   }, props.type)), __jsx("div", {
     className: "cardFooter",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 91
+      lineNumber: 99
     },
     __self: this
   }, __jsx("ul", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 92
+      lineNumber: 100
     },
     __self: this
   }, __jsx("li", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 93
+      lineNumber: 101
     },
     __self: this
   }, __jsx("span", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 93
+      lineNumber: 101
     },
     __self: this
   }, __jsx(react_icons_fa__WEBPACK_IMPORTED_MODULE_1__["FaMapMarkerAlt"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 93
+      lineNumber: 101
     },
     __self: this
   })), " ", props.rekkevidde, " ", __jsx("span", {
     className: "light",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 93
+      lineNumber: 101
     },
     __self: this
   }, "km")), __jsx("li", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 94
+      lineNumber: 102
     },
     __self: this
   }, __jsx("span", {
     className: "price",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 94
+      lineNumber: 102
     },
     __self: this
-  }, "Fra: ", numberWithSpaces(`${props.pris}`), ",-"))))));
+  }, "Fra: ", numberWithSpaces(`${props.pris}`), ",-")))))));
 }
 
 /***/ }),

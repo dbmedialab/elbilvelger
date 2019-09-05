@@ -86,7 +86,7 @@ class AllCars extends React.Component {
 
   render() {
     const elBiler = this.state.elbiler.map(elbil => 
-
+  <li key={elbil.id}>
     <Fade>
       <CarCard 
           merke={elbil.modell} 
@@ -98,6 +98,7 @@ class AllCars extends React.Component {
           id={elbil.id}
       /> 
     </Fade>
+    </li>
     );
 
     return (

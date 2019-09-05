@@ -18,6 +18,10 @@ color: #fff;
 border-bottom-left-radius: 5px;
 border-bottom-right-radius: 5px; 
 
+a{
+  text-decoration: none;
+}
+
   .imgTitle{
     position: relative;
     color: #fff;
@@ -30,7 +34,9 @@ border-bottom-right-radius: 5px;
     text-align: center;
     font-weight: bold;
     text-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2);
+ 
   }
+
 
   ul {
     width: 100%;
@@ -81,7 +87,9 @@ export default function CarCard(props) {
 
     return (
     <Link href={{ pathname: '/elbil', query: { id: `${props.id}` } }}>
+      <a title="CarDetail">
       <CardWrapper bildeURL={props.bildeURL}>
+       
         <div className="imgTitle">
           <span>{props.modell} </span>
           <span>{props.merke} </span>
@@ -95,6 +103,7 @@ export default function CarCard(props) {
           </ul>
         </div>
       </CardWrapper>
+      </a>
       </Link>
     );
   

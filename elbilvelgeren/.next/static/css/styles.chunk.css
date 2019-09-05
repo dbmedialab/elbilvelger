@@ -8,6 +8,11 @@ body, html{
 
 a{
     color: #fff;
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
 }
 
 /*# sourceMappingURL=styles.chunk.css.map*/

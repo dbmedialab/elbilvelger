@@ -213,7 +213,14 @@ class AllCars extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
 
 
   render() {
-    const elBiler = this.state.elbiler.map(elbil => __jsx(react_reveal_Fade__WEBPACK_IMPORTED_MODULE_4___default.a, {
+    const elBiler = this.state.elbiler.map(elbil => __jsx("li", {
+      key: elbil.id,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 89
+      },
+      __self: this
+    }, __jsx(react_reveal_Fade__WEBPACK_IMPORTED_MODULE_4___default.a, {
       __source: {
         fileName: _jsxFileName,
         lineNumber: 90
@@ -232,7 +239,7 @@ class AllCars extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
         lineNumber: 91
       },
       __self: this
-    })));
+    }))));
     return __jsx(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, null, elBiler, __jsx(react_awesome_modal__WEBPACK_IMPORTED_MODULE_7___default.a, {
       visible: this.state.visible,
       width: "400",
@@ -241,19 +248,19 @@ class AllCars extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
       onClickAway: () => this.closeModal(),
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 106
+        lineNumber: 107
       },
       __self: this
     }, __jsx(ModalContent, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 113
+        lineNumber: 114
       },
       __self: this
     }, __jsx("h3", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 114
+        lineNumber: 115
       },
       __self: this
     }, "Her kommer avanserte filtere:"), __jsx("a", {
@@ -261,13 +268,13 @@ class AllCars extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
       onClick: () => this.closeModal(),
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 115
+        lineNumber: 116
       },
       __self: this
     }, "Close"))), __jsx(_BottomNav__WEBPACK_IMPORTED_MODULE_3__["default"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 119
+        lineNumber: 120
       },
       __self: this
     }, __jsx("button", {
@@ -280,19 +287,19 @@ class AllCars extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
       },
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 120
+        lineNumber: 121
       },
       __self: this
     }, __jsx(react_icons_fa__WEBPACK_IMPORTED_MODULE_8__["FaMapMarkerAlt"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 127
+        lineNumber: 128
       },
       __self: this
     }), __jsx("br", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 127
+        lineNumber: 128
       },
       __self: this
     }), "Rekkevidde"), __jsx("button", {
@@ -305,19 +312,19 @@ class AllCars extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
       },
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 130
+        lineNumber: 131
       },
       __self: this
     }, __jsx(react_icons_fa__WEBPACK_IMPORTED_MODULE_8__["FaCoins"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 137
+        lineNumber: 138
       },
       __self: this
     }), __jsx("br", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 137
+        lineNumber: 138
       },
       __self: this
     }), "Pris"), __jsx("button", {
@@ -330,56 +337,56 @@ class AllCars extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
       },
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 141
+        lineNumber: 142
       },
       __self: this
     }, __jsx(react_icons_fa__WEBPACK_IMPORTED_MODULE_8__["FaArrowsAltV"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 148
+        lineNumber: 149
       },
       __self: this
     }), " ", __jsx("br", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 148
+        lineNumber: 149
       },
       __self: this
     }), "St\xF8rrelse"), __jsx("button", {
       onClick: this.reset,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 151
+        lineNumber: 152
       },
       __self: this
     }, __jsx(react_icons_fa__WEBPACK_IMPORTED_MODULE_8__["FaRedo"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 152
+        lineNumber: 153
       },
       __self: this
     }), " ", __jsx("br", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 152
+        lineNumber: 153
       },
       __self: this
     }), "Reset"), __jsx("div", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 155
+        lineNumber: 156
       },
       __self: this
     }, __jsx(react_icons_fa__WEBPACK_IMPORTED_MODULE_8__["FaRedo"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 156
+        lineNumber: 157
       },
       __self: this
     }), __jsx("br", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 156
+        lineNumber: 157
       },
       __self: this
     }), __jsx("input", {
@@ -388,7 +395,7 @@ class AllCars extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
       onClick: () => this.openModal(),
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 157
+        lineNumber: 158
       },
       __self: this
     }))));
@@ -512,6 +519,10 @@ color: #fff;
 border-bottom-left-radius: 5px;
 border-bottom-right-radius: 5px; 
 
+a{
+  text-decoration: none;
+}
+
   .imgTitle{
     position: relative;
     color: #fff;
@@ -524,7 +535,9 @@ border-bottom-right-radius: 5px;
     text-align: center;
     font-weight: bold;
     text-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2);
+ 
   }
+
 
   ul {
     width: 100%;
@@ -581,93 +594,100 @@ function CarCard(props) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 83
+      lineNumber: 89
+    },
+    __self: this
+  }, __jsx("a", {
+    title: "CarDetail",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 90
     },
     __self: this
   }, __jsx(CardWrapper, {
     bildeURL: props.bildeURL,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 84
+      lineNumber: 91
     },
     __self: this
   }, __jsx("div", {
     className: "imgTitle",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 85
+      lineNumber: 93
     },
     __self: this
   }, __jsx("span", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 86
+      lineNumber: 94
     },
     __self: this
   }, props.modell, " "), __jsx("span", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 87
+      lineNumber: 95
     },
     __self: this
   }, props.merke, " "), __jsx("span", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 88
+      lineNumber: 96
     },
     __self: this
   }, props.type)), __jsx("div", {
     className: "cardFooter",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 91
+      lineNumber: 99
     },
     __self: this
   }, __jsx("ul", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 92
+      lineNumber: 100
     },
     __self: this
   }, __jsx("li", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 93
+      lineNumber: 101
     },
     __self: this
   }, __jsx("span", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 93
+      lineNumber: 101
     },
     __self: this
   }, __jsx(react_icons_fa__WEBPACK_IMPORTED_MODULE_1__["FaMapMarkerAlt"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 93
+      lineNumber: 101
     },
     __self: this
   })), " ", props.rekkevidde, " ", __jsx("span", {
     className: "light",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 93
+      lineNumber: 101
     },
     __self: this
   }, "km")), __jsx("li", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 94
+      lineNumber: 102
     },
     __self: this
   }, __jsx("span", {
     className: "price",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 94
+      lineNumber: 102
     },
     __self: this
-  }, "Fra: ", numberWithSpaces(`${props.pris}`), ",-"))))));
+  }, "Fra: ", numberWithSpaces(`${props.pris}`), ",-")))))));
 }
 
 /***/ }),
