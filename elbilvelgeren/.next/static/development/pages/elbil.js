@@ -33928,12 +33928,11 @@ if (hasSymbols()) {
 /*!************************!*\
   !*** ./pages/elbil.js ***!
   \************************/
-/*! exports provided: ALL_POSTS_QUERY, default */
+/*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ALL_POSTS_QUERY", function() { return ALL_POSTS_QUERY; });
 /* harmony import */ var _babel_runtime_corejs2_core_js_json_stringify__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/core-js/json/stringify */ "./node_modules/@babel/runtime-corejs2/core-js/json/stringify.js");
 /* harmony import */ var _babel_runtime_corejs2_core_js_json_stringify__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_core_js_json_stringify__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime-corejs2/regenerator */ "./node_modules/@babel/runtime-corejs2/regenerator/index.js");
@@ -33962,7 +33961,7 @@ var _jsxFileName = "/Users/mariusgrondahl/Documents/GitHub/elbilvelger/elbilvelg
 var __jsx = react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement;
 
 function _templateObject2() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_3__["default"])(["\n{\n    labrador {\n    article(id: 71564397) {\n      title\n      bodytextHTML\n    }\n  }\n}\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_3__["default"])(["\n{\n    labrador {\n    article(id: 71564397) {\n      title\n      bodytextHTML\n      imageId\n    }\n  }\n}\n"]);
 
   _templateObject2 = function _templateObject2() {
     return data;
@@ -34000,7 +33999,7 @@ function () {
   var _ref2 = Object(_babel_runtime_corejs2_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_2__["default"])(
   /*#__PURE__*/
   _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee(_ref) {
-    var req, url, query, queryId;
+    var req, url, parameter, elbilId;
     return _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.wrap(function _callee$(_context) {
       while (1) {
         switch (_context.prev = _context.next) {
@@ -34012,12 +34011,12 @@ function () {
               url = window.location.href;
             } else {}
 
-            query = url.split("="); // Getting the id from the second part of the URL
+            parameter = url.split("="); // Getting the id from the second part of the URL
 
-            queryId = Number(query[1]); // Setting elbilId state to the id from Params
+            elbilId = Number(parameter[1]); // Returning elbilId to the id from Params
 
             return _context.abrupt("return", {
-              queryId: queryId
+              elbilId: elbilId
             });
 
           case 6:
@@ -34034,7 +34033,7 @@ function () {
 }();
 
 function ElbilDetail(_ref3) {
-  var queryId = _ref3.queryId;
+  var elbilId = _ref3.elbilId;
 
   var _useQuery = Object(_apollo_react_hooks__WEBPACK_IMPORTED_MODULE_11__["useQuery"])(ALL_POSTS_QUERY, {
     notifyOnNetworkStatusChange: true
@@ -34043,24 +34042,29 @@ function ElbilDetail(_ref3) {
       error = _useQuery.error,
       data = _useQuery.data,
       fetchMore = _useQuery.fetchMore,
-      networkStatus = _useQuery.networkStatus; // Filtering out all the Cars that does not match the id 
+      networkStatus = _useQuery.networkStatus;
 
+  Object(react__WEBPACK_IMPORTED_MODULE_4__["useEffect"])(function () {});
+
+  var articleData = _babel_runtime_corejs2_core_js_json_stringify__WEBPACK_IMPORTED_MODULE_0___default()(data);
+
+  console.log(articleData); // Filtering out all the Cars that does not match the id 
 
   var elbilDetail = _elbiler_json__WEBPACK_IMPORTED_MODULE_9__.filter(function (elbil) {
-    return elbil.id === queryId;
+    return elbil.id === elbilId;
   }); // Mapping the id that remains after filtering
 
   var elBiler = elbilDetail.map(function (elbil) {
     return __jsx(react_reveal_Fade__WEBPACK_IMPORTED_MODULE_10___default.a, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 59
+        lineNumber: 66
       },
       __self: this
     }, __jsx(Detail, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 60
+        lineNumber: 67
       },
       __self: this
     }, __jsx(_Components_CarCard__WEBPACK_IMPORTED_MODULE_6__["default"], {
@@ -34073,29 +34077,27 @@ function ElbilDetail(_ref3) {
       id: elbil.id,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 61
+        lineNumber: 68
       },
       __self: this
     }), __jsx("h3", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 70
+        lineNumber: 77
       },
       __self: this
-    }, "Sitteplasser: ", elbil.sitteplasser), _babel_runtime_corejs2_core_js_json_stringify__WEBPACK_IMPORTED_MODULE_0___default()({
-      data: data
-    })));
+    }, "Sitteplasser: ", elbil.sitteplasser), articleData));
   });
   return __jsx(_Components_FlexWrapper__WEBPACK_IMPORTED_MODULE_7__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 77
+      lineNumber: 84
     },
     __self: this
   }, __jsx(_Components_Navbar__WEBPACK_IMPORTED_MODULE_5__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 78
+      lineNumber: 85
     },
     __self: this
   }), elBiler);

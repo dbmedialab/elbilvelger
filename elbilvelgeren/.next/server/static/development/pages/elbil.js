@@ -1582,12 +1582,11 @@ module.exports = __webpack_require__(/*! ./dist/client/link */ "./node_modules/n
 /*!************************!*\
   !*** ./pages/elbil.js ***!
   \************************/
-/*! exports provided: ALL_POSTS_QUERY, default */
+/*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ALL_POSTS_QUERY", function() { return ALL_POSTS_QUERY; });
 /* harmony import */ var _babel_runtime_corejs2_core_js_json_stringify__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/core-js/json/stringify */ "./node_modules/@babel/runtime-corejs2/core-js/json/stringify.js");
 /* harmony import */ var _babel_runtime_corejs2_core_js_json_stringify__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_core_js_json_stringify__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
@@ -1631,6 +1630,7 @@ const ALL_POSTS_QUERY = graphql_tag__WEBPACK_IMPORTED_MODULE_9___default.a`
     article(id: 71564397) {
       title
       bodytextHTML
+      imageId
     }
   }
 }
@@ -1645,17 +1645,17 @@ ElbilDetail.getInitialProps = async ({
     url = req.url;
   }
 
-  let query = url.split("="); // Getting the id from the second part of the URL
+  let parameter = url.split("="); // Getting the id from the second part of the URL
 
-  let queryId = Number(query[1]); // Setting elbilId state to the id from Params
+  let elbilId = Number(parameter[1]); // Returning elbilId to the id from Params
 
   return {
-    queryId
+    elbilId
   };
 };
 
 function ElbilDetail({
-  queryId
+  elbilId
 }) {
   const {
     loading,
@@ -1665,20 +1665,25 @@ function ElbilDetail({
     networkStatus
   } = Object(_apollo_react_hooks__WEBPACK_IMPORTED_MODULE_8__["useQuery"])(ALL_POSTS_QUERY, {
     notifyOnNetworkStatusChange: true
-  }); // Filtering out all the Cars that does not match the id 
+  });
+  Object(react__WEBPACK_IMPORTED_MODULE_1__["useEffect"])(() => {});
 
-  const elbilDetail = _elbiler_json__WEBPACK_IMPORTED_MODULE_6__.filter(elbil => elbil.id === queryId); // Mapping the id that remains after filtering
+  const articleData = _babel_runtime_corejs2_core_js_json_stringify__WEBPACK_IMPORTED_MODULE_0___default()(data);
+
+  console.log(articleData); // Filtering out all the Cars that does not match the id 
+
+  const elbilDetail = _elbiler_json__WEBPACK_IMPORTED_MODULE_6__.filter(elbil => elbil.id === elbilId); // Mapping the id that remains after filtering
 
   const elBiler = elbilDetail.map(elbil => __jsx(react_reveal_Fade__WEBPACK_IMPORTED_MODULE_7___default.a, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 59
+      lineNumber: 66
     },
     __self: this
   }, __jsx(Detail, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 60
+      lineNumber: 67
     },
     __self: this
   }, __jsx(_Components_CarCard__WEBPACK_IMPORTED_MODULE_3__["default"], {
@@ -1691,28 +1696,26 @@ function ElbilDetail({
     id: elbil.id,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 61
+      lineNumber: 68
     },
     __self: this
   }), __jsx("h3", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 70
+      lineNumber: 77
     },
     __self: this
-  }, "Sitteplasser: ", elbil.sitteplasser), _babel_runtime_corejs2_core_js_json_stringify__WEBPACK_IMPORTED_MODULE_0___default()({
-    data
-  }))));
+  }, "Sitteplasser: ", elbil.sitteplasser), articleData)));
   return __jsx(_Components_FlexWrapper__WEBPACK_IMPORTED_MODULE_4__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 77
+      lineNumber: 84
     },
     __self: this
   }, __jsx(_Components_Navbar__WEBPACK_IMPORTED_MODULE_2__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 78
+      lineNumber: 85
     },
     __self: this
   }), elBiler);

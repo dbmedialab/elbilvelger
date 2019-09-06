@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { useEffect } from 'react';
 import Navbar from "../Components/Navbar";
 import CarCard from "../Components/CarCard";
 import FlexWrapper from "../Components/FlexWrapper"
@@ -17,18 +17,17 @@ display: flex;
 flex-direction: column;
 align-self: center;  
 `
-
-export const ALL_POSTS_QUERY = gql`
+const ALL_POSTS_QUERY = gql`
 {
     labrador {
     article(id: 71564397) {
       title
       bodytextHTML
+      imageId
     }
   }
 }
 `
-
 ElbilDetail.getInitialProps = async ({req}) =>{
   let url = ''
   if (typeof window !== "undefined") {
@@ -36,26 +35,34 @@ ElbilDetail.getInitialProps = async ({req}) =>{
   } else {
     url = req.url
   }
-  let query = url.split("=")
+  
+  let parameter = url.split("=")
   // Getting the id from the second part of the URL
-  let queryId = Number(query[1])
-  // Setting elbilId state to the id from Params
-  return {queryId};
+  let elbilId = Number(parameter[1])
+  // Returning elbilId to the id from Params
+  return {elbilId};
 }
 
-function ElbilDetail({queryId}) {
+function ElbilDetail({elbilId}) {
   const { loading, error, data, fetchMore, networkStatus } = useQuery(
     ALL_POSTS_QUERY,
     {
       notifyOnNetworkStatusChange: true
     }
   )
+  useEffect(() => {
+   
+  });
 
+
+  const articleData = JSON.stringify(data)
+  console.log(articleData)
+  
   // Filtering out all the Cars that does not match the id 
-  const elbilDetail = elbiler.filter (elbil => elbil.id === queryId)
+  const elbilDetail = elbiler.filter (elbil => elbil.id === elbilId)
   // Mapping the id that remains after filtering
   const elBiler = elbilDetail.map(elbil => 
-    
+
     <Fade>
       <Detail>
       <CarCard 
@@ -68,7 +75,7 @@ function ElbilDetail({queryId}) {
         id={elbil.id}
     />
       <h3>Sitteplasser: {elbil.sitteplasser}</h3>
-      {JSON.stringify({data})}
+      {articleData}
       </Detail>
     </Fade>
     );
@@ -79,7 +86,6 @@ function ElbilDetail({queryId}) {
         {elBiler}
       </FlexWrapper>
     )
-
 }
 
 export default withApollo(ElbilDetail);
