@@ -150,7 +150,7 @@ class AllCars extends React.Component {
                 </button>
 
                 <button onClick={this.reset}>
-                  <FaRedo  /> <br />Reset
+                  <FaRedo  /> <br />Tilbakestill
                 </button>
                 
                 <div>

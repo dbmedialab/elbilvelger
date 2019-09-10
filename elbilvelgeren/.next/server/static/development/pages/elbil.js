@@ -101,7 +101,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 5);
+/******/ 	return __webpack_require__(__webpack_require__.s = 3);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -1617,6 +1617,9 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
 
 
 
+ // Getting the same id from the router
+// const router = useRouter();
+// let queryId = router.query.id
 
 const Detail = _emotion_styled__WEBPACK_IMPORTED_MODULE_5___default.a.div`
 width: 100%;
@@ -1677,13 +1680,13 @@ function ElbilDetail({
   const elBiler = elbilDetail.map(elbil => __jsx(react_reveal_Fade__WEBPACK_IMPORTED_MODULE_7___default.a, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 66
+      lineNumber: 70
     },
     __self: this
   }, __jsx(Detail, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 67
+      lineNumber: 71
     },
     __self: this
   }, __jsx(_Components_CarCard__WEBPACK_IMPORTED_MODULE_3__["default"], {
@@ -1696,26 +1699,26 @@ function ElbilDetail({
     id: elbil.id,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 68
+      lineNumber: 72
     },
     __self: this
   }), __jsx("h3", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 77
+      lineNumber: 81
     },
     __self: this
   }, "Sitteplasser: ", elbil.sitteplasser), articleData)));
   return __jsx(_Components_FlexWrapper__WEBPACK_IMPORTED_MODULE_4__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 84
+      lineNumber: 88
     },
     __self: this
   }, __jsx(_Components_Navbar__WEBPACK_IMPORTED_MODULE_2__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 85
+      lineNumber: 89
     },
     __self: this
   }), elBiler);
@@ -1736,7 +1739,7 @@ function ElbilDetail({
 
 /***/ }),
 
-/***/ 5:
+/***/ 3:
 /*!******************************!*\
   !*** multi ./pages/elbil.js ***!
   \******************************/

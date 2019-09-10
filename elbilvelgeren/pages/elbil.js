@@ -11,6 +11,10 @@ import { useQuery } from '@apollo/react-hooks'
 import gql from 'graphql-tag'
 import { withApollo } from "../lib/apollo"
 
+// Getting the same id from the router
+// const router = useRouter();
+// let queryId = router.query.id
+
 const Detail = styled.div`
 width: 100%;
 display: flex;
@@ -89,4 +93,6 @@ function ElbilDetail({elbilId}) {
 }
 
 export default withApollo(ElbilDetail);
+
+
 

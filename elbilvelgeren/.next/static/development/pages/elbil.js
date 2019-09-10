@@ -33989,6 +33989,9 @@ function _templateObject() {
 
 
 
+ // Getting the same id from the router
+// const router = useRouter();
+// let queryId = router.query.id
 
 var Detail = _emotion_styled__WEBPACK_IMPORTED_MODULE_8__["default"].div(_templateObject());
 var ALL_POSTS_QUERY = graphql_tag__WEBPACK_IMPORTED_MODULE_12___default()(_templateObject2());
@@ -34058,13 +34061,13 @@ function ElbilDetail(_ref3) {
     return __jsx(react_reveal_Fade__WEBPACK_IMPORTED_MODULE_10___default.a, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 66
+        lineNumber: 70
       },
       __self: this
     }, __jsx(Detail, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 67
+        lineNumber: 71
       },
       __self: this
     }, __jsx(_Components_CarCard__WEBPACK_IMPORTED_MODULE_6__["default"], {
@@ -34077,13 +34080,13 @@ function ElbilDetail(_ref3) {
       id: elbil.id,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 68
+        lineNumber: 72
       },
       __self: this
     }), __jsx("h3", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 77
+        lineNumber: 81
       },
       __self: this
     }, "Sitteplasser: ", elbil.sitteplasser), articleData));
@@ -34091,13 +34094,13 @@ function ElbilDetail(_ref3) {
   return __jsx(_Components_FlexWrapper__WEBPACK_IMPORTED_MODULE_7__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 84
+      lineNumber: 88
     },
     __self: this
   }, __jsx(_Components_Navbar__WEBPACK_IMPORTED_MODULE_5__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 85
+      lineNumber: 89
     },
     __self: this
   }), elBiler);
@@ -34107,7 +34110,7 @@ function ElbilDetail(_ref3) {
 
 /***/ }),
 
-/***/ 4:
+/***/ 0:
 /*!*********************************************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2Felbil&absolutePagePath=%2FUsers%2Fmariusgrondahl%2FDocuments%2FGitHub%2Felbilvelger%2Felbilvelgeren%2Fpages%2Felbil.js ***!
   \*********************************************************************************************************************************************************************/
@@ -34130,5 +34133,5 @@ module.exports = dll_129a35c7ec57967eb265;
 
 /***/ })
 
-},[[4,"static/runtime/webpack.js","styles"]]]);
+},[[0,"static/runtime/webpack.js","styles"]]]);
 //# sourceMappingURL=elbil.js.map
