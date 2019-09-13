@@ -11,16 +11,13 @@ import { useQuery } from '@apollo/react-hooks'
 import gql from 'graphql-tag'
 import { withApollo } from "../lib/apollo"
 
-// Getting the same id from the router
-// const router = useRouter();
-// let queryId = router.query.id
-
 const Detail = styled.div`
 width: 100%;
 display: flex;
 flex-direction: column;
 align-self: center;  
 `
+
 const ALL_POSTS_QUERY = gql`
 {
     labrador {
@@ -32,18 +29,9 @@ const ALL_POSTS_QUERY = gql`
   }
 }
 `
-ElbilDetail.getInitialProps = async ({req}) =>{
-  let url = ''
-  if (typeof window !== "undefined") {
-    url = window.location.href
-  } else {
-    url = req.url
-  }
-  
-  let parameter = url.split("=")
-  // Getting the id from the second part of the URL
-  let elbilId = Number(parameter[1])
-  // Returning elbilId to the id from Params
+
+ElbilDetail.getInitialProps = async ({req, query}) =>{
+  let elbilId = Number(query.id)
   return {elbilId};
 }
 
@@ -54,35 +42,27 @@ function ElbilDetail({elbilId}) {
       notifyOnNetworkStatusChange: true
     }
   )
-  useEffect(() => {
-   
-  });
 
-
-  const articleData = JSON.stringify(data)
-  console.log(articleData)
-  
-  // Filtering out all the Cars that does not match the id 
-  const elbilDetail = elbiler.filter (elbil => elbil.id === elbilId)
-  // Mapping the id that remains after filtering
-  const elBiler = elbilDetail.map(elbil => 
-
+  // Filtering out the car that matches the elbilId
+  const singleElbil = elbiler.filter (elbil => elbil.id === elbilId)  
+  const elBiler =  
     <Fade>
       <Detail>
       <CarCard 
-        merke={elbil.modell} 
-        modell={elbil.merke}  
-        type={elbil.type}
-        rekkevidde={elbil.rekkevidde} 
-        pris={elbil.pris} 
-        bildeURL={elbil.bildeURL}
-        id={elbil.id}
+        merke={singleElbil[0].modell} 
+        modell={singleElbil[0].merke}  
+        type={singleElbil[0].type}
+        rekkevidde={singleElbil[0].rekkevidde} 
+        pris={singleElbil[0].pris} 
+        bildeURL={singleElbil[0].bildeURL}
+        id={singleElbil[0].id}
     />
-      <h3>Sitteplasser: {elbil.sitteplasser}</h3>
-      {articleData}
+      
+      <h3>Sitteplasser: {singleElbil[0].sitteplasser}</h3>
+    
       </Detail>
     </Fade>
-    );
+    
 
     return (
       <FlexWrapper>
