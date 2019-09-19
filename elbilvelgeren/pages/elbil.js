@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import Navbar from "../Components/Navbar";
 import CarCard from "../Components/CarCard";
 import FlexWrapper from "../Components/FlexWrapper"
@@ -19,12 +19,79 @@ align-self: center;
 `
 
 const ALL_POSTS_QUERY = gql`
-{
-    labrador {
-    article(id: 71564397) {
+query MyBodyText($id: Int) {
+  labrador {
+    article(id: $id) {
       title
-      bodytextHTML
+      subtitle
+      publishedURL
+      sectionTag
+      tags
+      siteDomain
       imageId
+      bodytextStructured {
+
+        ... on Labrador_HTMLElement {
+          name
+          attributes {
+            key
+            value
+          }
+          children {
+
+            ... on Labrador_HTMLElement {
+              name
+              attributes {
+                key
+                value
+              }
+              children {
+
+                ... on Labrador_HTMLElement {
+                  name
+                  attributes {
+                    key
+                    value
+                  }
+                  children {
+    
+                    ... on Labrador_HTMLElement {
+                      name
+                      attributes {
+                        key
+                        value
+                      }
+                      children {
+      
+                        ... on Labrador_HTMLElement {
+                          name
+                          attributes {
+                            key
+                            value
+                          }
+                     
+                        }
+                        ... on Labrador_Text {
+                          text
+                        }
+                      }
+                    }
+                    ... on Labrador_Text {
+                      text
+                    }
+                  }
+                }
+                ... on Labrador_Text {
+                  text
+                }
+              }
+            }
+            ... on Labrador_Text {
+              text
+            }
+          }
+        }
+      }
     }
   }
 }
@@ -36,12 +103,40 @@ ElbilDetail.getInitialProps = async ({req, query}) =>{
 }
 
 function ElbilDetail({elbilId}) {
+  // Getting article id of tester
+  const articleID = elbiler[elbilId].tester
+  console.log(articleID)
+
   const { loading, error, data, fetchMore, networkStatus } = useQuery(
     ALL_POSTS_QUERY,
     {
-      notifyOnNetworkStatusChange: true
+      notifyOnNetworkStatusChange: true,
+      variables: { id: articleID }
     }
   )
+  
+  // Stopping if error
+  if (error) {
+    console.log("Vi har en feil")
+    return null
+  } 
+
+
+  console.log(JSON.stringify(data))
+  // Using State Hook
+  const [articleTitle, setTitle] = useState(0);
+  const [articleText, setText] = useState(1);
+
+
+  useEffect(() => {
+    // Update the document title using the browser API
+    if (data.labrador === undefined) {
+      setTitle("Vi finner ikke data")
+    } else {
+      setTitle(JSON.stringify(data.labrador.article.title))
+      setText(JSON.stringify(data.labrador.article.bodytextHTML))
+    }
+  });
 
   // Filtering out the car that matches the elbilId
   const singleElbil = elbiler.filter (elbil => elbil.id === elbilId)  
@@ -68,6 +163,12 @@ function ElbilDetail({elbilId}) {
       <FlexWrapper>
         <Navbar />
         {elBiler}
+        {articleTitle} 
+        {articleText}
+        
+
+        
+       
       </FlexWrapper>
     )
 }

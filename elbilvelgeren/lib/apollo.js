@@ -7,8 +7,6 @@ import { HttpLink } from 'apollo-link-http'
 import fetch from 'isomorphic-unfetch'
 
 let apolloClient = null
-
-
 /**
  * Creates and provides the apolloContext
  * to a next.js PageTree. Use it by wrapping

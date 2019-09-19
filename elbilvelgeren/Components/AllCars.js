@@ -112,7 +112,11 @@ class AllCars extends React.Component {
                     onClickAway={() => this.closeModal()}
                 >
                     <ModalContent>
-                        <h3>Her kommer avanserte filtere:</h3>
+                        <h3>Hva er viktigst for deg
+                        </h3>
+
+                        <h4>Størrelse</h4>
+                        <h4>Rekkevidde</h4>
                         <a href="javascript:void(0);" onClick={() => this.closeModal()}>Close</a>
                     </ModalContent>
         </Modal>
