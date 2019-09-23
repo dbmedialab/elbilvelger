@@ -117,15 +117,14 @@ function ElbilDetail({elbilId}) {
   
   // Stopping if error
   if (error) {
-    console.log("Vi har en feil")
+    console.log("Error while fetching data")
     return null
   } 
 
-
-  console.log(JSON.stringify(data))
   // Using State Hook
-  const [articleTitle, setTitle] = useState(0);
-  const [articleText, setText] = useState(1);
+    const [articleTitle, setTitle] = useState("Tittel");
+    const [articleText, setText] = useState("Lorem ipsum");
+    console.log(articleText)
 
 
   useEffect(() => {
@@ -163,7 +162,7 @@ function ElbilDetail({elbilId}) {
       <FlexWrapper>
         <Navbar />
         {elBiler}
-        {articleTitle} 
+        <h2>{articleTitle} </h2>
         {articleText}
         
 

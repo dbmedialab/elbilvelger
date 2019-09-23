@@ -2,7 +2,8 @@ import React, { useMemo } from 'react'
 import Head from 'next/head'
 import { ApolloProvider } from '@apollo/react-hooks'
 import { ApolloClient } from 'apollo-client'
-import { InMemoryCache } from 'apollo-cache-inmemory'
+import { InMemoryCache, IntrospectionFragmentMatcher } from 'apollo-cache-inmemory'
+import introspectionData from '../fragmentTypes.json'
 import { HttpLink } from 'apollo-link-http'
 import fetch from 'isomorphic-unfetch'
 
@@ -121,11 +122,14 @@ function initApolloClient (initialState) {
   return apolloClient
 }
 
+const fragmentMatcher = new IntrospectionFragmentMatcher({introspectionQueryResultData: introspectionData}) 
+
 /**
  * Creates and configures the ApolloClient
  * @param  {Object} [initialState={}]
  */
 function createApolloClient (initialState = {}) {
+  const apolloCache = new InMemoryCache({fragmentMatcher}).restore(initialState);
   // Check out https://github.com/zeit/next.js/pull/4611 if you want to use the AWSAppSyncClient
   return new ApolloClient({
     ssrMode: typeof window === 'undefined', // Disables forceFetch on the server (so queries are only run once)
@@ -134,6 +138,6 @@ function createApolloClient (initialState = {}) {
       credentials: 'same-origin', // Additional fetch() options like `credentials` or `headers`
       fetch
     }),
-    cache: new InMemoryCache().restore(initialState)
+    cache: apolloCache
   })
 }

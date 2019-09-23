@@ -352,6 +352,17 @@ module.exports = JSON.parse("[{\"id\":1,\"bildeURL\":\"etron.jpg\",\"merke\":\"A
 
 /***/ }),
 
+/***/ "./fragmentTypes.json":
+/*!****************************!*\
+  !*** ./fragmentTypes.json ***!
+  \****************************/
+/*! exports provided: __schema, default */
+/***/ (function(module) {
+
+module.exports = JSON.parse("{\"__schema\":{\"types\":[{\"kind\":\"UNION\",\"name\":\"Labrador_Child\",\"possibleTypes\":[{\"name\":\"Labrador_ArticlePreview\"},{\"name\":\"Labrador_Column\"},{\"name\":\"Labrador_Ad\"},{\"name\":\"Labrador_AutoArticlePlaceholder\"},{\"name\":\"Labrador_PersonalizedArticlePlaceholder\"},{\"name\":\"Labrador_FrontRows\"},{\"name\":\"Labrador_ContentMarketing\"},{\"name\":\"Labrador_Row\"},{\"name\":\"Labrador_Markup\"},{\"name\":\"Labrador_CustomElement\"},{\"name\":\"Labrador_JWVideo\"},{\"name\":\"Labrador_WolverineAd\"},{\"name\":\"Labrador_PersonalizedCampaign\"},{\"name\":\"Labrador_Image\"},{\"name\":\"Labrador_Instagram\"}]},{\"kind\":\"UNION\",\"name\":\"Labrador_Content\",\"possibleTypes\":[{\"name\":\"Labrador_HTMLElement\"},{\"name\":\"Labrador_Text\"}]},{\"kind\":\"UNION\",\"name\":\"Mat_PaginatedResponseResult\",\"possibleTypes\":[{\"name\":\"Mat_RecipePreview\"},{\"name\":\"Mat_IngredientPreview\"}]}]}}");
+
+/***/ }),
+
 /***/ "./lib/apollo.js":
 /*!***********************!*\
   !*** ./lib/apollo.js ***!
@@ -375,9 +386,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _apollo_react_hooks__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @apollo/react-hooks */ "./node_modules/@apollo/react-hooks/lib/react-hooks.esm.js");
 /* harmony import */ var apollo_client__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! apollo-client */ "./node_modules/apollo-client/bundle.esm.js");
 /* harmony import */ var apollo_cache_inmemory__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! apollo-cache-inmemory */ "./node_modules/apollo-cache-inmemory/lib/bundle.esm.js");
-/* harmony import */ var apollo_link_http__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! apollo-link-http */ "./node_modules/apollo-link-http/lib/bundle.esm.js");
-/* harmony import */ var isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! isomorphic-unfetch */ "./node_modules/isomorphic-unfetch/browser.js");
-/* harmony import */ var isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_11__);
+/* harmony import */ var _fragmentTypes_json__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../fragmentTypes.json */ "./fragmentTypes.json");
+var _fragmentTypes_json__WEBPACK_IMPORTED_MODULE_10___namespace = /*#__PURE__*/__webpack_require__.t(/*! ../fragmentTypes.json */ "./fragmentTypes.json", 1);
+/* harmony import */ var apollo_link_http__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! apollo-link-http */ "./node_modules/apollo-link-http/lib/bundle.esm.js");
+/* harmony import */ var isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! isomorphic-unfetch */ "./node_modules/isomorphic-unfetch/browser.js");
+/* harmony import */ var isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_12___default = /*#__PURE__*/__webpack_require__.n(isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_12__);
 
 
 
@@ -385,6 +398,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var _jsxFileName = "/Users/mariusgrondahl/Documents/GitHub/elbilvelger/elbilvelgeren/lib/apollo.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement;
+
 
 
 
@@ -419,13 +433,13 @@ function withApollo(PageComponent) {
       client: client,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 25
+        lineNumber: 26
       },
       __self: this
     }, __jsx(PageComponent, Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_3__["default"])({}, pageProps, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 26
+        lineNumber: 27
       },
       __self: this
     })));
@@ -506,7 +520,7 @@ function withApollo(PageComponent) {
                   }),
                   __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 71
+                    lineNumber: 72
                   },
                   __self: this
                 }));
@@ -569,26 +583,32 @@ function initApolloClient(initialState) {
 
   return apolloClient;
 }
+
+var fragmentMatcher = new apollo_cache_inmemory__WEBPACK_IMPORTED_MODULE_9__["IntrospectionFragmentMatcher"]({
+  introspectionQueryResultData: _fragmentTypes_json__WEBPACK_IMPORTED_MODULE_10__
+});
 /**
  * Creates and configures the ApolloClient
  * @param  {Object} [initialState={}]
  */
 
-
 function createApolloClient() {
   var initialState = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
-  // Check out https://github.com/zeit/next.js/pull/4611 if you want to use the AWSAppSyncClient
+  var apolloCache = new apollo_cache_inmemory__WEBPACK_IMPORTED_MODULE_9__["InMemoryCache"]({
+    fragmentMatcher: fragmentMatcher
+  }).restore(initialState); // Check out https://github.com/zeit/next.js/pull/4611 if you want to use the AWSAppSyncClient
+
   return new apollo_client__WEBPACK_IMPORTED_MODULE_8__["ApolloClient"]({
     ssrMode: false,
     // Disables forceFetch on the server (so queries are only run once)
-    link: new apollo_link_http__WEBPACK_IMPORTED_MODULE_10__["HttpLink"]({
+    link: new apollo_link_http__WEBPACK_IMPORTED_MODULE_11__["HttpLink"]({
       uri: 'http://wolverine-fetcher.prod.medialaben.no/query',
       // Server URL (must be absolute)
       credentials: 'same-origin',
       // Additional fetch() options like `credentials` or `headers`
-      fetch: isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_11___default.a
+      fetch: isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_12___default.a
     }),
-    cache: new apollo_cache_inmemory__WEBPACK_IMPORTED_MODULE_9__["InMemoryCache"]().restore(initialState)
+    cache: apolloCache
   });
 }
 
@@ -34043,20 +34063,20 @@ function ElbilDetail(_ref3) {
 
 
   if (error) {
-    console.log("Vi har en feil");
+    console.log("Error while fetching data");
     return null;
-  }
+  } // Using State Hook
 
-  console.log(_babel_runtime_corejs2_core_js_json_stringify__WEBPACK_IMPORTED_MODULE_0___default()(data)); // Using State Hook
 
-  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_4__["useState"])(0),
+  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_4__["useState"])("Tittel"),
       articleTitle = _useState[0],
       setTitle = _useState[1];
 
-  var _useState2 = Object(react__WEBPACK_IMPORTED_MODULE_4__["useState"])(1),
+  var _useState2 = Object(react__WEBPACK_IMPORTED_MODULE_4__["useState"])("Lorem ipsum"),
       articleText = _useState2[0],
       setText = _useState2[1];
 
+  console.log(articleText);
   Object(react__WEBPACK_IMPORTED_MODULE_4__["useEffect"])(function () {
     // Update the document title using the browser API
     if (data.labrador === undefined) {
@@ -34074,13 +34094,13 @@ function ElbilDetail(_ref3) {
   var elBiler = __jsx(react_reveal_Fade__WEBPACK_IMPORTED_MODULE_10___default.a, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 144
+      lineNumber: 143
     },
     __self: this
   }, __jsx(Detail, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 145
+      lineNumber: 144
     },
     __self: this
   }, __jsx(_Components_CarCard__WEBPACK_IMPORTED_MODULE_6__["default"], {
@@ -34093,13 +34113,13 @@ function ElbilDetail(_ref3) {
     id: singleElbil[0].id,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 146
+      lineNumber: 145
     },
     __self: this
   }), __jsx("h3", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 156
+      lineNumber: 155
     },
     __self: this
   }, "Sitteplasser: ", singleElbil[0].sitteplasser)));
@@ -34107,23 +34127,29 @@ function ElbilDetail(_ref3) {
   return __jsx(_Components_FlexWrapper__WEBPACK_IMPORTED_MODULE_7__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 163
+      lineNumber: 162
     },
     __self: this
   }, __jsx(_Components_Navbar__WEBPACK_IMPORTED_MODULE_5__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 164
+      lineNumber: 163
     },
     __self: this
-  }), elBiler, articleTitle, articleText);
+  }), elBiler, __jsx("h2", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 165
+    },
+    __self: this
+  }, articleTitle, " "), articleText);
 }
 
 /* harmony default export */ __webpack_exports__["default"] = (Object(_lib_apollo__WEBPACK_IMPORTED_MODULE_13__["withApollo"])(ElbilDetail));
 
 /***/ }),
 
-/***/ 3:
+/***/ 0:
 /*!*********************************************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2Felbil&absolutePagePath=%2FUsers%2Fmariusgrondahl%2FDocuments%2FGitHub%2Felbilvelger%2Felbilvelgeren%2Fpages%2Felbil.js ***!
   \*********************************************************************************************************************************************************************/
@@ -34146,5 +34172,5 @@ module.exports = dll_129a35c7ec57967eb265;
 
 /***/ })
 
-},[[3,"static/runtime/webpack.js","styles"]]]);
+},[[0,"static/runtime/webpack.js","styles"]]]);
 //# sourceMappingURL=elbil.js.map
