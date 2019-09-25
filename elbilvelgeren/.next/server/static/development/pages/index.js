@@ -549,8 +549,7 @@ a{
     text-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2);
  
   }
-
-
+  
   ul {
     width: 100%;
     list-style: none;
@@ -606,156 +605,101 @@ function CarCard(props) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 89
+      lineNumber: 88
     },
     __self: this
   }, __jsx("a", {
     title: "CarDetail",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 90
+      lineNumber: 89
     },
     __self: this
   }, __jsx(CardWrapper, {
     bildeURL: props.bildeURL,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 91
+      lineNumber: 90
     },
     __self: this
   }, __jsx("div", {
     className: "imgTitle",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 93
+      lineNumber: 92
     },
     __self: this
   }, __jsx("span", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 94
+      lineNumber: 93
     },
     __self: this
   }, props.modell, " "), __jsx("span", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 95
+      lineNumber: 94
     },
     __self: this
   }, props.merke, " "), __jsx("span", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 96
+      lineNumber: 95
     },
     __self: this
   }, props.type)), __jsx("div", {
     className: "cardFooter",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 99
+      lineNumber: 98
     },
     __self: this
   }, __jsx("ul", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 100
+      lineNumber: 99
     },
     __self: this
   }, __jsx("li", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 101
+      lineNumber: 100
     },
     __self: this
   }, __jsx("span", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 101
+      lineNumber: 100
     },
     __self: this
   }, __jsx(react_icons_fa__WEBPACK_IMPORTED_MODULE_1__["FaMapMarkerAlt"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 101
+      lineNumber: 100
     },
     __self: this
   })), " ", props.rekkevidde, " ", __jsx("span", {
     className: "light",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 101
+      lineNumber: 100
     },
     __self: this
   }, "km")), __jsx("li", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 102
+      lineNumber: 101
     },
     __self: this
   }, __jsx("span", {
     className: "price",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 102
+      lineNumber: 101
     },
     __self: this
   }, "Fra: ", numberWithSpaces(`${props.pris}`), ",-")))))));
 }
-
-/***/ }),
-
-/***/ "./Components/FlexWrapper.js":
-/*!***********************************!*\
-  !*** ./Components/FlexWrapper.js ***!
-  \***********************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _emotion_styled__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @emotion/styled */ "@emotion/styled");
-/* harmony import */ var _emotion_styled__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_emotion_styled__WEBPACK_IMPORTED_MODULE_1__);
-var _jsxFileName = "/Users/mariusgrondahl/Documents/GitHub/elbilvelger/elbilvelgeren/Components/FlexWrapper.js";
-var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
-
-
-const FlexWrapperCSS = _emotion_styled__WEBPACK_IMPORTED_MODULE_1___default.a.div`
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin: .5rem;
-    padding: 4rem  0rem 3rem 0rem;
-
-    @media (min-width: 800px) {
-      flex-direction: row;
-      justify-content: flex-start;
-      flex-wrap: wrap;
-    }
-
-    .react-reveal{
-      width: 100%;
-
-      @media (min-width: 800px) {
-        width: 30vw;
-        margin: 1rem;
-      }
-  }
-  `;
-
-function FlexWrapper(props) {
-  return __jsx(FlexWrapperCSS, {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 28
-    },
-    __self: this
-  }, props.children);
-}
-
-;
-/* harmony default export */ __webpack_exports__["default"] = (FlexWrapper);
 
 /***/ }),
 
@@ -894,7 +838,7 @@ class Navbar extends react__WEBPACK_IMPORTED_MODULE_1__["Component"] {
 /*! exports provided: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, default */
 /***/ (function(module) {
 
-module.exports = JSON.parse("[{\"id\":1,\"bildeURL\":\"etron.jpg\",\"merke\":\"Audi\",\"modell\":\"e-tron\",\"type\":\"55\",\"rekkevidde\":415,\"pris\":652061,\"storelse\":1,\"sitteplasser\":\"5\",\"tester\":\"70709759\",\"leverandorer\":\"https://www.audi.no/no/web/no/bilmodeller/audi-tron/audi-e-tron.html\"},{\"id\":2,\"bildeURL\":\"default.jpg\",\"merke\":\"BMW\",\"modell\":\"i3\",\"type\":\"120Ah\",\"rekkevidde\":310,\"pris\":309000,\"storelse\":3,\"sitteplasser\":\"4\",\"tester\":\"70261709\",\"leverandorer\":\"https://www.bmw.no/no/ssl/configurator.html#/8P21/FBHGI,S0230,S02D6,S02VB,S02VC,S0428,S0494,S04EX,S04T9,S04U6,S04U7,S0548,S0570,S05DA,S0654,S06AC,S06AE,S06AK,S06AP,S0853,S0885,S08R9,S08SM,S08TG,S0993,S09AA/I01/esl/new/\"},{\"id\":3,\"bildeURL\":\"default.jpg\",\"merke\":\"Citroen\",\"modell\":\"E-Berlingo\",\"type\":\"Multispace\",\"rekkevidde\":170,\"pris\":227500,\"storelse\":2,\"sitteplasser\":\"2\",\"tester\":\"69199883\",\"leverandorer\":\"https://www.citroen.no/modeller/citroen/berlingo-electric-multispace.html\"},{\"id\":4,\"bildeURL\":\"default.jpg\",\"merke\":\"Citroen\",\"modell\":\"C-Zero\",\"type\":\"Feel\",\"rekkevidde\":150,\"pris\":144380,\"storelse\":3,\"sitteplasser\":\"4\",\"tester\":\"61639141\",\"leverandorer\":\"https://www.citroen.no/biler/citroen/c-zero.html\"},{\"id\":5,\"bildeURL\":\"default.jpg\",\"merke\":\"Hyundai\",\"modell\":\"Ioniq\",\"type\":\"EV\",\"rekkevidde\":280,\"pris\":244000,\"storelse\":2,\"sitteplasser\":\"5\",\"tester\":\"60948143\",\"leverandorer\":\"https://www.hyundai.no/modeller/ioniq-electric/\"},{\"id\":6,\"bildeURL\":\"default.jpg\",\"merke\":\"Hyundai\",\"modell\":\"Kona Electric\",\"type\":\"Teknikk\",\"rekkevidde\":449,\"pris\":325000,\"storelse\":2,\"sitteplasser\":\"5\",\"tester\":\"70039730\",\"leverandorer\":\"https://www.hyundai.no/modeller/kona-electric/\"},{\"id\":7,\"bildeURL\":\"default.jpg\",\"merke\":\"DS\",\"modell\":\"3 Crossback E-Tense\",\"type\":\"136 So Chic\",\"rekkevidde\":300,\"pris\":319900,\"storelse\":3,\"sitteplasser\":\"5\",\"tester\":\"70865528\",\"leverandorer\":\"https://www.dsautomobiles.no/elbil-hybrid/elbiler.html\"},{\"id\":8,\"bildeURL\":\"default.jpg\",\"merke\":\"Kia\",\"modell\":\"E-Niro\",\"type\":\"First Edition\",\"rekkevidde\":485,\"pris\":370600,\"storelse\":2,\"sitteplasser\":\"5\",\"tester\":\"70531310\",\"leverandorer\":\"https://www.kia.com/no/modeller/e-niro/opplev-e-Niro/\"},{\"id\":9,\"bildeURL\":\"default.jpg\",\"merke\":\"Kia\",\"modell\":\"E-Soul\",\"type\":\"Classic\",\"rekkevidde\":250,\"pris\":228100,\"storelse\":2,\"sitteplasser\":\"5\",\"tester\":\"70747144\",\"leverandorer\":\"https://www.kia.com/no/modeller/e-soul/opplev-e-soul/\"},{\"id\":10,\"bildeURL\":\"default.jpg\",\"merke\":\"Mitsubishi\",\"modell\":\"i-Miev\",\"type\":\"16 kWh\",\"rekkevidde\":105,\"pris\":149900,\"storelse\":3,\"sitteplasser\":\"4\",\"tester\":\"61732696\",\"leverandorer\":\"https://www.mitsubishi-motors.no/biler/imiev\"},{\"id\":11,\"bildeURL\":\"default.jpg\",\"merke\":\"Nissan\",\"modell\":\"Leaf\",\"type\":\"40kWh Acenta\",\"rekkevidde\":270,\"pris\":278000,\"storelse\":2,\"sitteplasser\":\"5\",\"tester\":\"69570276\",\"leverandorer\":\"https://www.nissan.no/biler/nye-biler/leaf.html\"},{\"id\":12,\"bildeURL\":\"default.jpg\",\"merke\":\"Nissan\",\"modell\":\"E-NV200\",\"type\":\"Evalia 40 kWt 5-s\",\"rekkevidde\":200,\"pris\":322840,\"storelse\":1,\"sitteplasser\":\"5\",\"tester\":\"61216187\",\"leverandorer\":\"https://www.nissan.no/biler/nye-biler/e-nv200-evalia.html\"},{\"id\":13,\"bildeURL\":\"default.jpg\",\"merke\":\"Opel\",\"modell\":\"Ampera-E\",\"type\":\"Premium\",\"rekkevidde\":423,\"pris\":359900,\"storelse\":2,\"sitteplasser\":\"5\",\"tester\":\"66931394\",\"leverandorer\":\"https://www.opel.no/personbil/ampera-e/modelloversikt.html\"},{\"id\":14,\"bildeURL\":\"default.jpg\",\"merke\":\"Peugeot\",\"modell\":\"iOn\",\"type\":\"Active\",\"rekkevidde\":150,\"pris\":163600,\"storelse\":3,\"sitteplasser\":\"4\",\"tester\":\"61639141\",\"leverandorer\":\"https://www.peugeot.no/modell/peugeot-modeller/ion.html\"},{\"id\":15,\"bildeURL\":\"default.jpg\",\"merke\":\"Peugeot\",\"modell\":\"e-Partner Tepee\",\"rekkevidde\":170,\"pris\":192000,\"storelse\":2,\"sitteplasser\":\"3\",\"tester\":\"69199883\",\"leverandorer\":\"https://www.peugeot.no/modell/peugeot-modeller/partner-tepee-electric.html\"},{\"id\":16,\"bildeURL\":\"default.jpg\",\"merke\":\"Renault\",\"modell\":\"Kangoo Electric\",\"type\":\"5-seter\",\"rekkevidde\":270,\"pris\":268400,\"storelse\":2,\"sitteplasser\":\"5\",\"tester\":\"61290789\",\"leverandorer\":\"https://renault.no/elbil/kangoo-maxi-ze-personbil\"},{\"id\":17,\"bildeURL\":\"default.jpg\",\"merke\":\"Renault\",\"modell\":\"Twizy\",\"type\":\"Intens\",\"rekkevidde\":90,\"pris\":93000,\"storelse\":3,\"sitteplasser\":\"2\",\"tester\":\"61501189\",\"leverandorer\":\"https://renault.no/elbil/twizy\"},{\"id\":18,\"bildeURL\":\"default.jpg\",\"merke\":\"Renault\",\"modell\":\"Zoe\",\"type\":\"Z.E 40 R90 Life\",\"rekkevidde\":400,\"pris\":245000,\"storelse\":3,\"sitteplasser\":\"5\",\"tester\":\"63605077\",\"leverandorer\":\"https://renault.no/elbil/zoe\"},{\"id\":19,\"bildeURL\":\"default.jpg\",\"merke\":\"Tesla\",\"modell\":\"3\",\"type\":\"Standard Range Plus RWD\",\"rekkevidde\":415,\"pris\":377020,\"storelse\":2,\"sitteplasser\":\"5\",\"tester\":\"71161178\",\"leverandorer\":\"https://www.tesla.com/no_NO/models\"},{\"id\":20,\"bildeURL\":\"default.jpg\",\"merke\":\"Tesla\",\"modell\":\"S\",\"type\":\"Long Range\",\"rekkevidde\":610,\"pris\":791220,\"storelse\":1,\"sitteplasser\":\"5\",\"tester\":\"71006479\",\"leverandorer\":\"https://www.tesla.com/no_NO/models\"},{\"id\":21,\"bildeURL\":\"default.jpg\",\"merke\":\"Tesla\",\"modell\":\"X\",\"type\":\"Performance 5-s\",\"rekkevidde\":485,\"pris\":1005220,\"storelse\":1,\"sitteplasser\":\"5\",\"tester\":\"69769249\",\"leverandorer\":\"https://www.tesla.com/no_NO/models\"},{\"id\":22,\"bildeURL\":\"default.jpg\",\"merke\":\"VW\",\"modell\":\"Golf\",\"rekkevidde\":229,\"pris\":326200,\"storelse\":2,\"sitteplasser\":\"5\",\"tester\":\"67454759\",\"leverandorer\":\"https://www.volkswagen.no/no/biler/e-golf-elbil.html\"},{\"id\":23,\"bildeURL\":\"default.jpg\",\"merke\":\"VW\",\"modell\":\"UP!\",\"rekkevidde\":133,\"pris\":211300,\"storelse\":3,\"sitteplasser\":\"4\",\"tester\":\"61244198\",\"leverandorer\":\"https://www.volkswagen.no/no/biler/e-up-elbil.html\"}]");
+module.exports = JSON.parse("[{\"id\":1,\"bildeURL\":\"etron.jpg\",\"merke\":\"Audi\",\"modell\":\"e-tron\",\"type\":\"55\",\"rekkevidde\":415,\"pris\":652061,\"storelse\":1,\"sitteplasser\":\"5\",\"tester\":\"70709759\",\"leverandorer\":\"https://www.audi.no/no/web/no/bilmodeller/audi-tron/audi-e-tron.html\"},{\"id\":2,\"bildeURL\":\"BMW-i3.jpg\",\"merke\":\"BMW\",\"modell\":\"i3\",\"type\":\"120Ah\",\"rekkevidde\":310,\"pris\":309000,\"storelse\":3,\"sitteplasser\":\"4\",\"tester\":\"70261709\",\"leverandorer\":\"https://www.bmw.no/no/ssl/configurator.html#/8P21/FBHGI,S0230,S02D6,S02VB,S02VC,S0428,S0494,S04EX,S04T9,S04U6,S04U7,S0548,S0570,S05DA,S0654,S06AC,S06AE,S06AK,S06AP,S0853,S0885,S08R9,S08SM,S08TG,S0993,S09AA/I01/esl/new/\"},{\"id\":3,\"bildeURL\":\"Citroen-Berlingo-2019.jpg\",\"merke\":\"Citroen\",\"modell\":\"E-Berlingo\",\"type\":\"Multispace\",\"rekkevidde\":170,\"pris\":227500,\"storelse\":2,\"sitteplasser\":\"2\",\"tester\":\"69199883\",\"leverandorer\":\"https://www.citroen.no/modeller/citroen/berlingo-electric-multispace.html\"},{\"id\":4,\"bildeURL\":\"Citroen-C-Zero-2011.jpg\",\"merke\":\"Citroen\",\"modell\":\"C-Zero\",\"type\":\"Feel\",\"rekkevidde\":150,\"pris\":144380,\"storelse\":3,\"sitteplasser\":\"4\",\"tester\":\"61639141\",\"leverandorer\":\"https://www.citroen.no/biler/citroen/c-zero.html\"},{\"id\":5,\"bildeURL\":\"Hyundai-ioniq-2017.jpg\",\"merke\":\"Hyundai\",\"modell\":\"Ioniq\",\"type\":\"EV\",\"rekkevidde\":280,\"pris\":244000,\"storelse\":2,\"sitteplasser\":\"5\",\"tester\":\"60948143\",\"leverandorer\":\"https://www.hyundai.no/modeller/ioniq-electric/\"},{\"id\":6,\"bildeURL\":\"Hyundai-Kona_Electric.jpg\",\"merke\":\"Hyundai\",\"modell\":\"Kona Electric\",\"type\":\"Teknikk\",\"rekkevidde\":449,\"pris\":325000,\"storelse\":2,\"sitteplasser\":\"5\",\"tester\":\"70039730\",\"leverandorer\":\"https://www.hyundai.no/modeller/kona-electric/\"},{\"id\":7,\"bildeURL\":\"DS3Crossbacke-Tense.jpg\",\"merke\":\"DS\",\"modell\":\"3 Crossback E-Tense\",\"type\":\"136 So Chic\",\"rekkevidde\":300,\"pris\":319900,\"storelse\":3,\"sitteplasser\":\"5\",\"tester\":\"70865528\",\"leverandorer\":\"https://www.dsautomobiles.no/elbil-hybrid/elbiler.html\"},{\"id\":8,\"bildeURL\":\"Kia-e-Niro-2019.jpg\",\"merke\":\"Kia\",\"modell\":\"E-Niro\",\"type\":\"First Edition\",\"rekkevidde\":485,\"pris\":370600,\"storelse\":2,\"sitteplasser\":\"5\",\"tester\":\"70531310\",\"leverandorer\":\"https://www.kia.com/no/modeller/e-niro/opplev-e-Niro/\"},{\"id\":9,\"bildeURL\":\"Kia-Soul_EV-2020-2.jpg\",\"merke\":\"Kia\",\"modell\":\"E-Soul\",\"type\":\"Classic\",\"rekkevidde\":250,\"pris\":228100,\"storelse\":2,\"sitteplasser\":\"5\",\"tester\":\"70747144\",\"leverandorer\":\"https://www.kia.com/no/modeller/e-soul/opplev-e-soul/\"},{\"id\":10,\"bildeURL\":\"Mitsubishi-i-MiEV2.jpg\",\"merke\":\"Mitsubishi\",\"modell\":\"i-Miev\",\"type\":\"16 kWh\",\"rekkevidde\":105,\"pris\":149900,\"storelse\":3,\"sitteplasser\":\"4\",\"tester\":\"61732696\",\"leverandorer\":\"https://www.mitsubishi-motors.no/biler/imiev\"},{\"id\":11,\"bildeURL\":\"Nissan-Leaf-2018.jpg\",\"merke\":\"Nissan\",\"modell\":\"Leaf\",\"type\":\"40kWh Acenta\",\"rekkevidde\":270,\"pris\":278000,\"storelse\":2,\"sitteplasser\":\"5\",\"tester\":\"69570276\",\"leverandorer\":\"https://www.nissan.no/biler/nye-biler/leaf.html\"},{\"id\":12,\"bildeURL\":\"Nissan-e-NV200-2.jpg\",\"merke\":\"Nissan\",\"modell\":\"E-NV200\",\"type\":\"Evalia 40 kWt 5-s\",\"rekkevidde\":200,\"pris\":322840,\"storelse\":1,\"sitteplasser\":\"5\",\"tester\":\"61216187\",\"leverandorer\":\"https://www.nissan.no/biler/nye-biler/e-nv200-evalia.html\"},{\"id\":13,\"bildeURL\":\"Opel-Ampera-e-2017-3.jpg\",\"merke\":\"Opel\",\"modell\":\"Ampera-E\",\"type\":\"Premium\",\"rekkevidde\":423,\"pris\":359900,\"storelse\":2,\"sitteplasser\":\"5\",\"tester\":\"66931394\",\"leverandorer\":\"https://www.opel.no/personbil/ampera-e/modelloversikt.html\"},{\"id\":14,\"bildeURL\":\"Peugeot-iOn-2011-2.jpg\",\"merke\":\"Peugeot\",\"modell\":\"iOn\",\"type\":\"Active\",\"rekkevidde\":150,\"pris\":163600,\"storelse\":3,\"sitteplasser\":\"4\",\"tester\":\"61639141\",\"leverandorer\":\"https://www.peugeot.no/modell/peugeot-modeller/ion.html\"},{\"id\":15,\"bildeURL\":\"Peugeot-Partner_Tepee.jpg\",\"merke\":\"Peugeot\",\"modell\":\"e-Partner Tepee\",\"rekkevidde\":170,\"pris\":192000,\"storelse\":2,\"sitteplasser\":\"3\",\"tester\":\"69199883\",\"leverandorer\":\"https://www.peugeot.no/modell/peugeot-modeller/partner-tepee-electric.html\"},{\"id\":16,\"bildeURL\":\"Renault-Kangoo.jpg\",\"merke\":\"Renault\",\"modell\":\"Kangoo Electric\",\"type\":\"5-seter\",\"rekkevidde\":270,\"pris\":268400,\"storelse\":2,\"sitteplasser\":\"5\",\"tester\":\"61290789\",\"leverandorer\":\"https://renault.no/elbil/kangoo-maxi-ze-personbil\"},{\"id\":17,\"bildeURL\":\"Renault-Twizy-2012.jpg\",\"merke\":\"Renault\",\"modell\":\"Twizy\",\"type\":\"Intens\",\"rekkevidde\":90,\"pris\":93000,\"storelse\":3,\"sitteplasser\":\"2\",\"tester\":\"61501189\",\"leverandorer\":\"https://renault.no/elbil/twizy\"},{\"id\":18,\"bildeURL\":\"Renault-Zoe-2017-1600-17.jpg\",\"merke\":\"Renault\",\"modell\":\"Zoe\",\"type\":\"Z.E 40 R90 Life\",\"rekkevidde\":400,\"pris\":245000,\"storelse\":3,\"sitteplasser\":\"5\",\"tester\":\"63605077\",\"leverandorer\":\"https://renault.no/elbil/zoe\"},{\"id\":19,\"bildeURL\":\"Tesla-Model_3-2018.jpg\",\"merke\":\"Tesla\",\"modell\":\"3\",\"type\":\"Standard Range Plus RWD\",\"rekkevidde\":415,\"pris\":377020,\"storelse\":2,\"sitteplasser\":\"5\",\"tester\":\"71161178\",\"leverandorer\":\"https://www.tesla.com/no_NO/models\"},{\"id\":20,\"bildeURL\":\"Tesla-Model_S-2017.jpg\",\"merke\":\"Tesla\",\"modell\":\"S\",\"type\":\"Long Range\",\"rekkevidde\":610,\"pris\":791220,\"storelse\":1,\"sitteplasser\":\"5\",\"tester\":\"71006479\",\"leverandorer\":\"https://www.tesla.com/no_NO/models\"},{\"id\":21,\"bildeURL\":\"Tesla-Model_X-2017.jpg\",\"merke\":\"Tesla\",\"modell\":\"X\",\"type\":\"Performance 5-s\",\"rekkevidde\":485,\"pris\":1005220,\"storelse\":1,\"sitteplasser\":\"5\",\"tester\":\"69769249\",\"leverandorer\":\"https://www.tesla.com/no_NO/models\"},{\"id\":22,\"bildeURL\":\"Volkswagen-e-Golf-2017.jpg\",\"merke\":\"VW\",\"modell\":\"Golf\",\"rekkevidde\":229,\"pris\":326200,\"storelse\":2,\"sitteplasser\":\"5\",\"tester\":\"67454759\",\"leverandorer\":\"https://www.volkswagen.no/no/biler/e-golf-elbil.html\"},{\"id\":23,\"bildeURL\":\"Volkswagen-e-Up-2014.jpg\",\"merke\":\"VW\",\"modell\":\"UP!\",\"rekkevidde\":133,\"pris\":211300,\"storelse\":3,\"sitteplasser\":\"4\",\"tester\":\"67454759\",\"leverandorer\":\"https://www.volkswagen.no/no/biler/e-up-elbil.html\"}]");
 
 /***/ }),
 
@@ -1606,32 +1550,60 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _Components_AllCars__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../Components/AllCars */ "./Components/AllCars.js");
 /* harmony import */ var _Components_Navbar__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../Components/Navbar */ "./Components/Navbar.js");
-/* harmony import */ var _Components_FlexWrapper__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../Components/FlexWrapper */ "./Components/FlexWrapper.js");
+/* harmony import */ var _emotion_styled__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @emotion/styled */ "@emotion/styled");
+/* harmony import */ var _emotion_styled__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_emotion_styled__WEBPACK_IMPORTED_MODULE_3__);
 var _jsxFileName = "/Users/mariusgrondahl/Documents/GitHub/elbilvelger/elbilvelgeren/pages/index.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
 
 
+const FlexWrapper = _emotion_styled__WEBPACK_IMPORTED_MODULE_3___default.a.div`
+    display: flex;
+    background: #1d1d1d;
+    flex-direction: column;
+    justify-content: center;
+    padding: 3.5rem .5rem 3rem .5rem;
+
+    @media (min-width: 800px) {
+      flex-direction: row;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .react-reveal{
+      width: 100%;
+
+      @media (min-width: 800px) {
+        width: 40vw;
+        margin: 1rem;
+      }
+
+      @media (min-width: 1280px) {
+        width: 25vw;
+        margin: 1rem;
+      }
+  }
+  `;
 
 class App extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
   render() {
-    return __jsx(_Components_FlexWrapper__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    return __jsx(FlexWrapper, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 9
+        lineNumber: 38
       },
       __self: this
     }, __jsx(_Components_Navbar__WEBPACK_IMPORTED_MODULE_2__["default"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 10
+        lineNumber: 39
       },
       __self: this
     }), __jsx(_Components_AllCars__WEBPACK_IMPORTED_MODULE_1__["default"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 11
+        lineNumber: 40
       },
       __self: this
     }));

@@ -1,21 +1,69 @@
 import React, { useState, useEffect } from 'react';
 import Navbar from "../Components/Navbar";
-import CarCard from "../Components/CarCard";
-import FlexWrapper from "../Components/FlexWrapper"
+import DetailHeader from "../Components/DetailHeader";
 import styled from '@emotion/styled';
 
 import elbiler from '../elbiler.json';
-import Fade from 'react-reveal/Fade';
 
 import { useQuery } from '@apollo/react-hooks'
 import gql from 'graphql-tag'
 import { withApollo } from "../lib/apollo"
 
+const Footer = styled.div`
+    color: #fff;
+    text-align: center;
+    width: 100%;
+    padding: .6rem;
+  }
+  `
+
+const DetailWrapper = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1rem;
+    margin: 0;
+
+    @media (min-width: 800px) {
+      max-width: 680px;
+      flex-direction: column;
+      align-align: center;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+  }
+  `
+
 const Detail = styled.div`
-width: 100%;
-display: flex;
-flex-direction: column;
-align-self: center;  
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-self: center;  
+    background: #1d1d1d;
+    color: #fff;
+    padding: .5rem;
+    margin: 0;
+
+  p{
+    margin: 0;
+    line-height: 1.4rem;
+
+  }
+
+  h1, h2, h3, h4{
+    text-align: center;
+    margin-bottom: .3rem;
+    font-size: 1.7rem;
+
+  }
+
+  h4{
+
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: 0.8rem;
+  }
 `
 
 const ALL_POSTS_QUERY = gql`
@@ -97,15 +145,38 @@ query MyBodyText($id: Int) {
 }
 `
 
+// Getinng props from query
 ElbilDetail.getInitialProps = async ({req, query}) =>{
   let elbilId = Number(query.id)
   return {elbilId};
 }
 
+// Getting the text from bodytextStrutured
+  const traverseElements = (elements = []) => {
+    if (!elements) {
+        return null
+    }
+  
+    return elements.map((el, i) => {
+      if (el["__typename"] === "Labrador_Text") {
+          return el.text
+      } else {
+          switch (el.name) {
+              default:
+                return (
+                  <el.name>
+                    {traverseElements(el.children)}
+                  </el.name>
+                )
+          }
+      }
+    })
+  }
+  
+
 function ElbilDetail({elbilId}) {
   // Getting article id of tester
   const articleID = elbiler[elbilId].tester
-  console.log(articleID)
 
   const { loading, error, data, fetchMore, networkStatus } = useQuery(
     ALL_POSTS_QUERY,
@@ -122,27 +193,37 @@ function ElbilDetail({elbilId}) {
   } 
 
   // Using State Hook
-    const [articleTitle, setTitle] = useState("Tittel");
-    const [articleText, setText] = useState("Lorem ipsum");
-    console.log(articleText)
-
-
+  const [articleTitle, setTitle] = useState("Tittel");
+  const [articleSubtitle, setSubtitle] = useState("undertittel");
+  const [articleImage, setImage] = useState(undefined);
+  const [brand, setBrand] = useState("brandnavn")
+  
   useEffect(() => {
     // Update the document title using the browser API
     if (data.labrador === undefined) {
-      setTitle("Vi finner ikke data")
+      const waitMessage = "Loading"
+      setTitle(waitMessage), setSubtitle(waitMessage), setImage(waitMessage)
     } else {
-      setTitle(JSON.stringify(data.labrador.article.title))
-      setText(JSON.stringify(data.labrador.article.bodytextHTML))
-    }
-  });
+      const articleTitle = data.labrador.article.title
+      const subTitle = data.labrador.article.subtitle
+      const imageId = data.labrador.article.imageId
+      const image = "https://www.dagbladet.no/images/" + imageId + ".jpg?imageId=" + imageId + "&width=600&height=auto"
+      console.log(image)
+      const brand = data.labrador.article.siteDomain
 
-  // Filtering out the car that matches the elbilId
+      setTitle(articleTitle)
+      setSubtitle(subTitle)
+      setImage(image)
+      setBrand(brand)
+    }
+
+  }, [data.labrador] );
+
+  // Filtering out the car that matches the elbilId to an Array with that ID
   const singleElbil = elbiler.filter (elbil => elbil.id === elbilId)  
-  const elBiler =  
-    <Fade>
-      <Detail>
-      <CarCard 
+  console.log(singleElbil)
+  const header =  
+      <DetailHeader
         merke={singleElbil[0].modell} 
         modell={singleElbil[0].merke}  
         type={singleElbil[0].type}
@@ -150,25 +231,25 @@ function ElbilDetail({elbilId}) {
         pris={singleElbil[0].pris} 
         bildeURL={singleElbil[0].bildeURL}
         id={singleElbil[0].id}
-    />
+      />
       
-      <h3>Sitteplasser: {singleElbil[0].sitteplasser}</h3>
-    
-      </Detail>
-    </Fade>
-    
-
     return (
-      <FlexWrapper>
+      <div>
+      {header}
+      <DetailWrapper>
         <Navbar />
-        {elBiler}
-        <h2>{articleTitle} </h2>
-        {articleText}
-        
+          <Detail>
+              
+              <h2 className="">Saker om {singleElbil[0].merke} {singleElbil[0].modell}:</h2>
+              <img src={articleImage}/>
+              <h2>{articleTitle} </h2>
+              <h4>{articleSubtitle} </h4>
+              <span>{brand}</span>
+              
+          </Detail>
 
-        
-       
-      </FlexWrapper>
+      </DetailWrapper>
+      </div>
     )
 }
 

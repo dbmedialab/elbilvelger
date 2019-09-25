@@ -106,31 +106,28 @@ module.exports =
 /************************************************************************/
 /******/ ({
 
-/***/ "./Components/CarCard.js":
-/*!*******************************!*\
-  !*** ./Components/CarCard.js ***!
-  \*******************************/
+/***/ "./Components/DetailHeader.js":
+/*!************************************!*\
+  !*** ./Components/DetailHeader.js ***!
+  \************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return CarCard; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return DetailHeader; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_icons_fa__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-icons/fa */ "react-icons/fa");
 /* harmony import */ var react_icons_fa__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_icons_fa__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _emotion_styled__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @emotion/styled */ "@emotion/styled");
 /* harmony import */ var _emotion_styled__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_emotion_styled__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_3__);
-var _jsxFileName = "/Users/mariusgrondahl/Documents/GitHub/elbilvelger/elbilvelgeren/Components/CarCard.js";
+var _jsxFileName = "/Users/mariusgrondahl/Documents/GitHub/elbilvelger/elbilvelgeren/Components/DetailHeader.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
 
-
-const CardWrapper = _emotion_styled__WEBPACK_IMPORTED_MODULE_2___default.a.div`
+const Card = _emotion_styled__WEBPACK_IMPORTED_MODULE_2___default.a.div`
 display: flex;
 flex-direction: column;
 justify-content: flex-end;
@@ -138,13 +135,9 @@ background-size: cover;
 background-position: center center;
 background-image: url(/static/img/${props => props.bildeURL});
 padding: 0;
-margin-bottom: 1.3rem;
-height: 35vh;
+margin-bottom: .3rem;
+height: 50vh;
 max-width: 1024px;
-color: #fff;  
-border-bottom-left-radius: 5px;
-border-bottom-right-radius: 5px; 
-
 a{
   text-decoration: none;
 }
@@ -152,19 +145,17 @@ a{
   .imgTitle{
     position: relative;
     color: #fff;
-    background: linear-gradient(to top, rgba(0,0,0,0.8) 0%,rgba(0,0,0,0) 100%);
     width: auto;
     bottom: 0;
     font-weigth: bold;
     padding: 2rem 0 .7rem 0rem;
-    font-size: 1.4rem;
+    font-size: 2rem;
     text-align: center;
     font-weight: bold;
     text-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2);
  
   }
-
-
+  
   ul {
     width: 100%;
     list-style: none;
@@ -184,10 +175,8 @@ a{
     display: flex;
     flex-direction: row;
     padding: .5rem;
-    background: rgba(0,0,0,0.8);
-    color: #fff;
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
+    background: linear-gradient(to top, #1d1d1d 0%,rgba(0,0,0,0) 100%);
+    color: #fff;  
 
     li{
       font-size: 1.2rem;
@@ -196,6 +185,7 @@ a{
       .price{
         font-weight: 400;
         background: #3CA069;
+        color: #fff;
         padding: .2rem .7rem;
         border-radius: 3px;
       }
@@ -206,170 +196,96 @@ a{
     }
   }
 `;
-function CarCard(props) {
+function DetailHeader(props) {
   function numberWithSpaces(x) {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
   }
 
-  return __jsx(next_link__WEBPACK_IMPORTED_MODULE_3___default.a, {
-    href: {
-      pathname: '/elbil',
-      query: {
-        id: `${props.id}`
-      }
-    },
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 89
-    },
-    __self: this
-  }, __jsx("a", {
-    title: "CarDetail",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 90
-    },
-    __self: this
-  }, __jsx(CardWrapper, {
+  return __jsx(Card, {
     bildeURL: props.bildeURL,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 91
+      lineNumber: 82
     },
     __self: this
   }, __jsx("div", {
     className: "imgTitle",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 93
+      lineNumber: 83
     },
     __self: this
   }, __jsx("span", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 94
+      lineNumber: 84
     },
     __self: this
   }, props.modell, " "), __jsx("span", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 95
+      lineNumber: 85
     },
     __self: this
   }, props.merke, " "), __jsx("span", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 96
+      lineNumber: 86
     },
     __self: this
   }, props.type)), __jsx("div", {
     className: "cardFooter",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 99
+      lineNumber: 89
     },
     __self: this
   }, __jsx("ul", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 100
+      lineNumber: 90
     },
     __self: this
   }, __jsx("li", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 101
+      lineNumber: 91
     },
     __self: this
   }, __jsx("span", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 101
+      lineNumber: 91
     },
     __self: this
   }, __jsx(react_icons_fa__WEBPACK_IMPORTED_MODULE_1__["FaMapMarkerAlt"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 101
+      lineNumber: 91
     },
     __self: this
   })), " ", props.rekkevidde, " ", __jsx("span", {
     className: "light",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 101
+      lineNumber: 91
     },
     __self: this
   }, "km")), __jsx("li", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 102
+      lineNumber: 92
     },
     __self: this
   }, __jsx("span", {
     className: "price",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 102
+      lineNumber: 92
     },
     __self: this
-  }, "Fra: ", numberWithSpaces(`${props.pris}`), ",-")))))));
+  }, "Fra: ", numberWithSpaces(`${props.pris}`), ",-")))));
 }
-
-/***/ }),
-
-/***/ "./Components/FlexWrapper.js":
-/*!***********************************!*\
-  !*** ./Components/FlexWrapper.js ***!
-  \***********************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _emotion_styled__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @emotion/styled */ "@emotion/styled");
-/* harmony import */ var _emotion_styled__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_emotion_styled__WEBPACK_IMPORTED_MODULE_1__);
-var _jsxFileName = "/Users/mariusgrondahl/Documents/GitHub/elbilvelger/elbilvelgeren/Components/FlexWrapper.js";
-var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
-
-
-const FlexWrapperCSS = _emotion_styled__WEBPACK_IMPORTED_MODULE_1___default.a.div`
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin: .5rem;
-    padding: 4rem  0rem 3rem 0rem;
-
-    @media (min-width: 800px) {
-      flex-direction: row;
-      justify-content: flex-start;
-      flex-wrap: wrap;
-    }
-
-    .react-reveal{
-      width: 100%;
-
-      @media (min-width: 800px) {
-        width: 30vw;
-        margin: 1rem;
-      }
-  }
-  `;
-
-function FlexWrapper(props) {
-  return __jsx(FlexWrapperCSS, {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 28
-    },
-    __self: this
-  }, props.children);
-}
-
-;
-/* harmony default export */ __webpack_exports__["default"] = (FlexWrapper);
 
 /***/ }),
 
@@ -508,7 +424,7 @@ class Navbar extends react__WEBPACK_IMPORTED_MODULE_1__["Component"] {
 /*! exports provided: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, default */
 /***/ (function(module) {
 
-module.exports = JSON.parse("[{\"id\":1,\"bildeURL\":\"etron.jpg\",\"merke\":\"Audi\",\"modell\":\"e-tron\",\"type\":\"55\",\"rekkevidde\":415,\"pris\":652061,\"storelse\":1,\"sitteplasser\":\"5\",\"tester\":\"70709759\",\"leverandorer\":\"https://www.audi.no/no/web/no/bilmodeller/audi-tron/audi-e-tron.html\"},{\"id\":2,\"bildeURL\":\"default.jpg\",\"merke\":\"BMW\",\"modell\":\"i3\",\"type\":\"120Ah\",\"rekkevidde\":310,\"pris\":309000,\"storelse\":3,\"sitteplasser\":\"4\",\"tester\":\"70261709\",\"leverandorer\":\"https://www.bmw.no/no/ssl/configurator.html#/8P21/FBHGI,S0230,S02D6,S02VB,S02VC,S0428,S0494,S04EX,S04T9,S04U6,S04U7,S0548,S0570,S05DA,S0654,S06AC,S06AE,S06AK,S06AP,S0853,S0885,S08R9,S08SM,S08TG,S0993,S09AA/I01/esl/new/\"},{\"id\":3,\"bildeURL\":\"default.jpg\",\"merke\":\"Citroen\",\"modell\":\"E-Berlingo\",\"type\":\"Multispace\",\"rekkevidde\":170,\"pris\":227500,\"storelse\":2,\"sitteplasser\":\"2\",\"tester\":\"69199883\",\"leverandorer\":\"https://www.citroen.no/modeller/citroen/berlingo-electric-multispace.html\"},{\"id\":4,\"bildeURL\":\"default.jpg\",\"merke\":\"Citroen\",\"modell\":\"C-Zero\",\"type\":\"Feel\",\"rekkevidde\":150,\"pris\":144380,\"storelse\":3,\"sitteplasser\":\"4\",\"tester\":\"61639141\",\"leverandorer\":\"https://www.citroen.no/biler/citroen/c-zero.html\"},{\"id\":5,\"bildeURL\":\"default.jpg\",\"merke\":\"Hyundai\",\"modell\":\"Ioniq\",\"type\":\"EV\",\"rekkevidde\":280,\"pris\":244000,\"storelse\":2,\"sitteplasser\":\"5\",\"tester\":\"60948143\",\"leverandorer\":\"https://www.hyundai.no/modeller/ioniq-electric/\"},{\"id\":6,\"bildeURL\":\"default.jpg\",\"merke\":\"Hyundai\",\"modell\":\"Kona Electric\",\"type\":\"Teknikk\",\"rekkevidde\":449,\"pris\":325000,\"storelse\":2,\"sitteplasser\":\"5\",\"tester\":\"70039730\",\"leverandorer\":\"https://www.hyundai.no/modeller/kona-electric/\"},{\"id\":7,\"bildeURL\":\"default.jpg\",\"merke\":\"DS\",\"modell\":\"3 Crossback E-Tense\",\"type\":\"136 So Chic\",\"rekkevidde\":300,\"pris\":319900,\"storelse\":3,\"sitteplasser\":\"5\",\"tester\":\"70865528\",\"leverandorer\":\"https://www.dsautomobiles.no/elbil-hybrid/elbiler.html\"},{\"id\":8,\"bildeURL\":\"default.jpg\",\"merke\":\"Kia\",\"modell\":\"E-Niro\",\"type\":\"First Edition\",\"rekkevidde\":485,\"pris\":370600,\"storelse\":2,\"sitteplasser\":\"5\",\"tester\":\"70531310\",\"leverandorer\":\"https://www.kia.com/no/modeller/e-niro/opplev-e-Niro/\"},{\"id\":9,\"bildeURL\":\"default.jpg\",\"merke\":\"Kia\",\"modell\":\"E-Soul\",\"type\":\"Classic\",\"rekkevidde\":250,\"pris\":228100,\"storelse\":2,\"sitteplasser\":\"5\",\"tester\":\"70747144\",\"leverandorer\":\"https://www.kia.com/no/modeller/e-soul/opplev-e-soul/\"},{\"id\":10,\"bildeURL\":\"default.jpg\",\"merke\":\"Mitsubishi\",\"modell\":\"i-Miev\",\"type\":\"16 kWh\",\"rekkevidde\":105,\"pris\":149900,\"storelse\":3,\"sitteplasser\":\"4\",\"tester\":\"61732696\",\"leverandorer\":\"https://www.mitsubishi-motors.no/biler/imiev\"},{\"id\":11,\"bildeURL\":\"default.jpg\",\"merke\":\"Nissan\",\"modell\":\"Leaf\",\"type\":\"40kWh Acenta\",\"rekkevidde\":270,\"pris\":278000,\"storelse\":2,\"sitteplasser\":\"5\",\"tester\":\"69570276\",\"leverandorer\":\"https://www.nissan.no/biler/nye-biler/leaf.html\"},{\"id\":12,\"bildeURL\":\"default.jpg\",\"merke\":\"Nissan\",\"modell\":\"E-NV200\",\"type\":\"Evalia 40 kWt 5-s\",\"rekkevidde\":200,\"pris\":322840,\"storelse\":1,\"sitteplasser\":\"5\",\"tester\":\"61216187\",\"leverandorer\":\"https://www.nissan.no/biler/nye-biler/e-nv200-evalia.html\"},{\"id\":13,\"bildeURL\":\"default.jpg\",\"merke\":\"Opel\",\"modell\":\"Ampera-E\",\"type\":\"Premium\",\"rekkevidde\":423,\"pris\":359900,\"storelse\":2,\"sitteplasser\":\"5\",\"tester\":\"66931394\",\"leverandorer\":\"https://www.opel.no/personbil/ampera-e/modelloversikt.html\"},{\"id\":14,\"bildeURL\":\"default.jpg\",\"merke\":\"Peugeot\",\"modell\":\"iOn\",\"type\":\"Active\",\"rekkevidde\":150,\"pris\":163600,\"storelse\":3,\"sitteplasser\":\"4\",\"tester\":\"61639141\",\"leverandorer\":\"https://www.peugeot.no/modell/peugeot-modeller/ion.html\"},{\"id\":15,\"bildeURL\":\"default.jpg\",\"merke\":\"Peugeot\",\"modell\":\"e-Partner Tepee\",\"rekkevidde\":170,\"pris\":192000,\"storelse\":2,\"sitteplasser\":\"3\",\"tester\":\"69199883\",\"leverandorer\":\"https://www.peugeot.no/modell/peugeot-modeller/partner-tepee-electric.html\"},{\"id\":16,\"bildeURL\":\"default.jpg\",\"merke\":\"Renault\",\"modell\":\"Kangoo Electric\",\"type\":\"5-seter\",\"rekkevidde\":270,\"pris\":268400,\"storelse\":2,\"sitteplasser\":\"5\",\"tester\":\"61290789\",\"leverandorer\":\"https://renault.no/elbil/kangoo-maxi-ze-personbil\"},{\"id\":17,\"bildeURL\":\"default.jpg\",\"merke\":\"Renault\",\"modell\":\"Twizy\",\"type\":\"Intens\",\"rekkevidde\":90,\"pris\":93000,\"storelse\":3,\"sitteplasser\":\"2\",\"tester\":\"61501189\",\"leverandorer\":\"https://renault.no/elbil/twizy\"},{\"id\":18,\"bildeURL\":\"default.jpg\",\"merke\":\"Renault\",\"modell\":\"Zoe\",\"type\":\"Z.E 40 R90 Life\",\"rekkevidde\":400,\"pris\":245000,\"storelse\":3,\"sitteplasser\":\"5\",\"tester\":\"63605077\",\"leverandorer\":\"https://renault.no/elbil/zoe\"},{\"id\":19,\"bildeURL\":\"default.jpg\",\"merke\":\"Tesla\",\"modell\":\"3\",\"type\":\"Standard Range Plus RWD\",\"rekkevidde\":415,\"pris\":377020,\"storelse\":2,\"sitteplasser\":\"5\",\"tester\":\"71161178\",\"leverandorer\":\"https://www.tesla.com/no_NO/models\"},{\"id\":20,\"bildeURL\":\"default.jpg\",\"merke\":\"Tesla\",\"modell\":\"S\",\"type\":\"Long Range\",\"rekkevidde\":610,\"pris\":791220,\"storelse\":1,\"sitteplasser\":\"5\",\"tester\":\"71006479\",\"leverandorer\":\"https://www.tesla.com/no_NO/models\"},{\"id\":21,\"bildeURL\":\"default.jpg\",\"merke\":\"Tesla\",\"modell\":\"X\",\"type\":\"Performance 5-s\",\"rekkevidde\":485,\"pris\":1005220,\"storelse\":1,\"sitteplasser\":\"5\",\"tester\":\"69769249\",\"leverandorer\":\"https://www.tesla.com/no_NO/models\"},{\"id\":22,\"bildeURL\":\"default.jpg\",\"merke\":\"VW\",\"modell\":\"Golf\",\"rekkevidde\":229,\"pris\":326200,\"storelse\":2,\"sitteplasser\":\"5\",\"tester\":\"67454759\",\"leverandorer\":\"https://www.volkswagen.no/no/biler/e-golf-elbil.html\"},{\"id\":23,\"bildeURL\":\"default.jpg\",\"merke\":\"VW\",\"modell\":\"UP!\",\"rekkevidde\":133,\"pris\":211300,\"storelse\":3,\"sitteplasser\":\"4\",\"tester\":\"61244198\",\"leverandorer\":\"https://www.volkswagen.no/no/biler/e-up-elbil.html\"}]");
+module.exports = JSON.parse("[{\"id\":1,\"bildeURL\":\"etron.jpg\",\"merke\":\"Audi\",\"modell\":\"e-tron\",\"type\":\"55\",\"rekkevidde\":415,\"pris\":652061,\"storelse\":1,\"sitteplasser\":\"5\",\"tester\":\"70709759\",\"leverandorer\":\"https://www.audi.no/no/web/no/bilmodeller/audi-tron/audi-e-tron.html\"},{\"id\":2,\"bildeURL\":\"BMW-i3.jpg\",\"merke\":\"BMW\",\"modell\":\"i3\",\"type\":\"120Ah\",\"rekkevidde\":310,\"pris\":309000,\"storelse\":3,\"sitteplasser\":\"4\",\"tester\":\"70261709\",\"leverandorer\":\"https://www.bmw.no/no/ssl/configurator.html#/8P21/FBHGI,S0230,S02D6,S02VB,S02VC,S0428,S0494,S04EX,S04T9,S04U6,S04U7,S0548,S0570,S05DA,S0654,S06AC,S06AE,S06AK,S06AP,S0853,S0885,S08R9,S08SM,S08TG,S0993,S09AA/I01/esl/new/\"},{\"id\":3,\"bildeURL\":\"Citroen-Berlingo-2019.jpg\",\"merke\":\"Citroen\",\"modell\":\"E-Berlingo\",\"type\":\"Multispace\",\"rekkevidde\":170,\"pris\":227500,\"storelse\":2,\"sitteplasser\":\"2\",\"tester\":\"69199883\",\"leverandorer\":\"https://www.citroen.no/modeller/citroen/berlingo-electric-multispace.html\"},{\"id\":4,\"bildeURL\":\"Citroen-C-Zero-2011.jpg\",\"merke\":\"Citroen\",\"modell\":\"C-Zero\",\"type\":\"Feel\",\"rekkevidde\":150,\"pris\":144380,\"storelse\":3,\"sitteplasser\":\"4\",\"tester\":\"61639141\",\"leverandorer\":\"https://www.citroen.no/biler/citroen/c-zero.html\"},{\"id\":5,\"bildeURL\":\"Hyundai-ioniq-2017.jpg\",\"merke\":\"Hyundai\",\"modell\":\"Ioniq\",\"type\":\"EV\",\"rekkevidde\":280,\"pris\":244000,\"storelse\":2,\"sitteplasser\":\"5\",\"tester\":\"60948143\",\"leverandorer\":\"https://www.hyundai.no/modeller/ioniq-electric/\"},{\"id\":6,\"bildeURL\":\"Hyundai-Kona_Electric.jpg\",\"merke\":\"Hyundai\",\"modell\":\"Kona Electric\",\"type\":\"Teknikk\",\"rekkevidde\":449,\"pris\":325000,\"storelse\":2,\"sitteplasser\":\"5\",\"tester\":\"70039730\",\"leverandorer\":\"https://www.hyundai.no/modeller/kona-electric/\"},{\"id\":7,\"bildeURL\":\"DS3Crossbacke-Tense.jpg\",\"merke\":\"DS\",\"modell\":\"3 Crossback E-Tense\",\"type\":\"136 So Chic\",\"rekkevidde\":300,\"pris\":319900,\"storelse\":3,\"sitteplasser\":\"5\",\"tester\":\"70865528\",\"leverandorer\":\"https://www.dsautomobiles.no/elbil-hybrid/elbiler.html\"},{\"id\":8,\"bildeURL\":\"Kia-e-Niro-2019.jpg\",\"merke\":\"Kia\",\"modell\":\"E-Niro\",\"type\":\"First Edition\",\"rekkevidde\":485,\"pris\":370600,\"storelse\":2,\"sitteplasser\":\"5\",\"tester\":\"70531310\",\"leverandorer\":\"https://www.kia.com/no/modeller/e-niro/opplev-e-Niro/\"},{\"id\":9,\"bildeURL\":\"Kia-Soul_EV-2020-2.jpg\",\"merke\":\"Kia\",\"modell\":\"E-Soul\",\"type\":\"Classic\",\"rekkevidde\":250,\"pris\":228100,\"storelse\":2,\"sitteplasser\":\"5\",\"tester\":\"70747144\",\"leverandorer\":\"https://www.kia.com/no/modeller/e-soul/opplev-e-soul/\"},{\"id\":10,\"bildeURL\":\"Mitsubishi-i-MiEV2.jpg\",\"merke\":\"Mitsubishi\",\"modell\":\"i-Miev\",\"type\":\"16 kWh\",\"rekkevidde\":105,\"pris\":149900,\"storelse\":3,\"sitteplasser\":\"4\",\"tester\":\"61732696\",\"leverandorer\":\"https://www.mitsubishi-motors.no/biler/imiev\"},{\"id\":11,\"bildeURL\":\"Nissan-Leaf-2018.jpg\",\"merke\":\"Nissan\",\"modell\":\"Leaf\",\"type\":\"40kWh Acenta\",\"rekkevidde\":270,\"pris\":278000,\"storelse\":2,\"sitteplasser\":\"5\",\"tester\":\"69570276\",\"leverandorer\":\"https://www.nissan.no/biler/nye-biler/leaf.html\"},{\"id\":12,\"bildeURL\":\"Nissan-e-NV200-2.jpg\",\"merke\":\"Nissan\",\"modell\":\"E-NV200\",\"type\":\"Evalia 40 kWt 5-s\",\"rekkevidde\":200,\"pris\":322840,\"storelse\":1,\"sitteplasser\":\"5\",\"tester\":\"61216187\",\"leverandorer\":\"https://www.nissan.no/biler/nye-biler/e-nv200-evalia.html\"},{\"id\":13,\"bildeURL\":\"Opel-Ampera-e-2017-3.jpg\",\"merke\":\"Opel\",\"modell\":\"Ampera-E\",\"type\":\"Premium\",\"rekkevidde\":423,\"pris\":359900,\"storelse\":2,\"sitteplasser\":\"5\",\"tester\":\"66931394\",\"leverandorer\":\"https://www.opel.no/personbil/ampera-e/modelloversikt.html\"},{\"id\":14,\"bildeURL\":\"Peugeot-iOn-2011-2.jpg\",\"merke\":\"Peugeot\",\"modell\":\"iOn\",\"type\":\"Active\",\"rekkevidde\":150,\"pris\":163600,\"storelse\":3,\"sitteplasser\":\"4\",\"tester\":\"61639141\",\"leverandorer\":\"https://www.peugeot.no/modell/peugeot-modeller/ion.html\"},{\"id\":15,\"bildeURL\":\"Peugeot-Partner_Tepee.jpg\",\"merke\":\"Peugeot\",\"modell\":\"e-Partner Tepee\",\"rekkevidde\":170,\"pris\":192000,\"storelse\":2,\"sitteplasser\":\"3\",\"tester\":\"69199883\",\"leverandorer\":\"https://www.peugeot.no/modell/peugeot-modeller/partner-tepee-electric.html\"},{\"id\":16,\"bildeURL\":\"Renault-Kangoo.jpg\",\"merke\":\"Renault\",\"modell\":\"Kangoo Electric\",\"type\":\"5-seter\",\"rekkevidde\":270,\"pris\":268400,\"storelse\":2,\"sitteplasser\":\"5\",\"tester\":\"61290789\",\"leverandorer\":\"https://renault.no/elbil/kangoo-maxi-ze-personbil\"},{\"id\":17,\"bildeURL\":\"Renault-Twizy-2012.jpg\",\"merke\":\"Renault\",\"modell\":\"Twizy\",\"type\":\"Intens\",\"rekkevidde\":90,\"pris\":93000,\"storelse\":3,\"sitteplasser\":\"2\",\"tester\":\"61501189\",\"leverandorer\":\"https://renault.no/elbil/twizy\"},{\"id\":18,\"bildeURL\":\"Renault-Zoe-2017-1600-17.jpg\",\"merke\":\"Renault\",\"modell\":\"Zoe\",\"type\":\"Z.E 40 R90 Life\",\"rekkevidde\":400,\"pris\":245000,\"storelse\":3,\"sitteplasser\":\"5\",\"tester\":\"63605077\",\"leverandorer\":\"https://renault.no/elbil/zoe\"},{\"id\":19,\"bildeURL\":\"Tesla-Model_3-2018.jpg\",\"merke\":\"Tesla\",\"modell\":\"3\",\"type\":\"Standard Range Plus RWD\",\"rekkevidde\":415,\"pris\":377020,\"storelse\":2,\"sitteplasser\":\"5\",\"tester\":\"71161178\",\"leverandorer\":\"https://www.tesla.com/no_NO/models\"},{\"id\":20,\"bildeURL\":\"Tesla-Model_S-2017.jpg\",\"merke\":\"Tesla\",\"modell\":\"S\",\"type\":\"Long Range\",\"rekkevidde\":610,\"pris\":791220,\"storelse\":1,\"sitteplasser\":\"5\",\"tester\":\"71006479\",\"leverandorer\":\"https://www.tesla.com/no_NO/models\"},{\"id\":21,\"bildeURL\":\"Tesla-Model_X-2017.jpg\",\"merke\":\"Tesla\",\"modell\":\"X\",\"type\":\"Performance 5-s\",\"rekkevidde\":485,\"pris\":1005220,\"storelse\":1,\"sitteplasser\":\"5\",\"tester\":\"69769249\",\"leverandorer\":\"https://www.tesla.com/no_NO/models\"},{\"id\":22,\"bildeURL\":\"Volkswagen-e-Golf-2017.jpg\",\"merke\":\"VW\",\"modell\":\"Golf\",\"rekkevidde\":229,\"pris\":326200,\"storelse\":2,\"sitteplasser\":\"5\",\"tester\":\"67454759\",\"leverandorer\":\"https://www.volkswagen.no/no/biler/e-golf-elbil.html\"},{\"id\":23,\"bildeURL\":\"Volkswagen-e-Up-2014.jpg\",\"merke\":\"VW\",\"modell\":\"UP!\",\"rekkevidde\":133,\"pris\":211300,\"storelse\":3,\"sitteplasser\":\"4\",\"tester\":\"67454759\",\"leverandorer\":\"https://www.volkswagen.no/no/biler/e-up-elbil.html\"}]");
 
 /***/ }),
 
@@ -723,17 +639,6 @@ function createApolloClient(initialState = {}) {
     cache: apolloCache
   });
 }
-
-/***/ }),
-
-/***/ "./node_modules/@babel/runtime-corejs2/core-js/json/stringify.js":
-/*!***********************************************************************!*\
-  !*** ./node_modules/@babel/runtime-corejs2/core-js/json/stringify.js ***!
-  \***********************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__(/*! core-js/library/fn/json/stringify */ "core-js/library/fn/json/stringify");
 
 /***/ }),
 
@@ -1607,27 +1512,21 @@ module.exports = __webpack_require__(/*! ./dist/client/link */ "./node_modules/n
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _babel_runtime_corejs2_core_js_json_stringify__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/core-js/json/stringify */ "./node_modules/@babel/runtime-corejs2/core-js/json/stringify.js");
-/* harmony import */ var _babel_runtime_corejs2_core_js_json_stringify__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_core_js_json_stringify__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _Components_Navbar__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../Components/Navbar */ "./Components/Navbar.js");
-/* harmony import */ var _Components_CarCard__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../Components/CarCard */ "./Components/CarCard.js");
-/* harmony import */ var _Components_FlexWrapper__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../Components/FlexWrapper */ "./Components/FlexWrapper.js");
-/* harmony import */ var _emotion_styled__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @emotion/styled */ "@emotion/styled");
-/* harmony import */ var _emotion_styled__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_emotion_styled__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _elbiler_json__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../elbiler.json */ "./elbiler.json");
-var _elbiler_json__WEBPACK_IMPORTED_MODULE_6___namespace = /*#__PURE__*/__webpack_require__.t(/*! ../elbiler.json */ "./elbiler.json", 1);
-/* harmony import */ var react_reveal_Fade__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react-reveal/Fade */ "react-reveal/Fade");
-/* harmony import */ var react_reveal_Fade__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(react_reveal_Fade__WEBPACK_IMPORTED_MODULE_7__);
-/* harmony import */ var _apollo_react_hooks__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @apollo/react-hooks */ "@apollo/react-hooks");
-/* harmony import */ var _apollo_react_hooks__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_apollo_react_hooks__WEBPACK_IMPORTED_MODULE_8__);
-/* harmony import */ var graphql_tag__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! graphql-tag */ "graphql-tag");
-/* harmony import */ var graphql_tag__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(graphql_tag__WEBPACK_IMPORTED_MODULE_9__);
-/* harmony import */ var _lib_apollo__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../lib/apollo */ "./lib/apollo.js");
-
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _Components_Navbar__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../Components/Navbar */ "./Components/Navbar.js");
+/* harmony import */ var _Components_DetailHeader__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../Components/DetailHeader */ "./Components/DetailHeader.js");
+/* harmony import */ var _emotion_styled__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @emotion/styled */ "@emotion/styled");
+/* harmony import */ var _emotion_styled__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_emotion_styled__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _elbiler_json__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../elbiler.json */ "./elbiler.json");
+var _elbiler_json__WEBPACK_IMPORTED_MODULE_4___namespace = /*#__PURE__*/__webpack_require__.t(/*! ../elbiler.json */ "./elbiler.json", 1);
+/* harmony import */ var _apollo_react_hooks__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @apollo/react-hooks */ "@apollo/react-hooks");
+/* harmony import */ var _apollo_react_hooks__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_apollo_react_hooks__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var graphql_tag__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! graphql-tag */ "graphql-tag");
+/* harmony import */ var graphql_tag__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(graphql_tag__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _lib_apollo__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../lib/apollo */ "./lib/apollo.js");
 var _jsxFileName = "/Users/mariusgrondahl/Documents/GitHub/elbilvelger/elbilvelgeren/pages/elbil.js";
-var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
 
@@ -1636,15 +1535,61 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
 
 
 
+const Footer = _emotion_styled__WEBPACK_IMPORTED_MODULE_3___default.a.div`
+    color: #fff;
+    text-align: center;
+    width: 100%;
+    padding: .6rem;
+  }
+  `;
+const DetailWrapper = _emotion_styled__WEBPACK_IMPORTED_MODULE_3___default.a.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1rem;
+    margin: 0;
 
+    @media (min-width: 800px) {
+      max-width: 680px;
+      flex-direction: column;
+      align-align: center;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
 
-const Detail = _emotion_styled__WEBPACK_IMPORTED_MODULE_5___default.a.div`
-width: 100%;
-display: flex;
-flex-direction: column;
-align-self: center;  
+  }
+  `;
+const Detail = _emotion_styled__WEBPACK_IMPORTED_MODULE_3___default.a.div`
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-self: center;  
+    background: #1d1d1d;
+    color: #fff;
+    padding: .5rem;
+    margin: 0;
+
+  p{
+    margin: 0;
+    line-height: 1.4rem;
+
+  }
+
+  h1, h2, h3, h4{
+    text-align: center;
+    margin-bottom: .3rem;
+    font-size: 1.7rem;
+
+  }
+
+  h4{
+
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: 0.8rem;
+  }
 `;
-const ALL_POSTS_QUERY = graphql_tag__WEBPACK_IMPORTED_MODULE_9___default.a`
+const ALL_POSTS_QUERY = graphql_tag__WEBPACK_IMPORTED_MODULE_6___default.a`
 query MyBodyText($id: Int) {
   labrador {
     article(id: $id) {
@@ -1721,7 +1666,7 @@ query MyBodyText($id: Int) {
     }
   }
 }
-`;
+`; // Getinng props from query
 
 ElbilDetail.getInitialProps = async ({
   req,
@@ -1731,21 +1676,44 @@ ElbilDetail.getInitialProps = async ({
   return {
     elbilId
   };
+}; // Getting the text from bodytextStrutured
+
+
+const traverseElements = (elements = []) => {
+  if (!elements) {
+    return null;
+  }
+
+  return elements.map((el, i) => {
+    if (el["__typename"] === "Labrador_Text") {
+      return el.text;
+    } else {
+      switch (el.name) {
+        default:
+          return __jsx(el.name, {
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 167
+            },
+            __self: undefined
+          }, traverseElements(el.children));
+      }
+    }
+  });
 };
 
 function ElbilDetail({
   elbilId
 }) {
   // Getting article id of tester
-  const articleID = _elbiler_json__WEBPACK_IMPORTED_MODULE_6__[elbilId].tester;
-  console.log(articleID);
+  const articleID = _elbiler_json__WEBPACK_IMPORTED_MODULE_4__[elbilId].tester;
   const {
     loading,
     error,
     data,
     fetchMore,
     networkStatus
-  } = Object(_apollo_react_hooks__WEBPACK_IMPORTED_MODULE_8__["useQuery"])(ALL_POSTS_QUERY, {
+  } = Object(_apollo_react_hooks__WEBPACK_IMPORTED_MODULE_5__["useQuery"])(ALL_POSTS_QUERY, {
     notifyOnNetworkStatusChange: true,
     variables: {
       id: articleID
@@ -1761,37 +1729,42 @@ function ElbilDetail({
   const {
     0: articleTitle,
     1: setTitle
-  } = Object(react__WEBPACK_IMPORTED_MODULE_1__["useState"])("Tittel");
+  } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])("Tittel");
   const {
-    0: articleText,
-    1: setText
-  } = Object(react__WEBPACK_IMPORTED_MODULE_1__["useState"])("Lorem ipsum");
-  console.log(articleText);
-  Object(react__WEBPACK_IMPORTED_MODULE_1__["useEffect"])(() => {
+    0: articleSubtitle,
+    1: setSubtitle
+  } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])("undertittel");
+  const {
+    0: articleImage,
+    1: setImage
+  } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(undefined);
+  const {
+    0: brand,
+    1: setBrand
+  } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])("brandnavn");
+  Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(() => {
     // Update the document title using the browser API
     if (data.labrador === undefined) {
-      setTitle("Vi finner ikke data");
+      const waitMessage = "Loading";
+      setTitle(waitMessage), setSubtitle(waitMessage), setImage(waitMessage);
     } else {
-      setTitle(_babel_runtime_corejs2_core_js_json_stringify__WEBPACK_IMPORTED_MODULE_0___default()(data.labrador.article.title));
-      setText(_babel_runtime_corejs2_core_js_json_stringify__WEBPACK_IMPORTED_MODULE_0___default()(data.labrador.article.bodytextHTML));
+      const articleTitle = data.labrador.article.title;
+      const subTitle = data.labrador.article.subtitle;
+      const imageId = data.labrador.article.imageId;
+      const image = "https://www.dagbladet.no/images/" + imageId + ".jpg?imageId=" + imageId + "&width=600&height=auto";
+      console.log(image);
+      const brand = data.labrador.article.siteDomain;
+      setTitle(articleTitle);
+      setSubtitle(subTitle);
+      setImage(image);
+      setBrand(brand);
     }
-  }); // Filtering out the car that matches the elbilId
+  }, [data.labrador]); // Filtering out the car that matches the elbilId to an Array with that ID
 
-  const singleElbil = _elbiler_json__WEBPACK_IMPORTED_MODULE_6__.filter(elbil => elbil.id === elbilId);
+  const singleElbil = _elbiler_json__WEBPACK_IMPORTED_MODULE_4__.filter(elbil => elbil.id === elbilId);
+  console.log(singleElbil);
 
-  const elBiler = __jsx(react_reveal_Fade__WEBPACK_IMPORTED_MODULE_7___default.a, {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 143
-    },
-    __self: this
-  }, __jsx(Detail, {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 144
-    },
-    __self: this
-  }, __jsx(_Components_CarCard__WEBPACK_IMPORTED_MODULE_3__["default"], {
+  const header = __jsx(_Components_DetailHeader__WEBPACK_IMPORTED_MODULE_2__["default"], {
     merke: singleElbil[0].modell,
     modell: singleElbil[0].merke,
     type: singleElbil[0].type,
@@ -1801,39 +1774,71 @@ function ElbilDetail({
     id: singleElbil[0].id,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 145
+      lineNumber: 226
     },
     __self: this
-  }), __jsx("h3", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 155
-    },
-    __self: this
-  }, "Sitteplasser: ", singleElbil[0].sitteplasser)));
+  });
 
-  return __jsx(_Components_FlexWrapper__WEBPACK_IMPORTED_MODULE_4__["default"], {
+  return __jsx("div", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 162
+      lineNumber: 237
     },
     __self: this
-  }, __jsx(_Components_Navbar__WEBPACK_IMPORTED_MODULE_2__["default"], {
+  }, header, __jsx(DetailWrapper, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 163
+      lineNumber: 239
     },
     __self: this
-  }), elBiler, __jsx("h2", {
+  }, __jsx(_Components_Navbar__WEBPACK_IMPORTED_MODULE_1__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 165
+      lineNumber: 240
     },
     __self: this
-  }, articleTitle, " "), articleText);
+  }), __jsx(Detail, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 241
+    },
+    __self: this
+  }, __jsx("h2", {
+    className: "",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 243
+    },
+    __self: this
+  }, "Saker om ", singleElbil[0].merke, " ", singleElbil[0].modell, ":"), __jsx("img", {
+    src: articleImage,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 244
+    },
+    __self: this
+  }), __jsx("h2", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 245
+    },
+    __self: this
+  }, articleTitle, " "), __jsx("h4", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 246
+    },
+    __self: this
+  }, articleSubtitle, " "), __jsx("span", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 247
+    },
+    __self: this
+  }, brand))));
 }
 
-/* harmony default export */ __webpack_exports__["default"] = (Object(_lib_apollo__WEBPACK_IMPORTED_MODULE_10__["withApollo"])(ElbilDetail));
+/* harmony default export */ __webpack_exports__["default"] = (Object(_lib_apollo__WEBPACK_IMPORTED_MODULE_7__["withApollo"])(ElbilDetail));
 
 /***/ }),
 
@@ -1923,17 +1928,6 @@ module.exports = require("apollo-client");
 /***/ (function(module, exports) {
 
 module.exports = require("apollo-link-http");
-
-/***/ }),
-
-/***/ "core-js/library/fn/json/stringify":
-/*!****************************************************!*\
-  !*** external "core-js/library/fn/json/stringify" ***!
-  \****************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = require("core-js/library/fn/json/stringify");
 
 /***/ }),
 
@@ -2121,17 +2115,6 @@ module.exports = require("react");
 /***/ (function(module, exports) {
 
 module.exports = require("react-icons/fa");
-
-/***/ }),
-
-/***/ "react-reveal/Fade":
-/*!************************************!*\
-  !*** external "react-reveal/Fade" ***!
-  \************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = require("react-reveal/Fade");
 
 /***/ }),
 

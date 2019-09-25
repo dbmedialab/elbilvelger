@@ -1,9 +1,8 @@
 import React, { Component } from "react";
 import { FaMapMarkerAlt} from 'react-icons/fa';
 import styled from '@emotion/styled';
-import Link from 'next/link';
 
-const CardWrapper = styled.div`
+const Card = styled.div`
 display: flex;
 flex-direction: column;
 justify-content: flex-end;
@@ -11,13 +10,9 @@ background-size: cover;
 background-position: center center;
 background-image: url(/static/img/${props => props.bildeURL});
 padding: 0;
-margin-bottom: 1.3rem;
-height: 35vh;
+margin-bottom: .3rem;
+height: 50vh;
 max-width: 1024px;
-color: #fff;  
-border-bottom-left-radius: 5px;
-border-bottom-right-radius: 5px; 
-
 a{
   text-decoration: none;
 }
@@ -25,12 +20,11 @@ a{
   .imgTitle{
     position: relative;
     color: #fff;
-    background: linear-gradient(to top, rgba(0,0,0,0.8) 0%,rgba(0,0,0,0) 100%);
     width: auto;
     bottom: 0;
     font-weigth: bold;
     padding: 2rem 0 .7rem 0rem;
-    font-size: 1.4rem;
+    font-size: 2rem;
     text-align: center;
     font-weight: bold;
     text-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2);
@@ -56,10 +50,8 @@ a{
     display: flex;
     flex-direction: row;
     padding: .5rem;
-    background: rgba(0,0,0,0.8);
-    color: #fff;
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
+    background: linear-gradient(to top, #1d1d1d 0%,rgba(0,0,0,0) 100%);
+    color: #fff;  
 
     li{
       font-size: 1.2rem;
@@ -68,6 +60,7 @@ a{
       .price{
         font-weight: 400;
         background: #3CA069;
+        color: #fff;
         padding: .2rem .7rem;
         border-radius: 3px;
       }
@@ -79,16 +72,14 @@ a{
   }
 `
 
-export default function CarCard(props) {
+export default function DetailHeader(props) {
    function numberWithSpaces(x) {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
   }
 
     return (
-    <Link href={{ pathname: '/elbil', query: { id: `${props.id}` } }}>
-      <a title="CarDetail">
-      <CardWrapper bildeURL={props.bildeURL}>
-       
+    
+      <Card bildeURL={props.bildeURL}>
         <div className="imgTitle">
           <span>{props.modell} </span>
           <span>{props.merke} </span>
@@ -101,9 +92,10 @@ export default function CarCard(props) {
             <li><span className="price">Fra: {numberWithSpaces(`${props.pris}`)},-</span></li>   
           </ul>
         </div>
-      </CardWrapper>
-      </a>
-      </Link>
+      </Card>
+      
+      
+
     );
   
 }
