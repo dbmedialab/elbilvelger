@@ -3,7 +3,6 @@ import AllCars from '../Components/AllCars';
 import Navbar from "../Components/Navbar";
 import styled from '@emotion/styled';
 
-
 const FlexWrapper = styled.div`
     display: flex;
     background: #1d1d1d;
