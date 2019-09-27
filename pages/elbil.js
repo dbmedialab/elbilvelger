@@ -214,9 +214,6 @@ function ElbilDetail({elbilId}) {
   console.log(singleElbil)
   const header =  
       <DetailHeader
-        merke={singleElbil[0].modell} 
-        modell={singleElbil[0].merke}  
-        type={singleElbil[0].type}
         rekkevidde={singleElbil[0].rekkevidde} 
         pris={singleElbil[0].pris} 
         bildeURL={singleElbil[0].bildeURL}
@@ -229,7 +226,7 @@ function ElbilDetail({elbilId}) {
       <DetailWrapper>
         <Navbar />
         <Detail>
-
+        <h1>{singleElbil[0].modell} {singleElbil[0].merke} {singleElbil[0].type}</h1>
         <p>Fusce ornare interdum lectus, sodales placerat dolor semper sed. Curabitur lacinia nibh sit amet iaculis ultricies. Ut vel ante vel ligula sagittis finibus in ac leo. Nulla ante dolor, sagittis luctus efficitur a, mollis vitae tellus. Donec blandit lobortis urna sed facilisis. Vivamus consectetur risus at tortor viverra vulputate.</p>
         <ButtonLink link="http://www.elbil24.no/" title="Gå til forhandler"/>
 
