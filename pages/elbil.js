@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Navbar from "../Components/Navbar";
 import DetailHeader from "../Components/DetailHeader";
 import ArticleCard from "../Components/ArticleCard";
+import ButtonLink from "../Components/Button"
 import styled from '@emotion/styled';
 
 import elbiler from '../elbiler.json';
@@ -166,6 +167,7 @@ ElbilDetail.getInitialProps = async ({req, query}) =>{
 function ElbilDetail({elbilId}) {
   // Getting article id of tester
   const articleID = elbiler[elbilId].tester
+  console.log(articleID)
 
   const { loading, error, data, fetchMore, networkStatus } = useQuery(
     ALL_POSTS_QUERY,
@@ -197,7 +199,6 @@ function ElbilDetail({elbilId}) {
       const subTitle = data.labrador.article.subtitle
       const imageId = data.labrador.article.imageId
       const image = "https://www.dagbladet.no/images/" + imageId + ".jpg?imageId=" + imageId + "&width=400&height=auto"
-      console.log(image)
       const brand = data.labrador.article.siteDomain
 
       setTitle(articleTitle)
@@ -228,15 +229,18 @@ function ElbilDetail({elbilId}) {
       <DetailWrapper>
         <Navbar />
         <Detail>
-        <p>Fusce ornare interdum lectus, sodales placerat dolor semper sed. Curabitur lacinia nibh sit amet iaculis ultricies. Ut vel ante vel ligula sagittis finibus in ac leo. Nulla ante dolor, sagittis luctus efficitur a, mollis vitae tellus. Donec blandit lobortis urna sed facilisis. Vivamus consectetur risus at tortor viverra vulputate.</p>
-          <h2>Saker om {singleElbil[0].merke} {singleElbil[0].modell}:</h2>
 
+        <p>Fusce ornare interdum lectus, sodales placerat dolor semper sed. Curabitur lacinia nibh sit amet iaculis ultricies. Ut vel ante vel ligula sagittis finibus in ac leo. Nulla ante dolor, sagittis luctus efficitur a, mollis vitae tellus. Donec blandit lobortis urna sed facilisis. Vivamus consectetur risus at tortor viverra vulputate.</p>
+        <ButtonLink link="http://www.elbil24.no/" title="Gå til forhandler"/>
+
+          <h2>Saker om {singleElbil[0].merke} {singleElbil[0].modell}:</h2>
             <ArticleCard title={articleTitle} 
                           subtitle={articleSubtitle} 
                           bildeURL={articleImage}
                           brand={brand}
             
             />   
+
         </Detail>           
 
 

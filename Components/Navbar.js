@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import styled from '@emotion/styled';
 import Link from 'next/link';
-// import { Global, css } from '@emotion/core'
 import "../style.css"
 
 class Navbar extends Component {
