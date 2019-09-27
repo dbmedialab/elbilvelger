@@ -3,10 +3,10 @@ import Navbar from "../Components/Navbar";
 import DetailHeader from "../Components/DetailHeader";
 import ArticleCard from "../Components/ArticleCard";
 import ButtonLink from "../Components/Button"
+import Title from "../Components/Title"
+
 import styled from '@emotion/styled';
-
 import elbiler from '../elbiler.json';
-
 import { useQuery } from '@apollo/react-hooks'
 import gql from 'graphql-tag'
 import { withApollo } from "../lib/apollo"
@@ -36,17 +36,18 @@ const Detail = styled.div`
     align-self: center;  
     background: #1d1d1d;
     color: #fff;
-    padding: .5rem;
+    padding: 0rem 0rem .5rem 0rem;
     margin: 0;
 
   p{
     margin: 0;
     line-height: 1.4rem;
+    text-align: center;
 
   }
 
   h1, h2, h3, h4{
-    margin-bottom: .3rem;
+
   }
 
   h4{
@@ -226,11 +227,18 @@ function ElbilDetail({elbilId}) {
       <DetailWrapper>
         <Navbar />
         <Detail>
-        <h1>{singleElbil[0].modell} {singleElbil[0].merke} {singleElbil[0].type}</h1>
+          <Title size="h1" 
+                 title={singleElbil[0].modell + singleElbil[0].merke + singleElbil[0].type} 
+                 align="center"
+          />
+
         <p>Fusce ornare interdum lectus, sodales placerat dolor semper sed. Curabitur lacinia nibh sit amet iaculis ultricies. Ut vel ante vel ligula sagittis finibus in ac leo. Nulla ante dolor, sagittis luctus efficitur a, mollis vitae tellus. Donec blandit lobortis urna sed facilisis. Vivamus consectetur risus at tortor viverra vulputate.</p>
         <ButtonLink link="http://www.elbil24.no/" title="Gå til forhandler"/>
 
-          <h2>Saker om {singleElbil[0].merke} {singleElbil[0].modell}:</h2>
+          <Title size="h2" 
+                 title="Tester:"
+                 align="left"
+          />
             <ArticleCard title={articleTitle} 
                           subtitle={articleSubtitle} 
                           bildeURL={articleImage}
