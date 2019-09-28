@@ -6,7 +6,7 @@ import elbiler from '../elbiler.json';
 import styled from '@emotion/styled';
 
 import Modal from 'react-awesome-modal';
-import { FaMapMarkerAlt, FaCoins, FaArrowsAltV, FaRedo, FaSlidersH } from 'react-icons/fa';
+import { FaMapMarkerAlt, FaCoins, FaArrowsAltV, FaRedo} from 'react-icons/fa';
 
 const ModalContent = styled.div`
   color: #2d2d2d;

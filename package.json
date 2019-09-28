@@ -13,6 +13,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@aller/blink-labrador": "^8.2.2",
     "@apollo/react-hooks": "^3.0.1",
     "@apollo/react-ssr": "^3.0.1",
     "@emotion/core": "^10.0.17",

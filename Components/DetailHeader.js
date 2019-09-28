@@ -10,7 +10,6 @@ background-size: cover;
 background-position: center center;
 background-image: url(/static/img/${props => props.bildeURL});
 padding: 0;
-margin-bottom: .3rem;
 height: 50vh;
 
 a{

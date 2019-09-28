@@ -24,5 +24,11 @@ li {
 
 p{
     font-family: 'Barlow', Arial, Helvetica, sans-serif;
+}
 
+button {
+    background: #3CA069;
+    border: none;
+    outline: none;
+    color: #fff;
 }

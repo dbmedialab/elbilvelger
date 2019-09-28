@@ -1,0 +1,128 @@
+---
+version: 2.1
+
+jobs:
+  build:
+    executor: docker_executor
+    steps:
+      - checkout
+      - setup_docker
+      - docker_build
+      - docker_push
+  deploy_prod:
+    machine: true
+    steps:
+      - deployer:
+          env: prod
+  deploy_stage:
+    machine: true
+    steps:
+      - deployer:
+          env: stage
+  deploy_test:
+    machine: true
+    steps:
+      - deployer:
+          env: test
+
+workflows:
+  version: 2
+  main-workflow:
+    jobs:
+      - build:
+          context: "org-global"
+      - approve_deploy_stage:
+          context: "org-global"
+          type: approval
+          requires:
+            - build
+          filters:
+            branches:
+              ignore:
+                - master
+      - deploy_stage:
+          context: "org-global"
+          requires:
+            - approve_deploy_stage
+          filters:
+            branches:
+              ignore:
+                - master
+      - deploy_prod:
+          context: "org-global"
+          requires:
+            - build
+          filters:
+            branches:
+              only:
+                - master
+
+executors:
+  docker_executor:
+    docker:
+      - image: docker:17.10.0-ce
+    working_directory: /app
+
+commands:
+  setup_docker:
+    description: "Set up remote docker"
+    parameters:
+      docker_version:
+        type: string
+        default: "17.10.0-ce"
+    steps:
+      - setup_remote_docker:
+          version: << parameters.docker_version >>
+          docker_layer_caching: true
+  docker_login:
+    description: "Log in to GCR"
+    steps:
+      - run:
+          name: Authenticate with GCR
+          command: echo $GCR_CREDENTIALS | docker login -u _json_key --password-stdin https://eu.gcr.io
+  docker_build:
+    description: "Build and tag docker image"
+    steps:
+      - docker_login
+      - run:
+          name: Build and tag docker image
+          command: |
+            MUNGED_BRANCH=$(echo $CIRCLE_BRANCH | tr '/@#' '_')
+            docker build -t app .
+            docker tag app $GCR/$CIRCLE_PROJECT_REPONAME/$CIRCLE_PROJECT_REPONAME:$CIRCLE_SHA1
+            docker tag app $GCR/$CIRCLE_PROJECT_REPONAME/$CIRCLE_PROJECT_REPONAME:$MUNGED_BRANCH
+
+  docker_push:
+    description: "Push docker image to GCR"
+    steps:
+      - docker_login
+      - run:
+          name: "Push docker image"
+          command: |
+            docker push $GCR/$CIRCLE_PROJECT_REPONAME/$CIRCLE_PROJECT_REPONAME
+
+  deployer:
+    description: "Deploy to environment"
+    parameters:
+      env:
+        default: test
+        type: enum
+        enum: ["test", "stage", "prod"]
+      namespace:
+        type: string
+        default: ""
+    steps:
+      - checkout
+      - docker_login
+      - run:
+          name: Deploy app to given environment
+          command: |
+            export NS="<< parameters.namespace >>"
+            if [ -n "$NS" ]; then
+              export OVERRIDE_NAMESPACE="$NS"
+            fi
+            export ENV="<< parameters.env >>"
+            export IMAGE=$GCR/$CIRCLE_PROJECT_REPONAME/$CIRCLE_PROJECT_REPONAME:$CIRCLE_SHA1
+            env | egrep -e '^(BUILD|CI_|CIRCLE|ENV=|GCR=|GH_|IMAGE=|OVERRIDE_NAMESPACE=)' > /tmp/env-file
+            docker run -t --env-file /tmp/env-file -v /home/circleci/project/.kubefiles:/kubefiles $GCR/kubectl:production kubeval_validate
+            docker run --env-file /tmp/env-file -v /home/circleci/project/.kubefiles:/kubefiles $GCR/kubectl:production
