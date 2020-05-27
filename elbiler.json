@@ -1,6 +1,7 @@
 [
   {
     "id": 1,
+    "desc": "Her kommer beskrivelse",
     "bildeURL": "etron.jpg",
     "merke": "Audi", 
     "modell": "e-tron",
@@ -15,6 +16,7 @@
   
   {
     "id": 2,
+    "desc": "Her kommer beskrivelse",
     "bildeURL": "BMW-i3.jpg",
     "merke":"BMW",
     "modell":"i3",
@@ -29,6 +31,7 @@
   
   {
     "id": 3,
+    "desc": "Her kommer beskrivelse",
     "bildeURL": "Citroen-Berlingo-2019.jpg",
     "merke":"Citroen",
     "modell":"E-Berlingo",
@@ -43,6 +46,7 @@
   
   {
     "id": 4,
+    "desc": "Her kommer beskrivelse",
     "bildeURL": "Citroen-C-Zero-2011.jpg",
     "merke":"Citroen",
     "modell":"C-Zero",
@@ -57,6 +61,7 @@
   
   {
     "id": 5,
+    "desc": "Her kommer beskrivelse",
     "bildeURL": "Hyundai-ioniq-2017.jpg",
     "merke":"Hyundai",
     "modell":"Ioniq",
@@ -71,6 +76,7 @@
   
   {
     "id": 6,
+    "desc": "Her kommer beskrivelse",
     "bildeURL": "Hyundai-Kona_Electric.jpg",
     "merke":"Hyundai",
     "modell":"Kona Electric",
@@ -85,6 +91,7 @@
   
   {
     "id": 7,
+    "desc": "Her kommer beskrivelse",
     "bildeURL": "DS3Crossbacke-Tense.jpg",
     "merke":"DS",
     "modell":"3 Crossback E-Tense",
@@ -100,6 +107,7 @@
   
   {
     "id": 8,
+    "desc": "Her kommer beskrivelse",
     "bildeURL": "Kia-e-Niro-2019.jpg",
     "merke":"Kia",
     "modell":"E-Niro",
@@ -115,6 +123,7 @@
   
   {
     "id": 9,
+    "desc": "Her kommer beskrivelse",
     "bildeURL": "Kia-Soul_EV-2020-2.jpg",
     "merke":"Kia",
     "modell":"E-Soul",
@@ -130,6 +139,7 @@
   
   {
     "id": 10,
+    "desc": "Her kommer beskrivelse",
     "bildeURL": "Mitsubishi-i-MiEV2.jpg",
     "merke":"Mitsubishi",
     "modell":"i-Miev",
@@ -144,6 +154,7 @@
   
   {
     "id": 11,
+    "desc": "Her kommer beskrivelse",
     "bildeURL": "Nissan-Leaf-2018.jpg",
     "merke":"Nissan",
     "modell":"Leaf",
@@ -159,6 +170,7 @@
   
   {
     "id": 12,
+    "desc": "Her kommer beskrivelse",
     "bildeURL": "Nissan-e-NV200-2.jpg",
     "merke":"Nissan",
     "modell":"E-NV200",
@@ -174,6 +186,7 @@
   
   {
     "id": 13,
+    "desc": "Her kommer beskrivelse",
     "bildeURL": "Opel-Ampera-e-2017-3.jpg",
     "merke":"Opel",
     "modell":"Ampera-E",
@@ -188,6 +201,7 @@
   
   {
     "id": 14,
+    "desc": "Her kommer beskrivelse",
     "bildeURL": "Peugeot-iOn-2011-2.jpg",
     "merke":"Peugeot",
     "modell":"iOn",
@@ -203,6 +217,7 @@
   
   {
     "id": 15,
+    "desc": "Her kommer beskrivelse",
     "bildeURL": "Peugeot-Partner_Tepee.jpg",
     "merke":"Peugeot",
     "modell":"e-Partner Tepee",
@@ -217,6 +232,7 @@
   
   {
     "id": 16,
+    "desc": "Her kommer beskrivelse",
     "bildeURL": "Renault-Kangoo.jpg",
     "merke":"Renault",
     "modell":"Kangoo Electric",
@@ -232,6 +248,7 @@
   
   {
     "id": 17,
+    "desc": "Her kommer beskrivelse",
     "bildeURL": "Renault-Twizy-2012.jpg",
     "merke":"Renault",
     "modell":"Twizy",
@@ -247,6 +264,7 @@
     
   {
     "id": 18,
+    "desc": "Her kommer beskrivelse",
     "bildeURL": "Renault-Zoe-2017-1600-17.jpg",
     "merke":"Renault",
     "modell":"Zoe",
@@ -261,6 +279,7 @@
   
   {
     "id": 19,
+    "desc": "Her kommer beskrivelse",
     "bildeURL": "Tesla-Model_3-2018.jpg",
     "merke":"Tesla",
     "modell": "3",
@@ -276,6 +295,7 @@
 
 {
     "id": 20,
+    "desc": "Her kommer beskrivelse",
     "bildeURL": "Tesla-Model_S-2017.jpg",
     "merke":"Tesla",
     "modell":"S",
@@ -291,6 +311,7 @@
           
 {
     "id": 21,
+    "desc": "Her kommer beskrivelse",
     "bildeURL": "Tesla-Model_X-2017.jpg",
     "merke":"Tesla",
     "modell":"X",
@@ -306,6 +327,7 @@
          
   {
     "id": 22,
+    "desc": "Her kommer beskrivelse",
     "bildeURL": "Volkswagen-e-Golf-2017.jpg",
     "merke":"VW",
     "modell":"Golf",
@@ -320,6 +342,7 @@
   
   {
     "id": 23,
+    "desc": "Her kommer beskrivelse",
     "bildeURL": "Volkswagen-e-Up-2014.jpg",
     "merke":"VW",
     "modell":"UP!",

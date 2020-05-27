@@ -183,6 +183,7 @@ function ElbilDetail({elbilId}) {
 
   // Using State Hook
   const [articleTitle, setTitle] = useState("Tittel");
+  const [articleDesc, setDesc] = useState("Beskrivelse");
   const [articleSubtitle, setSubtitle] = useState("undertittel");
   const [articleImage, setImage] = useState(undefined);
   const [brand, setBrand] = useState("brandnavn")
@@ -197,7 +198,6 @@ function ElbilDetail({elbilId}) {
       const subTitle = data.labrador.article.subtitle
       const imageId = data.labrador.article.imageId
       const image = "https://www.dagbladet.no/images/" + imageId + ".jpg?imageId=" + imageId + "&width=400&height=auto"
-      console.log(image)
       const brand = data.labrador.article.siteDomain
 
       setTitle(articleTitle)
@@ -206,7 +206,7 @@ function ElbilDetail({elbilId}) {
       setBrand(brand)
     }
 
-  }, [data.labrador] );
+  },);
 
   // Filtering out the car that matches the elbilId to an Array with that ID
   const singleElbil = elbiler.filter (elbil => elbil.id === elbilId)  
@@ -228,7 +228,7 @@ function ElbilDetail({elbilId}) {
       <DetailWrapper>
         <Navbar />
         <Detail>
-        <p>Fusce ornare interdum lectus, sodales placerat dolor semper sed. Curabitur lacinia nibh sit amet iaculis ultricies. Ut vel ante vel ligula sagittis finibus in ac leo. Nulla ante dolor, sagittis luctus efficitur a, mollis vitae tellus. Donec blandit lobortis urna sed facilisis. Vivamus consectetur risus at tortor viverra vulputate.</p>
+        <p>{singleElbil[0].desc} </p>
           <h2>Saker om {singleElbil[0].merke} {singleElbil[0].modell}:</h2>
 
             <ArticleCard title={articleTitle} 
