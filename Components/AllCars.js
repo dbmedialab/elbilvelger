@@ -5,14 +5,7 @@ import Fade from 'react-reveal/Fade';
 import elbiler from '../elbiler.json';
 import styled from '@emotion/styled';
 
-import Modal from 'react-awesome-modal';
 import { FaMapMarkerAlt, FaCoins, FaArrowsAltV, FaRedo, FaSlidersH } from 'react-icons/fa';
-
-const ModalContent = styled.div`
-  color: #2d2d2d;
-  text-align: center;
-  padding: 1rem;
-`
 
 class AllCars extends React.Component {
   constructor(props) {
@@ -26,18 +19,6 @@ class AllCars extends React.Component {
       orderBySize:  'asc',
       visible: false
     };
-  }
-
-  openModal() {
-    this.setState({
-        visible : true
-    });
-  }
-
-  closeModal() {
-    this.setState({
-        visible : false
-    });
   }
 
   // Have to change from string to number  in json for it to work
@@ -85,7 +66,7 @@ class AllCars extends React.Component {
   }
 
   render() {
-    const elBiler = this.state.elbiler.map(elbil => 
+  const elBiler = this.state.elbiler.map(elbil => 
   <li key={elbil.id}>
     <Fade>
       <CarCard 

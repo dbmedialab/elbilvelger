@@ -190,7 +190,8 @@ function ElbilDetail({elbilId}) {
   
   useEffect(() => {
     // Update the document title using the browser API
-    if (data.labrador === undefined) {
+    if (data === undefined) {
+      console.log(data)
       const waitMessage = "Loading"
       setTitle(waitMessage), setSubtitle(waitMessage), setImage(waitMessage)
     } else {
